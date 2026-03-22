@@ -1,251 +1,6 @@
-
-/*!* =============== 1. RESET (СБРОС СТИЛЕЙ) ============== *!*/
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box;*/
-/*}*/
-/*!* ================== 2. БАЗА =========================== *!*/
-/*body {*/
-/*    font-family: 'Inter', sans-serif;*/
-/*    color: #100c35;*/
-/*    background: #ffffff;*/
-/*    line-height: 1.5;*/
-/*}*/
-
-/*!* ================== 3. СЕТКА ========================== *!*/
-/*.container {*/
-/*    max-width: 1920px;*/
-/*    margin: 0 auto;*/
-/*    width: 100%;*/
-/*    padding: 0 192px; !* Одинаковые отступы с двух сторон *!*/
-/*}*/
-
-/*!* ================== 4. HEADER ========================= *!*/
-/*.header {*/
-/*    padding: 24px 0 20px;*/
-/*    border-bottom: 1px solid #E5E5E5;*/
-/*}*/
-
-/*!* -------- ПЕРВЫЙ РЯД -------- *!*/
-/*.header-top {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: space-between;*/
-/*    gap: 40px;*/
-/*    margin-bottom: 24px;*/
-/*}*/
-
-/*!* Логотип *!*/
-/*.logo {*/
-/*    font-size: 38px;*/
-/*    font-weight: 700;*/
-/*    color: #100c35;*/
-/*    flex-shrink: 0;*/
-/*    white-space: nowrap;*/
-/*    letter-spacing: -0.02em;*/
-/*}*/
-
-/*!* Навигация *!*/
-/*.nav {*/
-/*    display: flex;*/
-/*    gap: 28px;*/
-/*    flex: 1;*/
-/*}*/
-
-/*.nav a {*/
-/*    text-decoration: none;*/
-/*    color: #100c35;*/
-/*    font-size: 15px;*/
-/*    font-weight: 500;*/
-/*    white-space: nowrap;*/
-/*    transition: color 0.3s;*/
-/*}*/
-
-/*.nav a:hover {*/
-/*    color: #A80000;*/
-/*}*/
-
-/*!* Контакты *!*/
-/*.header-contacts {*/
-/*    display: flex;*/
-/*    gap: 40px;*/
-/*    flex-shrink: 0;*/
-/*}*/
-
-/*.contact-item {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    gap: 4px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.contact-phone,*/
-/*.contact-email {*/
-/*    color: #A80000;*/
-/*    font-size: 15px;*/
-/*    font-weight: 500;*/
-/*    white-space: nowrap;*/
-/*    transition: color 0.3s;*/
-/*}*/
-
-/*.contact-item:hover .contact-phone,*/
-/*.contact-item:hover .contact-email {*/
-/*    color: #100c35;*/
-/*}*/
-
-/*.contact-dept {*/
-/*    font-size: 13px;*/
-/*    color: #666666;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*!* -------- ВТОРОЙ РЯД -------- *!*/
-/*.header-bottom {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    gap: 20px;*/
-/*}*/
-
-/*!* Кнопки (общие стили) *!*/
-/*.btn {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    gap: 8px;*/
-
-/*    height: 48px;*/
-/*    padding: 0 20px;*/
-
-/*    background: #7B68EE;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 4px;*/
-
-/*    font-size: 16px;*/
-/*    font-weight: 600;*/
-/*    font-family: 'Inter', sans-serif;*/
-
-/*    cursor: pointer;*/
-/*    transition: all 0.3s;*/
-/*}*/
-
-/*.btn:hover {*/
-/*    background: #100c35;*/
-/*    transform: translateY(-1px);*/
-/*}*/
-
-/*.btn .btn-icon {*/
-/*    width: 18px;*/
-/*    height: 18px;*/
-/*    flex-shrink: 0;*/
-/*}*/
-
-/*!* Кнопка Каталог *!*/
-/*.btn-catalog {*/
-/*    width: 168px;*/
-/*    flex-shrink: 0;*/
-/*}*/
-
-/*!* Кнопка Корзина *!*/
-/*.btn-cart {*/
-/*    width: 168px;*/
-/*    flex-shrink: 0;*/
-/*}*/
-
-/*!* Поиск *!*/
-/*.search {*/
-/*    position: relative;*/
-/*    flex: 1;*/
-/*    max-width: 680px;*/
-/*}*/
-
-/*.search-input {*/
-/*    width: 100%;*/
-/*    height: 48px;*/
-/*    padding: 0 48px 0 16px;*/
-
-/*    border: 1px solid #E5E5E5;*/
-/*    border-radius: 4px;*/
-
-/*    font-size: 15px;*/
-/*    font-family: 'Inter', sans-serif;*/
-
-/*    transition: all 0.3s;*/
-/*    background: #F5F5F7;*/
-/*}*/
-
-/*.search-input:focus {*/
-/*    outline: none;*/
-/*    border-color: #7B68EE;*/
-/*    background: #ffffff;*/
-/*}*/
-
-/*.search-input::placeholder {*/
-/*    color: #999999;*/
-/*}*/
-
-/*.search-icon {*/
-/*    position: absolute;*/
-/*    right: 16px;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*    width: 20px;*/
-/*    height: 20px;*/
-/*    color: #999999;*/
-/*    pointer-events: none;*/
-/*}*/
-
-/*!* Минимальная сумма заказа *!*/
-/*.min-order {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    gap: 12px;*/
-/*    padding: 0 24px;*/
-/*    flex-shrink: 0;*/
-/*    border-left: 1px solid #E5E5E5;*/
-/*    border-right: 1px solid #E5E5E5;*/
-/*}*/
-
-/*.min-order-price {*/
-/*    font-size: 18px;*/
-/*    font-weight: 700;*/
-/*    color: #100c35;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*.min-order-label {*/
-/*    font-size: 13px;*/
-/*    color: #666666;*/
-/*    line-height: 1.3;*/
-/*}*/
-
-/*!* ===================================================== *!*/
-/*!* ================== 5. HERO =========================== *!*/
-/*!* ===================================================== *!*/
-
-/*.hero {*/
-/*    padding: 80px 0 120px;*/
-/*}*/
-
-/*!* Заголовок - в одну строку *!*/
-/*.hero-title {*/
-/*    font-style: italic;*/
-/*    font-weight: 700;*/
-/*    font-size: clamp(64px, 8vw, 120px);*/
-/*    line-height: 1.05;*/
-/*    color: #100c35;*/
-/*    margin-bottom: 48px;*/
-/*    white-space: nowrap;*/
-/*    letter-spacing: -0.02em;*/
-/*}*/
-
-/*!* Контент: текст + кнопка *!*/
-
 /* ===================================================== */
-/* =============== 1. RESET (СБРОС СТИЛЕЙ) ============== */
+/* ================== 1. RESET (СБРОС СТИЛЕЙ) ============ */
 /* ===================================================== */
-
 /* Выбираем ВСЕ элементы на странице */
 * {
     margin: 0;                    /* Убираем все внешние отступы */
@@ -266,423 +21,1331 @@ body {
 }
 
 /* ===================================================== */
-/* ================== 3. СЕТКА ========================== */
+/* ================== 3. ОБЩИЙ КОНТЕЙНЕР ================ */
 /* ===================================================== */
 
-/* Главный контейнер для центрирования контента */
-.container {
-    max-width: 1920px;              /* Максимальная ширина контейнера */
-    margin: 0 auto;                 /* Центрируем по горизонтали (0 сверху/снизу, auto слева/справа) */
-    width: 100%;                    /* Ширина 100% от родителя */
-    padding: 0 192px;               /* Отступы слева и справа по 192px (сверху/снизу 0) */
+/* ✅ ГЛАВНЫЙ КОНТЕЙНЕР ДЛЯ ВЫРАВНИВАНИЯ ВСЕХ СЕКЦИЙ */
+.container-fixed {
+    width: 100%;                       /* Ширина 100% от окна браузера */
+    max-width: 1536px;                 /* Максимальная ширина 1536px */
+    margin: 0 auto;                    /* Центрируем по горизонтали */
+    padding: 0 192px;                  /* ✅ ОТСТУПЫ: слева и справа по 192px (как в макете) */
 }
 
 /* ===================================================== */
-/* ================== 4. HEADER ========================= */
+/* ================== 4. СЕТКА ========================== */
+/* ===================================================== */
+
+/* Внутренний контейнер (для header и hero) */
+.container {
+    max-width: 1536px;                 /* Максимальная ширина */
+    margin: 0 auto;                    /* Центрирование */
+    width: 100%;                       /* Ширина 100% */
+    padding: 0;                        /* ✅ Отступы уже в container-fixed */
+}
+
+/* ===================================================== */
+/* ================== 5. HEADER ========================= */
 /* ===================================================== */
 
 /* Шапка сайта */
 .header {
-    padding: 24px 0 20px;           /* Отступы: сверху 24px, слева/справа 0, снизу 20px */
-    /*border-bottom: 1px solid #E5E5E5; !* Линия-разделитель снизу (1px, сплошная, светло-серая) *!*/
+    padding: 24px 0 20px;              /* Отступы: сверху 24px, снизу 20px, слева/справа 0 (уже в container-fixed) */
 }
 
 /* -------- ПЕРВЫЙ РЯД -------- */
 
 /* Верхняя часть хедера (лого + меню + контакты) */
 .header-top {
-    display: flex;                  /* Включаем Flexbox для выравнивания элементов в ряд */
-    align-items: center;            /* Выравниваем элементы по вертикали (по центру) */
-    justify-content: space-between; /* Распределяем пространство между элементами */
-    gap: 40px;                      /* Расстояние между элементами 40px */
-    margin-bottom: 24px;            /* Отступ снизу 24px */
+    display: flex;                     /* Flexbox для выравнивания в ряд */
+    align-items: center;               /* Выравниваем по вертикали (по центру) */
+    justify-content: space-between;    /* Распределяем пространство */
+    gap: 40px;                         /* Расстояние между элементами */
+    margin-bottom: 24px;               /* Отступ снизу */
 }
 
 /* Логотип */
 .logo {
-    font-size: 38px;                /* Размер шрифта 38 пикселей */
-    font-weight: 700;               /* Жирность шрифта (700 = Bold) */
-    color: #100c35;                 /* Цвет текста (темно-синий) */
-    flex-shrink: 0;                 /* Запрещаем сжиматься (остаётся фиксированного размера) */
-    white-space: nowrap;            /* Запрещаем перенос текста на новую строку */
-    letter-spacing: -0.02em;        /* Межбуквенный интервал (чуть плотнее) */
+    font-size: 38px;                   /* Размер шрифта */
+    font-weight: 700;                  /* Жирность (Bold) */
+    color: #100c35;                    /* Цвет текста */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
+    white-space: nowrap;               /* Запрещаем перенос */
+    letter-spacing: -0.02em;           /* Межбуквенный интервал */
 }
 
 /* Навигация (меню) */
 .nav {
-    display: flex;                  /* Включаем Flexbox для ссылок в ряд */
-    gap: 28px;                      /* Расстояние между ссылками 28px */
-    flex: 1;                        /* Занимает всё свободное пространство */
+    display: flex;                     /* Flexbox для ссылок */
+    gap: 28px;                         /* Расстояние между ссылками */
+    flex: 1;                           /* Занимает свободное пространство */
 }
 
 /* Ссылки в навигации */
 .nav a {
-    text-decoration: none;          /* Убираем подчеркивание ссылок */
-    color: #100c35;                 /* Цвет текста (темно-синий) */
-    font-size: 15px;                /* Размер шрифта 15 пикселей */
-    font-weight: 500;               /* Жирность шрифта (500 = Medium) */
-    white-space: nowrap;            /* Запрещаем перенос текста */
-    transition: color 0.3s;         /* Плавное изменение цвета за 0.3 секунды */
+    text-decoration: none;             /* Убираем подчеркивание */
+    color: #100c35;                    /* Цвет текста */
+    font-size: 15px;                   /* Размер шрифта */
+    font-weight: 500;                  /* Жирность (Medium) */
+    white-space: nowrap;               /* Запрещаем перенос */
+    transition: color 0.3s;            /* Плавное изменение цвета */
 }
 
-/* Ссылки при наведении курсора */
+/* Ссылки при наведении */
 .nav a:hover {
-    color: #A80000;                  /* Цвет меняется на красный при наведении */
-    text-decoration-line: ;
+    color: #A80000;                    /* Красный цвет при наведении */
 }
 
 /* Контакты в хедере */
 .header-contacts {
-    display: flex;                  /* Включаем Flexbox для контактов в ряд */
-    gap: 40px;                      /* Расстояние между контактами 40px */
-    flex-shrink: 0;                 /* Запрещаем сжиматься */
+    display: flex;                     /* Flexbox для контактов */
+    gap: 40px;                         /* Расстояние между контактами */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
 }
 
-/* Один контакт (телефон или email + подпись) */
+/* Один контакт (телефон/email + подпись) */
 .contact-item {
-    display: flex;                  /* Включаем Flexbox для вертикального расположения */
-    flex-direction: column;         /* Элементы друг под другом (колонка) */
-    gap: 4px;                       /* Расстояние между телефоном и подписью 4px */
-    cursor: pointer;                /* Курсор превращается в "руку" при наведении */
+    display: flex;                     /* Flexbox для вертикального расположения */
+    flex-direction: column;            /* Элементы в колонку */
+    gap: 4px;                          /* Расстояние между телефоном и подписью */
+    cursor: pointer;                   /* Курсор "рука" */
 }
 
 /* Телефон и email */
 .contact-phone,
 .contact-email {
-    color: #A80000;                 /* Цвет текста (красный) */
-    font-size: 15px;                /* Размер шрифта 15 пикселей */
-    font-weight: 500;               /* Жирность шрифта (500 = Medium) */
-    white-space: nowrap;            /* Запрещаем перенос текста */
-    transition: color 0.3s;         /* Плавное изменение цвета за 0.3 секунды */
+    color: #A80000;                    /* Красный цвет */
+    font-size: 15px;                   /* Размер шрифта */
+    font-weight: 500;                  /* Жирность (Medium) */
+    white-space: nowrap;               /* Запрещаем перенос */
+    transition: color 0.3s;            /* Плавное изменение */
 }
 
-/* Телефон и email при наведении на весь контакт */
+/* Телефон/email при наведении */
 .contact-item:hover .contact-phone,
 .contact-item:hover .contact-email {
-    color: #100c35;                 /* Цвет меняется на темно-синий при наведении */
+    color: #100c35;                    /* Темно-синий при наведении */
 }
 
 /* Подпись контакта (отдел) */
 .contact-dept {
-    font-size: 13px;                /* Размер шрифта 13 пикселей (меньше основного) */
-    color: #666666;                 /* Цвет текста (серый) */
-    white-space: nowrap;            /* Запрещаем перенос текста */
+    font-size: 13px;                   /* Размер шрифта (меньше) */
+    color: #666666;                    /* Серый цвет */
+    white-space: nowrap;               /* Запрещаем перенос */
 }
 
 /* -------- ВТОРОЙ РЯД -------- */
 
 /* Нижняя часть хедера (каталог + поиск + корзина) */
 .header-bottom {
-    display: flex;                  /* Включаем Flexbox для элементов в ряд */
-    align-items: center;            /* Выравниваем элементы по вертикали (по центру) */
-    gap: 20px;                      /* Расстояние между элементами 20px */
+    display: flex;                     /* Flexbox для элементов */
+    align-items: center;               /* Выравниваем по вертикали */
+    gap: 40px;                         /* Расстояние между элементами */
 }
 
-/* Кнопки (общие стили для всех кнопок) */
+/* Кнопки (общие стили) */
 .btn {
-    display: flex;                  /* Включаем Flexbox для иконки и текста */
-    align-items: center;            /* Выравниваем по вертикали (по центру) */
-    justify-content: center;        /* Выравниваем по горизонтали (по центру) */
-    gap: 8px;                       /* Расстояние между иконкой и текстом 8px */
-
-    height: 48px;                   /* Высота кнопки 48 пикселей */
-    padding: 0 30px;                /* Отступы: сверху/снизу 0, слева/справа 20px */
-
-    background: #7B68EE;            /* Цвет фона (фиолетовый) */
-    color: white;                   /* Цвет текста (белый) */
-    border: none;                   /* Убираем границу */
-    border-radius: 5px;             /* Закругление углов 4 пикселя */
-
-    font-size: 16px;                /* Размер шрифта 16 пикселей */
-    font-weight: 600;               /* Жирность шрифта (600 = SemiBold) */
-    font-family: 'Inter', sans-serif; /* Шрифт Inter */
-
-    cursor: pointer;                /* Курсор превращается в "руку" */
-    transition: all 0.3s;           /* Плавное изменение всех свойств за 0.3 секунды */
+    display: flex;                     /* Flexbox для иконки и текста */
+    align-items: center;               /* Выравниваем по центру */
+    justify-content: center;           /* Выравниваем по горизонтали */
+    gap: 8px;                          /* Расстояние между иконкой и текстом */
+    height: 48px;                      /* Высота кнопки */
+    padding: 0 30px;                   /* Отступы слева/справа */
+    background: #7B68EE;               /* Фиолетовый фон */
+    color: white;                      /* Белый текст */
+    border: none;                      /* Без границы */
+    border-radius: 5px;                /* Закругление углов */
+    font-size: 16px;                   /* Размер шрифта */
+    font-weight: 600;                  /* Жирность (SemiBold) */
+    font-family: 'Inter', sans-serif;  /* Шрифт Inter */
+    cursor: pointer;                   /* Курсор "рука" */
+    transition: all 0.3s;              /* Плавное изменение всех свойств */
 }
 
-/* Кнопки при наведении курсора */
+/* Кнопки при наведении */
 .btn:hover {
-    background: #100c35;            /* Фон меняется на темно-синий */
-    transform: translateY(-1px);    /* Кнопка немного поднимается вверх (1px) */
+    background: #100c35;               /* Темно-синий фон */
+    transform: translateY(-1px);       /* Поднимаем на 1px */
 }
 
 /* Иконки внутри кнопок */
 .btn .btn-icon {
-    width: 18px;                    /* Ширина иконки 18 пикселей */
-    height: 18px;                   /* Высота иконки 18 пикселей */
-    flex-shrink: 0;                 /* Запрещаем иконке сжиматься */
+    width: 18px;                       /* Ширина иконки */
+    height: 18px;                      /* Высота иконки */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
 }
 
 /* Кнопка Каталог */
 .btn-catalog {
-    width: 168px;                   /* Фиксированная ширина 168 пикселей */
-    flex-shrink: 0;                 /* Запрещаем сжиматься */
+    width: 180px;                      /* Фиксированная ширина */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
+    height: 48px;                      /*фиксированая высота как у поиска*/
 }
 
 /* Кнопка Корзина */
 .btn-cart {
-    width: 168px;                   /* Фиксированная ширина 168 пикселей */
-    flex-shrink: 0;                 /* Запрещаем сжиматься */
+    width: 168px;                      /* Фиксированная ширина */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
+    height: 48px;                      /*фиксированая высота как у поиска*/
+    margin-left: 20px;                 /*отступ слева*/
 }
 
 /* Поиск */
 .search {
-    position: relative;             /* Относительное позиционирование (для иконки внутри) */
-    flex: 1;                        /* Занимает всё свободное пространство */
-    max-width: 680px;               /* Максимальная ширина 680 пикселей */
+    position: relative;                /* Относительное позиционирование */
+    flex: 2;                           /* Занимает свободное пространство */
+    max-width: 2000px;                  /* ✅ УВЕЛИЧЕНО: с 680px до 800px */
 }
 
 /* Поле ввода поиска */
 .search-input {
-    width: 100%;                    /* Ширина 100% от родителя */
-    height: 48px;                   /* Высота 48 пикселей */
-    padding: 0 48px 0 10px;         /* Отступы: сверху 0, справа 48px (для иконки), снизу 0, слева 16px */
-
-    border: 1px solid #E5E5E5;      /* Граница: 1px, сплошная, светло-серая */
-    border-radius: 4px;             /* Закругление углов 4 пикселя */
-
-    font-size: 15px;                /* Размер шрифта 15 пикселей */
-    font-family: 'Inter', sans-serif; /* Шрифт Inter */
-
-    transition: all 0.3s;           /* Плавное изменение всех свойств за 0.3 секунды */
-    background: #F5F5F7;            /* Цвет фона (светло-серый) */
+    width: 100%;                       /* Ширина 100% */
+    height: 48px;                      /* Высота */
+    padding: 0 48px 0 16px;            /* ✅ УВЕЛИЧЕНО: левый отступ с 10px до 16px */
+    border: 1px solid #E5E5E5;         /* Светло-серая граница */
+    border-radius: 4px;                /* Закругление */
+    font-size: 15px;                   /* Размер шрифта */
+    font-family: 'Inter', sans-serif;  /* Шрифт */
+    transition: all 0.3s;              /* Плавное изменение */
+    background: #F5F5F7;               /* Светло-серый фон */
 }
 
-/* Поле поиска в фокусе (когда кликнули) */
+/* Поле поиска в фокусе */
 .search-input:focus {
-    outline: none;                  /* Убираем стандартную рамку браузера */
-    border-color: #7B68EE;          /* Цвет границы меняется на фиолетовый */
-    background: #ffffff;            /* Фон меняется на белый */
+    outline: none;                     /* Убираем стандартную рамку */
+    border-color: #7B68EE;             /* Фиолетовая граница */
+    background: #ffffff;               /* Белый фон */
 }
 
-/* Текст-подсказка в поле поиска */
+/* Placeholder в поиске */
 .search-input::placeholder {
-    color: #999999;                 /* Цвет подсказки (серый) */
+    color: #999999;                    /* Серый цвет */
 }
 
 /* Иконка поиска (лупа) */
 .search-icon {
-    position: absolute;             /* Абсолютное позиционирование (внутри .search) */
-    right: 16px;                    /* Отступ справа 16 пикселей */
-    top: 50%;                       /* Позиция сверху 50% */
-    transform: translateY(-50%);    /* Сдвигаем на 50% высоты вверх (для центрирования) */
-    width: 20px;                    /* Ширина иконки 20 пикселей */
-    height: 20px;                   /* Высота иконки 20 пикселей */
-    color: #999999;                 /* Цвет иконки (серый) */
-    pointer-events: none;           /* Иконка не реагирует на клики (клик проходит сквозь) */
+    position: absolute;                /* Абсолютное позиционирование */
+    right: 16px;                       /* Отступ справа */
+    top: 50%;                          /* По вертикали по центру */
+    transform: translateY(-50%);       /* Сдвигаем на половину высоты */
+    width: 20px;                       /* Ширина */
+    height: 20px;                      /* Высота */
+    color: #999999;                    /* Серый цвет */
+    pointer-events: none;              /* Иконка не реагирует на клики */
 }
 
 /* Минимальная сумма заказа */
 .min-order {
-    display: flex;                  /* Включаем Flexbox для цены и текста в ряд */
-    align-items: center;            /* Выравниваем по вертикали (по центру) */
-    gap: 12px;                      /* Расстояние между ценой и текстом 12px */
-    padding: 0 32px;                /* Отступы слева и справа по 24px */
-    flex-shrink: 0;                 /* Запрещаем сжиматься */
-    /*border-left: 1px solid #E5E5E5; !* Линия слева (1px, сплошная, светло-серая) *!*/
-    /*border-right: 1px solid #E5E5E5; !* Линия справа (1px, сплошная, светло-серая) *!*/
+    display: flex;                     /* Flexbox для цены и текста */
+    align-items: center;               /* Выравниваем по центру */
+    gap: 20px;                         /* Расстояние */
+    padding: 0 40px;                   /* Отступы */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
+    /*margin-right: 40px;                !* добавила сдвинуть влево*!*/
 }
 
-/* Цена минимального заказа */
+/* Цена */
 .min-order-price {
-    font-size: 18px;                /* Размер шрифта 18 пикселей */
-    font-weight: 700;               /* Жирность шрифта (700 = Bold) */
-    color: #100c35;                 /* Цвет текста (темно-синий) */
-    white-space: nowrap;            /* Запрещаем перенос текста */
+    font-size: 18px;                   /* Размер шрифта */
+    font-weight: 700;                  /* Жирность (Bold) */
+    color: #100c35;                    /* Темно-синий */
+    white-space: nowrap;               /* Запрещаем перенос */
+    /*добавила для выравнивания*/
+    line-height: 1;                    /*добавила убрать лишнее пространство*/
+
 }
 
 /* Текст "минимальная сумма заказа" */
 .min-order-label {
-    font-size: 13px;                /* Размер шрифта 13 пикселей */
-    color: #666666;                 /* Цвет текста (серый) */
-    line-height: 1.3;               /* Высота строки 1.3 */
+    font-size: 13px;                   /* Размер шрифта */
+    color: #666666;                    /* Серый */
+    line-height: 1.3;                  /* Высота строки */
+    margin-top: 2px;                   /*добавили для выравнивания сдвинуть чуть вниз для центровки*/
 }
 
 /* ===================================================== */
-/* ================== 5. HERO =========================== */
+/* ================== 6. HERO SECTION =================== */
 /* ===================================================== */
 
-/* Главный экран (секция с заголовком) */
+/* Главный экран */
 .hero {
-    padding: 80px 0 120px;          /* Отступы: сверху 80px, слева/справа 0, снизу 120px */
+    padding: 80px 0 120px;             /* Отступы: сверху 80px, снизу 120px */
 }
 
 /* Заголовок "МЕРЧ ДЛЯ БИЗНЕСА" */
 .hero-title {
-    font-style: italic;             /* Курсивное начертание шрифта */
-    font-weight: 700;               /* Жирность шрифта (700 = Bold) */
-    font-size: clamp(125px, 8vw, 120px); /* Адаптивный размер: мин 64px, опт 8% от ширины экрана, макс 120px */
-    line-height: 1.05;              /* Высота строки 1.05 (плотнее для заголовков) */
-    color: #100c35;                 /* Цвет текста (темно-синий) */
-    margin-bottom: 48px;            /* Отступ снизу 48 пикселей */
-    white-space: nowrap;            /* Запрещаем перенос текста на новую строку */
-    letter-spacing: 0.01em;        /* Межбуквенный интервал (чуть плотнее) */
+    font-style: italic;                /* Курсив */
+    font-weight: 700;                  /* Жирность (Bold) */
+    font-size: clamp(125px, 8vw, 120px); /* Адаптивный размер */
+    line-height: 1.05;                 /* Высота строки */
+    color: #100c35;                    /* Темно-синий */
+    margin-bottom: 48px;               /* Отступ снизу */
+    white-space: nowrap;               /* Запрещаем перенос */
+    letter-spacing: 0.03em;           /* Межбуквенный интервал */
 }
 
 /* Контент: текст + кнопка */
 .hero-content {
-    display: flex;                  /* Включаем Flexbox для текста и кнопки в ряд */
-    justify-content: space-between; /* Распределяем пространство между элементами */
-    align-items: flex-start;        /* Выравниваем по верхнему краю */
-    gap: 40px;
-    font-weight: 600;              /* Расстояние между текстом и кнопкой 40px */
-    line-height: 0,2              /* Высота строки 1.05 (плотнее для заголовков) */
+    display: flex;                     /* Flexbox */
+    justify-content: space-between;    /* Распределяем пространство */
+    align-items: flex-start;           /* Выравниваем по верху */
+    gap: 40px;                         /* Расстояние между элементами */
+    font-weight: 600;                  /* Жирность */
+    line-height: 1.2;                  /* Высота строки */
 }
 
-/* Подзаголовок (описание) */
+/* Подзаголовок */
 .hero-subtitle {
-    font-size: 16px;                /* Размер шрифта 16 пикселей */
-    color: #333333;                 /* Цвет текста (темно-серый) */
-    max-width: 480px;               /* Максимальная ширина текста 480 пикселей */
-    line-height: 1.4;               /* Высота строки 1.6 (удобно для чтения) */
-    margin: 0;                      /* Убираем все отступы */
+    font-size: 16px;                   /* Размер шрифта */
+    color: #333333;                    /* Темно-серый */
+    max-width: 480px;                  /* Максимальная ширина */
+    line-height: 1.4;                  /* Высота строки */
+    margin: 0;                         /* Убираем отступы */
 }
 
 /* Кнопка "Оптом" */
 .btn-hero {
-    width: 380px;                   /* Фиксированная ширина 360 пикселей */
-    height: 72px;                   /* Фиксированная высота 72 пикселя */
-    padding: 0 26px;                /* Отступы слева и справа по 28px */
-    border-radius: 8px;             /* Закругление углов 8 пикселей */
-    flex-shrink: 0;                 /* Запрещаем сжиматься */
-    margin: 0;                      /* Убираем все отступы */
-    line-height: 1.5;
-    gap: 10px;
+    width: 380px;                      /* Фиксированная ширина */
+    height: 70px;                      /* Фиксированная высота */
+    padding: 0 32px;                   /* ✅ УВЕЛИЧЕНО: горизонтальные отступы */
+    border-radius: 8px;                /* Закругление */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
+    margin-left: 40px;                 /* ✅ ДОБАВЛЕНО: отступ слева от текста */
+    line-height: 1.5;                  /* Высота строки */
+    gap: 10px;                         /* Расстояние между иконкой и текстом */
 }
 
 /* Иконка в кнопке "Оптом" */
 .btn-hero .btn-icon {
-    width: 36px;                    /* Ширина иконки 36 пикселей */
-    height: 36px;                   /* Высота иконки 36 пикселей */
+    width: 36px;                       /* Ширина */
+    height: 36px;                      /* Высота */
 }
 
-/* Текст внутри кнопки "Оптом" */
+/* Текст внутри кнопки */
 .btn-text {
-    display: flex;                  /* Включаем Flexbox для текста в колонку */
-    flex-direction: column;         /* Элементы друг под другом (колонка) */
-    align-items: flex-start;        /* Выравниваем по левому краю */
-    text-align: left;               /* Выравнивание текста по левому краю */
+    display: flex;                     /* Flexbox */
+    flex-direction: column;            /* Колонка */
+    align-items: flex-start;           /* По левому краю */
+    text-align: left;                  /* Выравнивание */
 }
 
-/* Основной текст кнопки ("Оптом") */
+/* Основной текст ("Оптом") */
 .btn-text strong {
-    font-size: 17px;                /* Размер шрифта 17 пикселей */
-    font-weight: 700;               /* Жирность шрифта (700 = Bold) */
-    line-height: 1.2;               /* Высота строки 1.2 */
+    font-size: 17px;                   /* Размер */
+    font-weight: 700;                  /* Жирность (Bold) */
+    line-height: 1.2;                  /* Высота строки */
+    white-space: nowrap;
+
+
 }
 
-/* Подпись в кнопке ("Работаем с юр. лицами") */
+/* Подпись ("Работаем с юр. лицами") */
 .btn-text span {
-    font-size: 16px;                /* Размер шрифта 14 пикселей */
-    font-weight: 500;               /* Жирность шрифта (500 = Medium) */
-    opacity: 0.9;                   /* Прозрачность 90% (чуть светлее) */
-    line-height: 1.2;               /* Высота строки 1.2 */
+    font-size: 16px;                   /* Размер */
+    font-weight: 500;                  /* Жирность (Medium) */
+    opacity: 0.9;                      /* Прозрачность 90% */
+    line-height: 1.2;                  /* Высота строки */
+    white-space: nowrap;
 }
 
 /* ===================================================== */
-/* ================== 6. АДАПТИВ ======================== */
+/* ================== 7. BANNER SECTION ================ */
 /* ===================================================== */
 
-/* Большие экраны (меньше 1600px) */
+/* Секция баннера */
+.banner-form-section {
+    padding: 0;                        /* ✅ УБРАНО: отступы теперь в container-fixed */
+}
+
+
+/* Контейнер баннера */
+.banner-container {
+    position: relative;                /* Для абсолютного позиционирования */
+    width: 100%;                       /* Ширина 100% */
+    height: 158px;                     /* Фиксированная высота */
+    margin: 0 auto;                         /* ✅ УБРАНО: центрирование не нужно */
+    border-radius: 10px;               /* Закругление */
+    overflow: hidden;                 /* ✅ ИСПРАВЛЕНО: разрешаем фото не выходить за границы */
+    background: #333333;               /* Темно-серый фон */
+    max-width: 1536px;
+}
+
+/* Фоновое изображение */
+.banner-bg {
+    position: absolute;                    /* фиксируем относительно контейнера Абсолютное позиционирование */
+    top: 10px;                             /* Прижать к верху фиксированная позиция сверху*/
+    left: 150px;                           /* Прижать к левому краю фиксированная позиция слева*/
+    width: 100%;                           /* заполняет контейнер Ширина 100% */
+    height: 100%;                          /* заполняет контейнер Высота 100% */
+    /*  УВЕЛИЧИВАЕМ И СДВИГАЕМ ВЛЕВО */
+    background-position: left 800px;       /* точная позиция Сдвигаем влево (было center) */
+    background-repeat: no-repeat;          /* не повторять*/
+    background-size: 2500px auto;          /* фиксированный размер не меняется Ширина 2500px увеличили вместо 1536px */
+    /* ИЛИ через transform */
+    transform: scale(2.2);                 /* увелечение масштаба Уменьшить или увеличить */
+    /*transform-origin: left top;            !* для контроля точки масштабирования Масштабирование от левого верхнего угла *!*/
+    z-index: 1;
+    will-change: transform;                /* для еще большей стабильности Оптимизация производительности */
+
+}
+
+/* Изображение внутри banner-bg */
+.banner-bg img {
+    width: 100%;                       /* Ширина 100% */
+    height: 100%;                      /* Высота 100% */
+    object-fit: contain;               /* ✅ НЕ ОБРЕЗАТЬ - показать целиком */
+    object-position: center;           /* Центрировать */
+}
+
+/* Контент поверх фона */
+.banner-content {
+    position: absolute;                /* Абсолютное позиционирование */
+    top: 0;                            /* Прижать к верху */
+    left: 0;                           /* Прижать к левому краю */
+    width: 100%;                       /* Ширина 100% */
+    height: 100%;                      /* Высота 100% */
+    z-index: 2;                        /* ВЫШЕ фона */
+    display: flex;                     /* Flexbox */
+    justify-content: space-between;    /* Распределяем пространство */
+    align-items: center;               /* Выравниваем по центру */
+    padding: 0 40px;                   /* Внутренние отступы */
+}
+
+/* ЛЕВАЯ ЧАСТЬ: текстовые оферы */
+.banner-left {
+    display: flex;                     /* Flexbox */
+    flex-direction: column;            /* Колонка */
+    gap: 8px;                          /* Расстояние между элементами */
+}
+
+/* Заголовок "Оставьте заявку..." */
+.banner-title {
+    font-family: 'Inter', sans-serif;  /* Шрифт */
+    font-weight: 500;                  /* Жирность (Medium) */
+    font-size: 16px;                   /* Размер */
+    line-height: 1.3;                  /* Высота строки */
+    color: #ffffff;                    /* Белый */
+    margin: 0;                         /* Убираем отступы */
+    white-space: nowrap;               /* Запрещаем перенос */
+}
+
+/* Подзаголовок "Проконсультируем..." */
+.banner-subtitle {
+    font-family: 'Inter', sans-serif;  /* Шрифт */
+    font-weight: 400;                  /* Жирность (Regular) */
+    font-size: 13px;                   /* Размер */
+    color: #A4A4A4;                    /* Серый */
+    margin: 0;                         /* Убираем отступы */
+}
+
+/* ПРАВАЯ ЧАСТЬ: форма + чекбокс */
+.banner-form-wrapper {
+    display: flex;                     /* Flexbox */
+    flex-direction: column;            /* Колонка */
+    align-items: flex-start;           /* По левому краю */
+    gap: 8px;                          /* Расстояние */
+    margin-right: 250px;               /* Отступ справа */
+}
+
+/* Поля ввода и кнопка (в ряд) */
+.banner-form {
+    display: flex;                     /* Flexbox */
+    align-items: center;               /* По центру */
+    gap: 10px;                         /* Расстояние */
+}
+
+/* Поле ввода */
+.form-input {
+    width: 200px;                      /* Фиксированная ширина */
+    height: 40px;                      /* Фиксированная высота */
+    padding: 0 14px;                   /* Внутренние отступы */
+    border: none;                      /* Без границы */
+    border-radius: 5px;                /* Закругление */
+    font-family: 'Inter', sans-serif;  /* Шрифт */
+    font-weight: 500;                  /* Жирность (Medium) */
+    font-size: 13px;                   /* Размер */
+    color: #333333;                    /* Темно-серый */
+    background: #ffffff;               /* Белый фон */
+    transition: all 0.3s;              /* Плавное изменение */
+}
+
+/* Placeholder */
+.form-input::placeholder {
+    color: #333333;                    /* Темно-серый */
+}
+
+/* Поле в фокусе */
+.form-input:focus {
+    outline: none;                     /* Убираем рамку */
+    background: #f5f5f5;               /* Светло-серый фон */
+}
+
+/* Кнопка "Отправить" */
+.form-btn {
+    width: 100px;                      /* Фиксированная ширина */
+    height: 40px;                      /* Фиксированная высота */
+    border: 0.5px solid #ffffff;       /* Белая обводка */
+    border-radius: 5px;                /* Закругление */
+    font-family: 'Inter', sans-serif;  /* Шрифт */
+    font-weight: 500;                  /* Жирность (Medium) */
+    font-size: 13px;                   /* Размер */
+    color: #ffffff;                    /* Белый */
+    background: #333333;               /* Темно-серый фон */
+    cursor: pointer;                   /* Курсор "рука" */
+    transition: all 0.3s;              /* Плавное изменение */
+}
+
+/* Кнопка при наведении */
+.form-btn:hover {
+    background: transparent;           /* Прозрачный фон */
+    border-color: #ffffff;             /* Белая обводка */
+    color: #ffffff;                    /* Белый текст */
+}
+
+/* ЧЕКБОКС */
+.banner-checkbox {
+    display: flex;                     /* Flexbox */
+    align-items: center;               /* По центру */
+    gap: 8px;                          /* Расстояние */
+    cursor: pointer;                   /* Курсор "рука" */
+}
+
+/* Сам чекбокс */
+.banner-checkbox input[type="checkbox"] {
+    width: 20px;                       /* Ширина */
+    height: 20px;                      /* Высота */
+    flex-shrink: 0;                    /* Запрещаем сжиматься */
+    border: 1px solid #FFFFFF;         /* Белая обводка */
+    background: #333333;               /* Темно-серый фон */
+    border-radius: 4px;                /* Закругление */
+    cursor: pointer;                   /* Курсор */
+    appearance: none;                  /* Убираем стандартный стиль */
+    -webkit-appearance: none;          /* Для WebKit */
+    position: relative;                /* Для галочки */
+    transition: all 0.3s;              /* Плавное изменение */
+}
+
+/* Чекбокс в отмеченном состоянии */
+.banner-checkbox input[type="checkbox"]:checked {
+    background: #7B68EE;               /* Фиолетовый фон */
+    border-color: #7B68EE;             /* Фиолетовая обводка */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 14px;             /* Размер галочки */
+    background-position: center;       /* По центру */
+    background-repeat: no-repeat;      /* Не повторять */
+}
+
+/* Текст чекбокса */
+.checkbox-text {
+    font-family: 'Inter', sans-serif;  /* Шрифт */
+    font-weight: 400;                  /* Жирность (Regular) */
+    font-size: 12px;                   /* Размер */
+    color: #ffffff;                    /* Белый */
+}
+
+/* "персональных данных" - красный */
+.personal-data {
+    color: #A80000;                    /* Красный */
+}
+
+/* ===================================================== */
+/* ================== 8. SERVICE SECTION =============== */
+/* ===================================================== */
+
+/* Секция преимуществ */
+.service-section {
+    padding: 0;                      /* Убираем внешние отступы у секции */
+    margin-top: 20px;                /* Отступ сверху 20px от предыдущей секции */
+}
+
+/* Контейнер секции */
+.service-container {
+    position: relative;              /* Относительное позиционирование (для абсолютных дочерних элементов) */
+    width: 100%;                     /* Ширина 100% от родительского элемента */
+    max-width: 1536px;               /* Максимальная ширина контейнера 1536px */
+    height: 520px;                   /* Фиксированная высота 520px (как у фото) */
+    margin: 0 auto;                  /* Центрирование по горизонтали (0 сверху/снизу, auto слева/справа) */
+    border-radius: 12px;             /* Закругление углов 12 пикселей */
+    overflow: hidden;                /* Обрезать всё, что выходит за границы контейнера */
+}
+
+/* ✅ ФОТО КАК ФОН (1536×520px) */
+.service-bg {
+    position: absolute;              /* Абсолютное позиционирование (относительно родителя с position: relative) */
+    top: 0;                          /* Прижать к верхнему краю */
+    left: 0;                         /* Прижать к левому краю */
+    width: 100%;                     /* Ширина 100% от родителя */
+    height: 100%;                    /* Высота 100% от родителя */
+    z-index: 1;                      /* Z-индекс 1 (нижний слой, под контентом) */
+}
+
+.service-bg-img {
+    width: 100%;                     /* Ширина изображения 100% от родителя */
+    height: 100%;                    /* Высота изображения 100% от родителя */
+    object-fit: cover;               /* Заполнить контейнер, обрезая лишнее (сохраняя пропорции) */
+    object-position: 80% center;     /* Позиция фото: 80% от левого края, по центру вертикали (чтобы домовенок был виден) */
+    display: block;                  /* Блочный элемент (убирает лишние отступы снизу) */
+}
+
+/* Контент поверх фона */
+.service-content {
+    position: relative;              /* Относительное позиционирование */
+    z-index: 2;                      /* Z-индекс 2 (ВЫШЕ фона, поверх него) */
+    height: 100%;                    /* Высота 100% от родителя */
+    padding: 40px 192px 40px 40px;   /* Отступы: сверху 40px, справа 192px (место для фото), снизу 40px, слева 40px */
+}
+
+/* Левая часть: кнопки */
+.service-left {
+    max-width: 800px;                /* Максимальная ширина левой части 800px */
+    display: flex;                   /* Включаем Flexbox */
+    flex-direction: column;          /* Расположить элементы вертикально (колонка) */
+    gap: 24px;                       /* Расстояние между элементами 24 пикселя */
+}
+
+/* Заголовок */
+.service-title {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter, запасной sans-serif */
+    font-weight: 600;                /* Жирность шрифта 600 (SemiBold) */
+    font-size: 30px;                 /* Размер шрифта 30 пикселей */
+    line-height: 1.3;                /* Межстрочное расстояние 1.3 */
+    color: #333333;                  /* Цвет текста тёмно-серый #333333 */
+    margin: 0;                       /* Убрать все внешние отступы */
+}
+
+/* СЕТКА КНОПОК */
+.service-buttons {
+    display: flex;                   /* Включаем Flexbox */
+    flex-direction: column;          /* Расположить элементы вертикально (колонка) */
+    gap: 20px;                       /* Расстояние между рядами кнопок 20 пикселей */
+}
+
+/* Ряды кнопок */
+.btn-row {
+    display: flex;                   /* Включаем Flexbox */
+    gap: 20px;                       /* Расстояние между кнопками в ряду 20 пикселей */
+}
+
+/* Кнопка преимущества */
+.service-btn {
+    display: flex;                   /* Включаем Flexbox */
+    align-items: center;             /* Выровнять элементы по вертикали (по центру) */
+    gap: 10px;                       /* Расстояние между иконкой и текстом 10 пикселей */
+    height: 42px;                    /* Фиксированная высота кнопки 42 пикселя */
+    padding: 9px 11px 9px 11px;      /* Внутренние отступы: сверху 9, справа 11, снизу 9, слева 11 */
+    background: #FFFFFF;             /* Цвет фона белый #FFFFFF */
+    border-radius: 6px;              /* Закругление углов 6 пикселей */
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 500;                /* Жирность шрифта 500 (Medium) */
+    font-size: 14px;                 /* Размер шрифта 14 пикселей */
+    color: #333333;                  /* Цвет текста тёмно-серый #333333 */
+    white-space: nowrap;             /* Запретить перенос текста на новую строку */
+    transition: all 0.3s;            /* Плавное изменение всех свойств за 0.3 секунды */
+    cursor: pointer;                 /* Курсор "рука" при наведении */
+    border: none;                    /* Убрать границу */
+    text-decoration: none;           /* Убрать подчеркивание */
+}
+
+/* Эффект при наведении на кнопку преимущества */
+.service-btn:hover {
+    background: #f5f5f5;             /* Фон светло-серый #f5f5f5 при наведении */
+    transform: translateY(-2px);     /* Поднять кнопку на 2 пикселя вверх */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Добавить тень */
+}
+
+/* Иконка внутри кнопки */
+.service-btn .btn-icon {
+    width: 24px;                     /* Ширина иконки 24 пикселя */
+    height: 24px;                    /* Высота иконки 24 пикселя */
+    flex-shrink: 0;                  /* Запретить иконке сжиматься */
+    color: #333333;                  /* Цвет иконки тёмно-серый #333333 */
+}
+
+/* Текст внутри кнопки */
+.service-btn .btn-text {
+    display: inline;                 /* Встроенный элемент */
+    font-size: 14px;                 /* Размер шрифта 14 пикселей */
+}
+
+/* ВЫДЕЛЕННЫЙ ТЕКСТ (фиолетовый) */
+.text-highlight {
+    color: #7B68EE;                  /* Цвет текста фиолетовый #7B68EE */
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 500;                /* Жирность шрифта 500 (Medium) */
+    font-size: 14px;                 /* Размер шрифта 14 пикселей */
+}
+
+/* Размеры кнопок */
+.btn-1 { width: 260px; }             /* Ширина кнопки 1: 260 пикселей */
+.btn-2 { width: 410px; }             /* Ширина кнопки 2: 410 пикселей */
+.btn-3 { width: 420px; }             /* Ширина кнопки 3: 420 пикселей */
+.btn-4 { width: 380px; }             /* Ширина кнопки 4: 380 пикселей */
+.btn-5 { width: 395px; }             /* Ширина кнопки 5: 395 пикселей */
+.btn-6 { width: 440px; }             /* Ширина кнопки 6: 440 пикселей */
+.btn-7 { width: 330px; }             /* Ширина кнопки 7: 330 пикселей */
+.btn-8 { width: 470px; }             /* Ширина кнопки 8: 470 пикселей */
+
+/* Кнопка "Получить консультацию" */
+.btn-consultation {
+    display: flex;                   /* Включаем Flexbox */
+    align-items: center;             /* Выровнять элементы по вертикали (по центру) */
+    justify-content: flex-start;     /* Выровнять элементы по горизонтали (слева) */
+    width: 250px;                    /* Фиксированная ширина 250 пикселей */
+    height: 40px;                    /* Фиксированная высота 40 пикселей */
+    padding: 0 16px 0 16px;          /* Внутренние отступы: сверху 0, справа 16, снизу 0, слева 16 */
+    background: #7B68EE;             /* Цвет фона фиолетовый #7B68EE */
+    border: none;                    /* Убрать границу */
+    border-radius: 6px;              /* Закругление углов 6 пикселей */
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 600;                /* Жирность шрифта 600 (SemiBold) */
+    font-size: 14px;                 /* Размер шрифта 14 пикселей */
+    color: #ffffff;                  /* Цвет текста белый #ffffff */
+    cursor: pointer;                 /* Курсор "рука" при наведении */
+    transition: all 0.3s;            /* Плавное изменение всех свойств за 0.3 секунды */
+}
+
+/* Стрелка в кнопке "Получить консультацию" */
+.btn-consultation .btn-arrow {
+    width: 24px;                     /* Ширина области стрелки 24 пикселя */
+    height: 24px;                    /* Высота области стрелки 24 пикселя */
+    margin-left: 15px;               /* Отступ слева 15 пикселей */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 6h7m0 0l-3-3m3 3l-3 3'/%3E%3C/svg%3E"); /* SVG код закруглённой стрелки в base64 */
+    background-size: contain;        /* Вписать стрелку в область */
+    background-position: center;     /* Позиционировать по центру */
+    background-repeat: no-repeat;    /* Не повторять изображение */
+}
+
+/* Эффект при наведении на кнопку "Получить консультацию" */
+.btn-consultation:hover {
+    background: #100c35;             /* Фон тёмно-синий #100c35 при наведении */
+    transform: translateX(5px);      /* Сдвинуть кнопку на 5 пикселей вправо */
+}
+
+/* ===================================================== */
+/* ================== 9. АДАПТИВНОСТЬ =================== */
+/* ===================================================== */
+
+/* Планшет большой (меньше 1600px) */
 @media (max-width: 1600px) {
-    .container {
-        padding: 0 120px;           /* Уменьшаем отступы до 120px */
+    .container-fixed {
+        padding: 0 80px;               /* ✅ УМЕНЬШАЕМ: с 192px до 80px */
+    }
+
+    .search {
+        max-width: 600px;              /* Уменьшаем поиск */
     }
 }
 
-/* Планшет большой (меньше 1400px) */
+/* Планшет (меньше 1400px) */
 @media (max-width: 1400px) {
-    .container {
-        padding: 0 80px;            /* Уменьшаем отступы до 80px */
-    }
-
     .nav {
-        gap: 24px;                  /* Уменьшаем расстояние между ссылками */
+        gap: 24px;                     /* Уменьшаем расстояние */
     }
 
     .nav a {
-        font-size: 14px;            /* Уменьшаем размер шрифта ссылок */
+        font-size: 14px;               /* Уменьшаем шрифт */
     }
 
     .header-contacts {
-        gap: 30px;                  /* Уменьшаем расстояние между контактами */
+        gap: 30px;                     /* Уменьшаем расстояние */
     }
 
     .contact-phone,
     .contact-email {
-        font-size: 14px;            /* Уменьшаем размер шрифта контактов */
+        font-size: 14px;               /* Уменьшаем шрифт */
     }
 
     .hero-title {
-        font-size: clamp(56px, 7vw, 96px); /* Уменьшаем размер заголовка */
+        font-size: clamp(56px, 7vw, 96px); /* Уменьшаем заголовок */
     }
 }
 
-/* Планшет (меньше 1200px) */
+/* Планшет маленький (меньше 1200px) */
 @media (max-width: 1200px) {
-    .container {
-        padding: 0 40px;            /* Уменьшаем отступы до 40px */
-    }
-
     .hero-title {
-        font-size: clamp(48px, 8vw, 80px); /* Уменьшаем размер заголовка */
-        white-space: normal;        /* Разрешаем перенос текста */
-    }
-
-    .header-top {
-        gap: 30px;                  /* Уменьшаем расстояние между элементами */
-    }
-
-    .nav {
-        gap: 20px;                  /* Уменьшаем расстояние между ссылками */
-    }
-
-    .header-contacts {
-        gap: 25px;                  /* Уменьшаем расстояние между контактами */
+        font-size: clamp(48px, 8vw, 80px); /* Уменьшаем */
+        white-space: normal;           /* Разрешаем перенос */
     }
 
     .search {
-        max-width: 500px;           /* Уменьшаем максимальную ширину поиска */
+        max-width: 500px;              /* Уменьшаем */
     }
 }
 
 /* Мобильный (меньше 968px) */
 @media (max-width: 968px) {
-    .container {
-        padding: 0 20px;            /* Уменьшаем отступы до 20px */
+    .container-fixed {
+        padding: 0 20px;               /* ✅ УМЕНЬШАЕМ: с 80px до 20px */
     }
 
     .header {
-        padding: 16px 0;            /* Уменьшаем отступы хедера */
+        padding: 16px 0;               /* Уменьшаем */
     }
 
     .header-top {
-        flex-direction: column;     /* Элементы друг под другом (вертикально) */
-        align-items: flex-start;    /* Выравниваем по левому краю */
-        gap: 20px;                  /* Уменьшаем расстояние между элементами */
-        margin-bottom: 16px;        /* Уменьшаем отступ снизу */
+        flex-direction: column;        /* Вертикально */
+        align-items: flex-start;       /* По левому краю */
+        gap: 20px;                     /* Уменьшаем */
+        margin-bottom: 16px;           /* Уменьшаем */
     }
 
     .nav {
-        flex-wrap: wrap;            /* Разрешаем перенос ссылок на новую строку */
-        gap: 15px;                  /* Уменьшаем расстояние между ссылками */
+        flex-wrap: wrap;               /* Разрешаем перенос */
+        gap: 15px;                     /* Уменьшаем */
     }
 
     .header-contacts {
-        flex-wrap: wrap;            /* Разрешаем перенос контактов на новую строку */
-        gap: 15px;                  /* Уменьшаем расстояние между контактами */
+        flex-wrap: wrap;               /* Разрешаем перенос */
+        gap: 15px;                     /* Уменьшаем */
     }
 
     .header-bottom {
-        flex-wrap: wrap;            /* Разрешаем перенос элементов на новую строку */
+        flex-wrap: wrap;               /* Разрешаем перенос */
     }
 
     .search {
-        order: 3;                   /* Перемещаем поиск на 3-е место (вниз) */
-        max-width: 100%;            /* Ширина 100% */
-        width: 100%;                /* Ширина 100% */
+        order: 3;                      /* Перемещаем вниз */
+        max-width: 100%;               /* На всю ширину */
+        width: 100%;                   /* На всю ширину */
     }
 
     .min-order {
-        display: none;              /* Скрываем минимальную
+        display: none;                 /* Скрываем */
+    }
+
+    .hero {
+        padding: 40px 0 60px;          /* Уменьшаем */
+    }
+
+    .hero-content {
+        flex-direction: column;        /* Вертикально */
+        gap: 30px;                     /* Уменьшаем */
+    }
+
+    .btn-hero {
+        width: 100%;                   /* На всю ширину */
+        max-width: 380px;              /* Но не больше 380px */
+        margin-left: 0;                /* Убираем отступ */
+    }
+
+    /* Баннер на мобильном */
+    .banner-container {
+        height: auto;                  /* Автоматическая высота */
+        min-height: 300px;             /* Минимальная высота */
+    }
+
+    .banner-content {
+        position: relative;            /* Относительное */
+        flex-direction: column;        /* Вертикально */
+        padding: 20px;                 /* Уменьшаем */
+        gap: 20px;                     /* Уменьшаем */
+        align-items: flex-start;       /* По левому краю */
+    }
+
+    .banner-left {
+        width: 100%;                   /* На всю ширину */
+    }
+
+    .banner-form-wrapper {
+        width: 100%;                   /* На всю ширину */
+        margin-right: 0;               /* Убираем отступ */
+    }
+
+    .banner-form {
+        flex-direction: column;        /* Вертикально */
+        width: 100%;                   /* На всю ширину */
+    }
+
+    .form-input,
+    .form-btn {
+        width: 100%;                   /* На всю ширину */
+    }
+
+    /* Сервис на мобильном */
+    .service-section {
+        margin-top: 20px;              /* Отступ */
+        padding: 40px 0;               /* Отступы */
+    }
+
+    .service-container {
+        height: auto;                  /* Автоматическая */
+        min-height: 800px;             /* Минимальная */
+    }
+
+    .service-content {
+        flex-direction: column;        /* Вертикально */
+        padding: 30px;                 /* Уменьшаем */
+    }
+
+    .service-left {
+        max-width: 100%;               /* На всю ширину */
+        width: 100%;                   /* На всю ширину */
+    }
+
+    .btn-row {
+        flex-direction: column;        /* Вертикально */
+        gap: 12px;                     /* Уменьшаем */
+    }
+
+    .service-btn {
+        width: 100% !important;        /* На всю ширину */
+    }
+
+    .service-mascot {
+        width: 100%;                   /* На всю ширину */
+        height: 300px;                 /* Фиксированная высота */
+        margin-top: 30px;              /* Отступ сверху */
+        justify-content: center;       /* По центру */
+    }
+}
+
+/* Маленький мобильный (меньше 640px) */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: clamp(36px, 10vw, 64px); /* Ещё меньше */
+    }
+
+    .service-title {
+        font-size: 24px;               /* Уменьшаем */
+    }
+
+    .btn-consultation {
+        width: 100%;                   /* На всю ширину */
+        max-width: 250px;              /* Но не больше */
+    }
+}
+
+/* ===================================================== */
+/* ================== 10. РЕАЛИЗОВАННЫЕ ПРОЕКТЫ ======== */
+/* ===================================================== */
+
+/* Секция реализованных проектов */
+.projects-section {
+    padding: 120px 0 0 0;          /* ✅ ОТСТУП: сверху 120px, слева/справа/снизу 0 */
+    width: 100%;                   /* Ширина 100% */
+}
+
+/* Контейнер секции */
+.projects-container {
+    /*position: relative;            !* Для абсолютного позиционирования *!*/
+    /*width: 100%;                   !* Ширина 100% от родителя *!*/
+    max-width: 1920px;             /* ✅ МАКСИМАЛЬНАЯ ширина 1536px */
+    /*height: 695px;                 !* ✅ ФИКСИРОВАННАЯ высота 695px *!*/
+    /*margin: 0 auto;                !* Центрирование по горизонтали *!*/
+    padding: 0;                      /* Отступы слева/справа 192px (как в container-fixed) */
+}
+
+/* ===================================================== */
+/* ЗАГОЛОВОК СЕКЦИИ */
+/* ===================================================== */
+
+/* Обёртка заголовка */
+.projects-header {
+    display: flex;                 /* Flexbox для заголовка и подзаголовка */
+    flex-direction: column;        /* Элементы в колонку */
+    align-items: center;           /* Выравниваем по центру */
+    margin-bottom: 70px;           /* ✅ ОТСТУП до фото: 70px */
+}
+
+/* Главный заголовок */
+.projects-title {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 1000;              /* ✅ Black (900) - самый жирный */
+    font-style: italic;            /* ✅ Italic - курсив */
+    font-size: 80px;               /* Размер 50px */
+    line-height: 1.2;              /* Высота строки */
+    text-transform: uppercase;     /* Заглавные буквы */
+    letter-spacing: -0.01em;       /* Межбуквенный интервал */
+    margin: 0;                     /* Убираем отступы */
+    padding: 0 576px;              /* ОТСТУПЫ: слева и справа по 576px */
+    text-align: center;            /* Центрирование */
+    white-space: nowrap;               /* Запрещаем перенос */
+}
+
+}
+
+/* Слово "РЕАЛИЗОВАННЫЕ" - чёрное */
+.title-black {
+    color: #100c35;                /* ✅ Тёмно-серый цвет */
+}
+
+/* Слово "ПРОЕКТЫ" - фиолетовое */
+.title-purple {
+    color: #7B68EE;                /* ✅ Фиолетовый цвет */
+    margin-left: 10px;             /* Отступ между словами */
+}
+
+/* Подзаголовок "Смотреть портфолио" */
+.projects-subtitle {
+    display: flex;                 /* Flexbox для текста и стрелки */
+    align-items: center;           /* Выравниваем по центру */
+    justify-content: center;       /* Центрируем */
+    gap: 8px;                      /* Расстояние между текстом и стрелкой */
+
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 800;              /* ✅ Semi Bold (600) */
+    font-size: 30px;               /* ✅ Размер 20px */
+    color: #333333;                /* ✅ Тёмно-серый цвет */
+
+    text-decoration: none;         /* Убираем подчеркивание ссылки */
+    margin-top: 15px;              /* ✅ ОТСТУП от заголовка: 15px */
+
+    cursor: pointer;               /* Курсор "рука" */
+    transition: all 0.3s;          /* Плавное изменение */
+}
+
+/* Подзаголовок при наведении */
+.projects-subtitle:hover {
+    color: #7B68EE;                /* Фиолетовый при наведении */
+    transform: translateX(5px);    /* Сдвиг вправо */
+}
+
+
+/* Стрелка "Смотреть портфолио" */
+.arrow-icon {
+    width: 50px;
+    height: 35px;
+    flex-shrink: 0;
+    margin-left: 12px;
+
+    /* ✅ ПОЛНОСТЬЮ НОВЫЙ SVG БЕЗ ЦВЕТОВ */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* ✅ ПЛАВНЫЙ ПЕРЕХОД ЦВЕТА */
+    transition: all 0.3s;
+}
+
+/* ✅ ПРИ НАВЕДЕНИИ - меняем фон стрелки */
+.projects-subtitle:hover .arrow-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237B68EE' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+}
+
+/* ===================================================== */
+/* ГАЛЕРЕЯ ПРОЕКТОВ */
+/* ===================================================== */
+
+/* Контейнер галереи */
+.projects-gallery {
+    display: flex;                 /* Flexbox для фото */
+    gap: 20px;                     /* ✅ РАССТОЯНИЕ между фото: 20px */
+    justify-content: center;       /* Центрируем */
+    align-items: center;           /* Выравниваем по центру */
+
+}
+
+/* Отдельный проект */
+.project-item {
+    position: relative;            /* Для оверлея и позиционирования */
+    display: block;                /* Блочный элемент */
+    border-radius: 12px;           /* Закругление углов */
+    overflow: hidden;              /* Обрезаем всё за границами */
+    cursor: pointer;               /* Курсор "рука" */
+    transition: all 0.3s;          /* Плавное изменение */
+}
+
+/* Фото проекта */
+.project-img {
+    display: block;                /* Блочный элемент */
+    width: 100%;                   /* Ширина 100% */
+    height: 100%;                  /* Высота 100% */
+    object-fit: cover;             /* Заполняет контейнер */
+    object-position: center;       /* Центрируем фото */
+    transition: transform 0.3s;    /* Плавное увеличение */
+}
+
+/* Проект 1: 940×544px */
+.project-1 {
+    width: 600px;                  /* ✅ ФИКСИРОВАННАЯ ширина */
+    height: 544px;                 /* ✅ ФИКСИРОВАННАЯ высота */
+    flex-shrink: 0;
+}
+
+/* Проект 2: 958×544px */
+.project-2 {
+    width: 600px;                  /* ✅ ФИКСИРОВАННАЯ ширина */
+    height: 544px;                 /* ✅ ФИКСИРОВАННАЯ высота */
+    flex-shrink: 0;
+}
+
+/* Оверлей при наведении */
+.project-overlay {
+    position: absolute;            /* Абсолютное позиционирование */
+    top: 0;                        /* Прижать к верху */
+    left: 0;                       /* Прижать к левому краю */
+    width: 100%;                   /* Ширина 100% */
+    height: 100%;                  /* Высота 100% */
+
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный фон */
+    display: flex;                 /* Flexbox для текста */
+    align-items: center;           /* По центру */
+    justify-content: center;       /* По центру */
+
+    opacity: 0;                    /* Скрыт по умолчанию */
+    transition: opacity 0.3s;      /* Плавное появление */
+}
+
+/* Название проекта */
+.project-name {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 600;              /* Semi Bold */
+    font-size: 24px;               /* Размер */
+    color: #ffffff;                /* Белый текст */
+    text-align: center;            /* Центрирование */
+}
+
+/* При наведении на проект */
+.project-item:hover {
+    transform: translateY(-5px);   /* Поднимаем на 5px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;                    /* Показываем оверлей */
+}
+
+.project-item:hover .project-img {
+    transform: scale(1.05);        /* Увеличиваем фото на 5% */
+}
+
+/* ===================================================== */
+/* АДАПТИВНОСТЬ */
+/* ===================================================== */
+
+/* Планшет большой (меньше 1600px) */
+@media (max-width: 1600px) {
+    .projects-container {
+        padding: 0 80px;           /* Уменьшаем отступы */
+    }
+
+    .projects-title {
+        padding: 0 300px;          /* Уменьшаем отступы заголовка */
+        font-size: 40px;           /* Уменьшаем шрифт */
+    }
+
+    .project-1,
+    .project-2 {
+        width: 100%;               /* На всю ширину */
+        max-width: 700px;          /* Но не больше 700px */
+    }
+}
+
+/* Планшет (меньше 1400px) */
+@media (max-width: 1400px) {
+    .projects-title {
+        padding: 0 200px;          /* Уменьшаем отступы */
+        font-size: 36px;           /* Уменьшаем шрифт */
+    }
+
+    .projects-gallery {
+        flex-direction: column;    /* Фото в колонку */
+        gap: 30px;                 /* Увеличиваем расстояние */
+    }
+
+    .project-1,
+    .project-2 {
+        width: 100%;               /* На всю ширину */
+        max-width: 600px;          /* Но не больше 600px */
+    }
+}
+
+/* Мобильный (меньше 968px) */
+@media (max-width: 968px) {
+    .projects-section {
+        padding: 80px 0 0 0;       /* Уменьшаем отступ сверху */
+    }
+
+    .projects-container {
+        padding: 0 20px;           /* Минимальные отступы */
+        height: auto;              /* Автоматическая высота */
+    }
+
+    .projects-title {
+        padding: 0 20px;           /* Минимальные отступы */
+        font-size: 28px;           /* Уменьшаем шрифт */
+        line-height: 1.3;          /* Увеличиваем высоту строки */
+    }
+
+    .projects-subtitle {
+        font-size: 16px;           /* Уменьшаем шрифт */
+    }
+
+    .projects-gallery {
+        flex-direction: column;    /* Фото в колонку */
+        gap: 20px;                 /* Расстояние */
+    }
+
+    .project-1,
+    .project-2 {
+        width: 100%;               /* На всю ширину */
+        height: auto;              /* Автоматическая высота */
+    }
+}
+
+/* ===================================================== */
+/* ================== 11. ТАРГЕТ СЕКЦИЯ =============== */
+/* ===================================================== */
+
+/* Секция: Для кого и для каких целей */
+.targets-section {
+    padding: 120px 0 0 0;          /* ОТСТУП сверху 120px (от предыдущей секции) */
+    width: 100%;                   /* Ширина 100% от окна браузера */
+}
+
+/* Контейнер секции */
+.targets-container {
+    position: relative;            /* Относительное позиционирование */
+    width: 100%;                   /* Ширина 100% от родителя */
+    max-width: 1536px;             /* Максимальная ширина 1536px */
+    height: 300px;                 /* Фиксированная высота 300px */
+    margin: 0 auto;                /* Центрирование по горизонтали */
+    padding: 0 192px;              /* Отступы слева/справа 192px (как в container-fixed) */
+}
+
+/* Обёртка для двух прямоугольников */
+.targets-wrapper {
+    display: flex;                 /* Включаем Flexbox для размещения в ряд */
+    gap: 20px;                     /* РАССТОЯНИЕ между прямоугольниками: 20px */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: stretch;          /* Растягиваем по высоте */
+}
+
+/* Прямоугольник (общие стили для обоих) */
+.target-box {
+    position: relative;            /* Относительное позиционирование (для логотипа) */
+    width: 758px;                  /* ФИКСИРОВАННАЯ ширина 758px */
+    height: 300px;                 /* ФИКСИРОВАННАЯ высота 300px */
+    background: #EEEEEE;           /* ЦВЕТ ФОНА: светло-серый #EEEEEE */
+    border-radius: 10px;           /* ЗАКРУГЛЕНИЕ углов 10 пикселей */
+    padding: 30px 40px 0 40px;     /* ОТСТУПЫ: сверху 30px, справа 40px, снизу 0, слева 40px */
+    overflow: hidden;              /* Обрезаем всё, что выходит за границы */
+}
+
+/* Заголовок в прямоугольнике */
+.target-title {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter, запасной sans-serif */
+    font-weight: 700;              /* Жирность шрифта 700 (Bold) */
+    font-size: 33px;               /* Размер шрифта 33 пикселя */
+    color: #100C35;                /* ЦВЕТ текста: тёмно-синий #100C35 */
+    line-height: 1.3;              /* Межстрочное расстояние 1.3 */
+    margin: 0;                     /* Убираем все внешние отступы */
+    margin-bottom: 73px;           /* ОТСТУП снизу до подзаголовка: 52px (для первого) */
+    text-align: left;              /* Выравнивание текста по левому краю */
+}
+
+/* Список (подзаголовок) */
+.target-list {
+    list-style: none;              /* Убираем маркеры списка (точки) */
+    margin: 0;                     /* Убираем внешние отступы */
+    padding: 0;                    /* Убираем внутренние отступы */
+    max-width: 400px;              /* Максимальная ширина списка */
+    /*margin-bottom: 52px;           !* ОТСТУП снизу до подзаголовка: 52px (для первого) *!*/
+}
+
+/* Элемент списка */
+.target-list li {
+    font-family: 'Inter', sans-serif; /* Шрифт Inter */
+    font-weight: 500;              /* Жирность шрифта 500 (Medium) */
+    font-size: 15px;               /* Размер шрифта 15 пикселей */
+    color: #333333;                /* Цвет текста: тёмно-серый #333333 */
+    line-height: 10px;             /* МЕЖСТРОЧНОЕ расстояние 10 пикселей */
+    margin-bottom: 10px;           /* Отступ снизу между элементами */
+    text-align: left;              /* Выравнивание по левому краю */
+}
+
+/* Последний элемент списка (убираем отступ) */
+.target-list li:last-child {
+    margin-bottom: 0;              /* Убираем отступ снизу у последнего элемента */
+}
+
+/* Логотип (справа в прямоугольнике) */
+.target-logo {
+    position: absolute;            /* Абсолютное позиционирование */
+    top: 0;                        /* Прижать к верхнему краю */
+    right: 0;                   /* Отступ справа 40 пикселей */
+    width: auto;                   /* Автоматическая ширина (сохраняет пропорции) */
+    height: 100%;                  /* Высота 100% от родителя */
+    object-fit: contain;           /* Заполнить контейнер, сохраняя пропорции */
+    object-position: right center; /* Позиция: справа по центру */
+    z-index: 1;                    /* Z-индекс 1 (ниже текста, но на фоне) */
+    opacity: 0.6;                  /* Прозрачность 60% (чтобы не отвлекал) */
+}
+
+/* ВТОРОЙ ПРЯМОУГОЛЬНИК: корректировка отступов */
+.target-right .target-title {
+    margin-bottom: 31px;           /* ОТСТУП снизу до подзаголовка: 31px (для второго) */
+    /*margin-top: 30px;*/
+
+}
+
+/* ===================================================== */
+/* АДАПТИВНОСТЬ */
+/* ===================================================== */
+
+/* Планшет большой (меньше 1600px) */
+@media (max-width: 1600px) {
+    .targets-container {
+        padding: 0 80px;           /* Уменьшаем отступы контейнера */
+    }
+
+    .target-box {
+        width: calc(50% - 10px);   /* Ширина 50% минус половина gap */
+        max-width: 600px;          /* Максимальная ширина */
+    }
+}
+
+/* Планшет (меньше 1400px) */
+@media (max-width: 1400px) {
+    .targets-wrapper {
+        flex-direction: column;    /* Размещаем прямоугольники в колонку */
+        gap: 30px;                 /* Увеличиваем расстояние между ними */
+    }
+
+    .target-box {
+        width: 100%;               /* Ширина 100% */
+        height: auto;              /* Автоматическая высота */
+        min-height: 250px;         /* Минимальная высота */
+    }
+
+    .target-logo {
+        right: 20px;               /* Уменьшаем отступ справа */
+        max-width: 200px;          /* Ограничиваем ширину логотипа */
+    }
+}
+
+/* Мобильный (меньше 968px) */
+@media (max-width: 968px) {
+    .targets-section {
+        padding: 80px 0 0 0;       /* Уменьшаем отступ сверху */
+    }
+
+    .targets-container {
+        padding: 0 20px;           /* Минимальные отступы контейнера */
+        height: auto;              /* Автоматическая высота */
+    }
+
+    .target-box {
+        padding: 25px 30px 0 30px; /* Уменьшаем отступы внутри */
+        min-height: 200px;         /* Минимальная высота */
+    }
+
+    .target-title {
+        font-size: 24px;           /* Уменьшаем размер заголовка */
+        margin-bottom: 30px;       /* Уменьшаем отступ до списка */
+    }
+
+    .target-right .target-title {
+        margin-bottom: 20px;       /* Уменьшаем отступ для второго */
+    }
+
+    .target-list li {
+        font-size: 14px;           /* Уменьшаем размер текста списка */
+        line-height: 8px;          /* Уменьшаем межстрочное расстояние */
+    }
+
+    .target-logo {
+        display: none;             /* Скрываем логотип на мобильном */
+    }
+}

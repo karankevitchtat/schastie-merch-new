@@ -1,464 +1,393 @@
-<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
-<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
-
-<!--&lt;!&ndash;<head>&ndash;&gt;-->
-<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
-<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
-<!--&lt;!&ndash;    <title>Счастье — мерч для бизнеса</title>&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="preconnect" href="https://fonts.googleapis.com">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="css/style.css">&ndash;&gt;-->
-<!--&lt;!&ndash;</head>&ndash;&gt;-->
-
-<!--&lt;!&ndash;<body>&ndash;&gt;-->
-<!--&lt;!&ndash;<header class="header">&ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
-<!--&lt;!&ndash;        &lt;!&ndash; ПЕРВЫЙ РЯД (горизонтальный) &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="row first-row">&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="logo">СЧАСТЬЕ</div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            <nav class="nav">&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Спецпредложения</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Портфолио</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Доставка и оплата</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Контакты</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">О нас</a>&ndash;&gt;-->
-<!--&lt;!&ndash;            </nav>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            <div class="contacts-row">&ndash;&gt;-->
-<!--&lt;!&ndash;                &lt;!&ndash; Телефон &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="contact-group">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-phone">+7 12356 8955</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-dept">Отдел продаж</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                &lt;!&ndash; Email 1 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="contact-group">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-email">zakaz@schastie.ru</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-dept">Отдел продаж</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                &lt;!&ndash; Email 2 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="contact-group">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-email">info@schastie.ru</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-dept">Отдел закупок</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;        &lt;!&ndash; ВТОРОЙ РЯД &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="row second-row">&ndash;&gt;-->
-<!--&lt;!&ndash;            &lt;!&ndash; Кнопка Каталог &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <button class="catalog-btn">&ndash;&gt;-->
-<!--&lt;!&ndash;                <img src="images/иконка каталог.svg" alt="Каталог" class="btn-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;                Каталог&ndash;&gt;-->
-<!--&lt;!&ndash;            </button>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            &lt;!&ndash; Поиск &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="search">&ndash;&gt;-->
-<!--&lt;!&ndash;                <input type="text" placeholder="Поиск">&ndash;&gt;-->
-<!--&lt;!&ndash;                <img src="images/знак поиск.svg" alt="Поиск" class="search-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            &lt;!&ndash; МИНИМАЛЬНАЯ СУММА ЗАКАЗА (между 50000 и корзиной) &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="min-order">&ndash;&gt;-->
-<!--&lt;!&ndash;                <span class="price">50 000 ₽</span>&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="min-order-text">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <span class="min-order-label">минимальная</span>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <span class="min-order-label">сумма заказа</span>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            &lt;!&ndash; Кнопка Корзина (такого же размера как Каталог) &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <button class="cart-btn">&ndash;&gt;-->
-<!--&lt;!&ndash;                <img src="images/корзинка.svg" alt="Корзина" class="btn-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;                Корзина&ndash;&gt;-->
-<!--&lt;!&ndash;            </button>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;</header>&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash; СЕКЦИЯ 2: МЕРЧ ДЛЯ БИЗНЕСА &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;<section class="hero">&ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
-
-<!--&lt;!&ndash;        <div class="hero-inner">&ndash;&gt;-->
-
-<!--&lt;!&ndash;            <h1 class="hero-title">&ndash;&gt;-->
-<!--&lt;!&ndash;                МЕРЧ ДЛЯ БИЗНЕСА&ndash;&gt;-->
-<!--&lt;!&ndash;            </h1>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            <div class="hero-bottom">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                <p class="hero-subtitle">&ndash;&gt;-->
-<!--&lt;!&ndash;                    Помогаем сделать лучшие корпоративные подарки с логотипом&ndash;&gt;-->
-<!--&lt;!&ndash;                </p>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                <button class="hero-btn">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <img src="images/стрелка2.svg" class="btn-icon">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <div class="btn-text">&ndash;&gt;-->
-<!--&lt;!&ndash;                        <strong>Оптом</strong>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <span>Работаем с юридическими лицами</span>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </button>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;</section>&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash; Остальные секции будут позже &ndash;&gt;&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;</body>&ndash;&gt;-->
-<!--&lt;!&ndash;</html>&ndash;&gt;-->
-
-<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
-<!--&lt;!&ndash;<html lang="ru">&ndash;&gt;-->
-
-<!--&lt;!&ndash;<head>&ndash;&gt;-->
-<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
-<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
-<!--&lt;!&ndash;    <title>Счастье — мерч для бизнеса</title>&ndash;&gt;-->
-
-<!--&lt;!&ndash;    &lt;!&ndash; ✅ ИСПРАВЛЕНО: убраны пробелы в URL &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="preconnect" href="https://fonts.googleapis.com">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>&ndash;&gt;-->
-
-<!--&lt;!&ndash;    &lt;!&ndash; ✅ ИСПРАВЛЕНО: добавлен italic (1,700) для заголовка &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">&ndash;&gt;-->
-
-<!--&lt;!&ndash;    <link rel="stylesheet" href="css/style.css">&ndash;&gt;-->
-<!--&lt;!&ndash;</head>&ndash;&gt;-->
-
-<!--&lt;!&ndash;<body>&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash; ============================================&ndash;&gt;-->
-<!--&lt;!&ndash;     HEADER (ШАПКА САЙТА)&ndash;&gt;-->
-<!--&lt;!&ndash;     ============================================ &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;<header class="header">&ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
-
-<!--&lt;!&ndash;        &lt;!&ndash; ПЕРВЫЙ РЯД: Логотип + Навигация + Контакты &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="header-top">&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="logo">СЧАСТЬЕ</div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            <nav class="nav">&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Спецпредложения</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Портфолио</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Доставка и оплата</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">Контакты</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="#">О нас</a>&ndash;&gt;-->
-<!--&lt;!&ndash;            </nav>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            <div class="header-contacts">&ndash;&gt;-->
-<!--&lt;!&ndash;                &lt;!&ndash; Телефон &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="contact-item">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-phone">+7 12356 8955</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-dept">Отдел продаж</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                &lt;!&ndash; Email 1 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="contact-item">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-email">zakaz@schastie.ru</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-dept">Отдел продаж</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                &lt;!&ndash; Email 2 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="contact-item">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-email">info@schastie.ru</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="contact-dept">Отдел закупок</div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;        &lt;!&ndash; ВТОРОЙ РЯД: Каталог + Поиск + Мин. сумма + Корзина &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="header-bottom">&ndash;&gt;-->
-
-<!--&lt;!&ndash;            &lt;!&ndash; Кнопка Каталог &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <button class="btn btn-catalog">&ndash;&gt;-->
-<!--&lt;!&ndash;                <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <rect x="2" y="2" width="5" height="5" rx="1"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <rect x="9" y="2" width="5" height="5" rx="1"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <rect x="2" y="9" width="5" height="5" rx="1"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <rect x="9" y="9" width="5" height="5" rx="1"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                </svg>&ndash;&gt;-->
-<!--&lt;!&ndash;                Каталог&ndash;&gt;-->
-<!--&lt;!&ndash;            </button>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            &lt;!&ndash; Поле поиска &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="search">&ndash;&gt;-->
-<!--&lt;!&ndash;                <input type="text" placeholder="Поиск" class="search-input">&ndash;&gt;-->
-<!--&lt;!&ndash;                <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                </svg>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            &lt;!&ndash; Минимальная сумма заказа &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="min-order">&ndash;&gt;-->
-<!--&lt;!&ndash;                <span class="min-order-price">50 000 ₽</span>&ndash;&gt;-->
-<!--&lt;!&ndash;                <span class="min-order-label">минимальная<br>сумма заказа</span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            &lt;!&ndash; Кнопка Корзина &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <button class="btn btn-cart">&ndash;&gt;-->
-<!--&lt;!&ndash;                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                </svg>&ndash;&gt;-->
-<!--&lt;!&ndash;                Корзина&ndash;&gt;-->
-<!--&lt;!&ndash;            </button>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;</header>&ndash;&gt;-->
-
-<!--&lt;!&ndash;&lt;!&ndash; ============================================&ndash;&gt;-->
-<!--&lt;!&ndash;     HERO SECTION (ГЛАВНЫЙ ЭКРАН)&ndash;&gt;-->
-<!--&lt;!&ndash;     ============================================ &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;<section class="hero">&ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
-
-<!--&lt;!&ndash;        <h1 class="hero-title">&ndash;&gt;-->
-<!--&lt;!&ndash;            МЕРЧ ДЛЯ БИЗНЕСА&ndash;&gt;-->
-<!--&lt;!&ndash;        </h1>&ndash;&gt;-->
-
-<!--&lt;!&ndash;        <div class="hero-content">&ndash;&gt;-->
-<!--&lt;!&ndash;            <p class="hero-subtitle">&ndash;&gt;-->
-<!--&lt;!&ndash;                Помогаем сделать лучшие корпоративные<br>подарки с логотипом&ndash;&gt;-->
-<!--&lt;!&ndash;            </p>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            <button class="btn btn-hero">&ndash;&gt;-->
-<!--&lt;!&ndash;                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <path d="M16.172 10.9998L10.808 5.63577L12.222 4.22177L20 11.9998L12.222 19.7778L10.808 18.3638L16.172 12.9998H4V10.9998H16.172Z"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                </svg>&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="btn-text">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <strong>Оптом</strong>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <span>Работаем с юридическими лицами</span>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </button>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;</section>&ndash;&gt;-->
-
-<!--&lt;!&ndash;</body>&ndash;&gt;-->
-<!--&lt;!&ndash;</html>&ndash;&gt;-->
-
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Счастье — мерч для бизнеса</title>
 
+    <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
 
+    <!-- Подключение CSS файла -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-<!-- ============================================
-     HEADER (ШАПКА САЙТА)
+<body>  <!-- ✅ BODY ОТКРЫВАЕТСЯ ЗДЕСЬ -->
+
+<!-- ОБЩИЙ КОНТЕЙНЕР -->
+<div class="container-fixed">
+
+    <!-- ============================================
+         HEADER (ШАПКА САЙТА)
+         ============================================ -->
+    <header class="header">
+        <div class="container">
+
+            <!-- ПЕРВЫЙ РЯД: Логотип + Меню + Контакты -->
+            <div class="header-top">
+                <div class="logo">СЧАСТЬЕ</div>
+
+                <nav class="nav">
+                    <a href="#">Спецпредложения</a>
+                    <a href="#">Портфолио</a>
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">О нас</a>
+                </nav>
+
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <div class="contact-phone">+7 12356 8955</div>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-email">zakaz@schastie.ru</div>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-email">info@schastie.ru</div>
+                        <div class="contact-dept">Отдел закупок</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ВТОРОЙ РЯД: Каталог + Поиск + Мин.сумма + Корзина -->
+            <div class="header-bottom">
+
+                <button class="btn btn-catalog">
+                    <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor">
+                        <rect x="2" y="2" width="5" height="5" rx="1"/>
+                        <rect x="9" y="2" width="5" height="5" rx="1"/>
+                        <rect x="2" y="9" width="5" height="5" rx="1"/>
+                        <rect x="9" y="9" width="5" height="5" rx="1"/>
+                    </svg>
+                    Каталог
+                </button>
+
+                <div class="search">
+                    <input type="text" placeholder="Поиск" class="search-input">
+                    <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817
+                            4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="min-order">
+                    <span class="min-order-price">50 000 ₽</span>
+                    <span class="min-order-label">минимальная<br>сумма заказа</span>
+                </div>
+
+                <button class="btn btn-cart">
+                    <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    Корзина
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION (ГЛАВНЫЙ ЭКРАН)
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+
+            <h1 class="hero-title">МЕРЧ ДЛЯ БИЗНЕСА</h1>
+
+            <div class="hero-content">
+                <p class="hero-subtitle">
+                    Помогаем сделать лучшие корпоративные <br>подарки с логотипом
+                </p>
+
+                <button class="btn btn-hero">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.172 10.9998L10.808 5.63577L12.222 4.22177L20 11.9998L12.222 19.7778L10.808 18.3638L16.172 12.9998H4V10.9998H16.172Z"/>
+                    </svg>
+                    <div class="btn-text">
+                        <strong>Оптом</strong>
+                        <span>Работаем с юридическими лицами</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         СЕКЦИЯ: ФОРМА ЗАЯВКИ НА БАННЕРЕ
+         ============================================ -->
+    <section class="banner-form-section">
+        <div class="banner-container">
+
+            <!-- Фоновое изображение -->
+            <div class="banner-bg">
+                <img src="images/logoнов.svg" alt="Фон баннера" class="banner-img">
+            </div>
+
+            <div class="banner-content">
+
+                <!-- ЛЕВАЯ ЧАСТЬ: Оферы -->
+                <div class="banner-left">
+                    <h2 class="banner-title">Оставьте заявку,<br>мы сэкономим ваше время</h2>
+                    <p class="banner-subtitle">Проконсультируем вас по вопросам мерча</p>
+                </div>
+
+                <!-- ПРАВАЯ ЧАСТЬ: Форма + Чекбокс -->
+                <div class="banner-form-wrapper">
+
+                    <!-- Форма -->
+                    <div class="banner-form">
+                        <input type="text" placeholder="Контактное лицо" class="form-input">
+                        <input type="tel" placeholder="Номер телефона" class="form-input">
+                        <button type="submit" class="form-btn">Отправить</button>
+                    </div>
+
+                    <!-- Чекбокс под кнопками -->
+                    <label class="banner-checkbox">
+                        <input type="checkbox" required>
+                        <span class="checkbox-text">Даю согласие на обработку <span class="personal-data">персональных данных</span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         СЕКЦИЯ ПРЕИМУЩЕСТВ
+         ============================================ -->
+    <section class="service-section">
+        <div class="service-container">
+
+            <!-- ✅ ФОТО КАК ФОН (1536×520px) -->
+            <div class="service-bg">
+                <img src="images/услуги.png" alt="Фон секции" class="service-bg-img">
+            </div>
+
+            <!-- Контент поверх фона -->
+            <div class="service-content">
+
+                <!-- Левая часть: кнопки -->
+                <div class="service-left">
+
+                    <h2 class="service-title">Предлагаем лучший сервис<br>для наших клиентов</h2>
+
+                    <div class="service-buttons">
+                        <!-- РЯД 1 -->
+                        <div class="btn-row">
+                            <button class="service-btn btn-1">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0
+                                    9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span class="btn-text">
+                                <span class="text-highlight">офис</span> в Санкт-Петербурге
+                            </span>
+                            </button>
+
+                            <button class="service-btn btn-2">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34
+                                    3 3 3s3-1.34 3-3h2v-5l-3-4z"/>
+                                </svg>
+                                <span class="btn-text">
+                                <span class="text-highlight">Выезжаем на встречу</span> с образцами продукции
+                            </span>
+                            </button>
+                        </div>
+
+                        <!-- РЯД 2 -->
+                        <div class="btn-row">
+                            <button class="service-btn btn-3">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89
+                                    2-2V6c0-1.11-.89-2-2-2zm-1 14H5c-.55 0-1-.45-1-1V8l8 5 8-5v9c0 .55-.45 1-1 1z"/>
+                                </svg>
+                                <span class="btn-text">
+                                Дилеры самых <span class="text-highlight">известных поставщиков</span> рынка
+                            </span>
+                            </button>
+                        </div>
+
+                        <!-- РЯД 3 -->
+                        <div class="btn-row">
+                            <button class="service-btn btn-4">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1
+                                    17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2
+                                    2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45
+                                    1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                                <span class="btn-text">
+                                <span class="text-highlight">500+</span> постоянных корпоративных <span class="text-highlight">клиентов</span>
+                            </span>
+                            </button>
+
+                            <button class="service-btn btn-5">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7
+                                    14h-2v-4h2v4zm0-6h-2V7h2v4z"/>
+                                </svg>
+                                <span class="btn-text">
+                                <span class="text-highlight">Полный спектр</span> услуг от полиграфии до мерча
+                            </span>
+                            </button>
+                        </div>
+
+                        <!-- РЯД 4 -->
+                        <div class="btn-row">
+                            <button class="service-btn btn-6">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6z"/>
+                                </svg>
+                                <span class="btn-text">
+                                Мы предлагаем <span class="text-highlight">более 20 видов</span> нанесения логотипа
+                            </span>
+                            </button>
+                        </div>
+
+                        <!-- РЯД 5 -->
+                        <div class="btn-row">
+                            <button class="service-btn btn-7">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0
+                                    1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/>
+                                </svg>
+                                <span class="btn-text">
+                                Поставка товара из <span class="text-highlight">Европы и Китая</span>
+                            </span>
+                            </button>
+
+                            <button class="service-btn btn-8">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1
+                                    16H4V5h16v14zm-7-2h2v-2h-2v2zm0-4h2V7h-2v6z"/>
+                                </svg>
+                                <span class="btn-text">
+                                Предоставляем дизайн и визуализацию <span class="text-highlight">перед проектом</span>
+                            </span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Кнопка CTA -->
+                    <button class="btn-consultation" onclick="window.location.href='#contact'">
+                        <span>Получить консультацию</span>
+                        <svg class="btn-arrow" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M9 12l4-4-4-4M1 8h12"/>
+                        </svg>
+                    </button>
+
+                </div>
+
+                <!-- ✅ ПРАВАЯ ЧАСТЬ УБРАНА (маскот теперь фон) -->
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================================
+     СЕКЦИЯ: РЕАЛИЗОВАННЫЕ ПРОЕКТЫ
      ============================================ -->
-<header class="header">
-    <div class="container">
+    <section class="projects-section">
+        <div class="projects-container">
 
-        <!-- ПЕРВЫЙ РЯД: Логотип + Меню + Контакты -->
-        <div class="header-top">
-            <div class="logo">СЧАСТЬЕ</div>
+            <!-- ЗАГОЛОВОК СЕКЦИИ -->
+            <div class="projects-header">
 
-            <nav class="nav">
-                <a href="#">Спецпредложения</a>
-                <a href="#">Портфолио</a>
-                <a href="#">Доставка и оплата</a>
-                <a href="#">Контакты</a>
-                <a href="#">О нас</a>
-            </nav>
+                <!-- Главный заголовок -->
+                <h2 class="projects-title">
+                    <span class="title-black">РЕАЛИЗОВАННЫЕ</span>
+                    <span class="title-purple">ПРОЕКТЫ</span>
+                </h2>
 
-            <div class="header-contacts">
-                <div class="contact-item">
-                    <div class="contact-phone">+7 12356 8955</div>
-                    <div class="contact-dept">Отдел продаж</div>
-                </div>
+                <!-- Подзаголовок с стрелкой -->
+                <a href="#portfolio" class="projects-subtitle">
+                    <span>Смотреть портфолио</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
 
-                <div class="contact-item">
-                    <div class="contact-email">zakaz@schastie.ru</div>
-                    <div class="contact-dept">Отдел продаж</div>
-                </div>
+            <!-- ФОТО ПРОЕКТОВ -->
+            <div class="projects-gallery">
 
-                <div class="contact-item">
-                    <div class="contact-email">info@schastie.ru</div>
-                    <div class="contact-dept">Отдел закупок</div>
-                </div>
+                <!-- Фото 1: Подарочная коробка -->
+                <a href="#project1" class="project-item project-1">
+                    <img src="images/секция%204%20набор.png" alt="Подарочная коробка с мерчем" class="project-img">
+                    <div class="project-overlay">
+                        <span class="project-name">Подарочный набор</span>
+                    </div>
+                </a>
+
+                <!-- Фото 2: Фургон с логотипом -->
+                <a href="#project2" class="project-item project-2">
+                    <img src="images/секция%204%20машина%202.png" alt="Фургон с брендингом Счастье" class="project-img">
+                    <div class="project-overlay">
+                        <span class="project-name">Брендинг транспорта</span>
+                    </div>
+                </a>
             </div>
         </div>
-
-        <!-- ВТОРОЙ РЯД: Каталог + Поиск + Мин.сумма + Корзина -->
-        <div class="header-bottom">
-
-            <button class="btn btn-catalog">
-                <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor">
-                    <rect x="2" y="2" width="5" height="5" rx="1"/>
-                    <rect x="9" y="2" width="5" height="5" rx="1"/>
-                    <rect x="2" y="9" width="5" height="5" rx="1"/>
-                    <rect x="9" y="9" width="5" height="5" rx="1"/>
-                </svg>
-                Каталог
-            </button>
-
-            <div class="search">
-                <input type="text" placeholder="Поиск" class="search-input">
-                <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817
-                    4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
-                </svg>
-            </div>
-
-            <div class="min-order">
-                <span class="min-order-price">50 000 ₽</span>
-                <span class="min-order-label">минимальная<br>сумма заказа</span>
-            </div>
-
-            <button class="btn btn-cart">
-                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
-                </svg>
-                Корзина
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- ============================================
-     HERO SECTION (ГЛАВНЫЙ ЭКРАН)
+    </section>
+    <!-- ============================================
+     СЕКЦИЯ: ДЛЯ КОГО И ДЛЯ КАКИХ ЦЕЛЕЙ
+     Отступ от предыдущей секции: 120px
+     Размер контейнера: 1536×300px
      ============================================ -->
-<section class="hero">
-    <div class="container">
+    <section class="targets-section">
+        <div class="targets-container">
 
-        <h1 class="hero-title">МЕРЧ ДЛЯ БИЗНЕСА</h1>
+            <!-- ОБЁРТКА ДЛЯ ДВУХ ПРЯМОУГОЛЬНИКОВ -->
+            <div class="targets-wrapper">
 
-        <div class="hero-content">
-            <p class="hero-subtitle">
-                Помогаем сделать лучшие корпоративные <br>подарки с логотипом
-            </p>
+                <!-- ПЕРВЫЙ ПРЯМОУГОЛЬНИК: Для кого мы работаем -->
+                <div class="target-box target-left">
 
-            <button class="btn btn-hero">
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16.172 10.9998L10.808 5.63577L12.222 4.22177L20 11.9998L12.222 19.7778L10.808 18.3638L16.172 12.9998H4V10.9998H16.172Z"/>
-                </svg>
-                <div class="btn-text">
-                    <strong>Оптом</strong>
-                    <span>Работаем с юридическими лицами</span>
+                    <!-- Заголовок -->
+                    <h2 class="target-title">Для кого<br>мы работаем</h2>
+
+                    <!-- Подзаголовок (список) -->
+                    <ul class="target-list">
+                        <li>Коммерческие организации, компании</li>
+                        <li>Государственные организации</li>
+                        <li>Политические партии</li>
+                        <li>Рестораны, гостиницы</li>
+                    </ul>
+
+                    <!-- Логотип (справа) -->
+                    <img src="images/секция%205%20лого.png" alt="Логотип" class="target-logo">
+
                 </div>
-            </button>
+
+                <!-- ВТОРОЙ ПРЯМОУГОЛЬНИК: Для каких целей -->
+                <div class="target-box target-right">
+
+                    <!-- Заголовок -->
+                    <h2 class="target-title">Для каких целей<br>изготавливается<br>наша продукция</h2>
+
+                    <!-- Подзаголовок (список) -->
+                    <ul class="target-list">
+                        <li>Корпоративные подарки</li>
+                        <li>Промоакции и дегустации</li>
+                        <li>Подарки для ВИП-персон</li>
+                        <li>Подарки для свадеб и юбилеев</li>
+                    </ul>
+
+                    <!-- Логотип (справа) -->
+                    <img src="images/секция%205%20лого.png" alt="Логотип" class="target-logo">
+
+                </div>
+
+            </div>
+
         </div>
+    </section>
 
-    </div>
-</section>
-
-</body>
+</div>  <!-- ✅ ЗАКРЫВАЕМ container-fixed -->
+</body>  <!-- ✅ ЗАКРЫВАЕМ body -->
 </html>
-<!--<!DOCTYPE html>-->
-<!--<html lang="ru">-->
-
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Счастье — мерч для бизнеса</title>-->
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">-->
-<!--    <link rel="stylesheet" href="css/style.css">-->
-<!--</head>-->
-
-<!--<body>-->
-<!--&lt;!&ndash; ХЕДЕР &ndash;&gt;-->
-<!--<header class="header">-->
-<!--    <div class="container">-->
-<!--        &lt;!&ndash; ПЕРВЫЙ РЯД &ndash;&gt;-->
-<!--        <div class="header-top">-->
-<!--            <div class="logo">СЧАСТЬЕ</div>-->
-
-<!--            <nav class="nav">-->
-<!--                <a href="#">Спецпредложения</a>-->
-<!--                <a href="#">Портфолио</a>-->
-<!--                <a href="#">Доставка и оплата</a>-->
-<!--                <a href="#">Контакты</a>-->
-<!--                <a href="#">О нас</a>-->
-<!--            </nav>-->
-
-<!--            <div class="header-contacts">-->
-<!--                &lt;!&ndash; Телефон &ndash;&gt;-->
-<!--                <div class="contact-item">-->
-<!--                    <a href="tel:+7123568955" class="contact-phone">+7 12356 8955</a>-->
-<!--                    <span class="contact-dept">Отдел продаж</span>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Email 1 &ndash;&gt;-->
-<!--                <div class="contact-item">-->
-<!--                    <a href="mailto:zakaz@schastie.ru" class="contact-email">zakaz@schastie.ru</a>-->
-<!--                    <span class="contact-dept">Отдел продаж</span>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Email 2 &ndash;&gt;-->
-<!--                <div class="contact-item">-->
-<!--                    <a href="mailto:info@schastie.ru" class="contact-email">info@schastie.ru</a>-->
-<!--                    <span class="contact-dept">Отдел закупок</span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        &lt;!&ndash; ЛИНИЯ МЕЖДУ РЯДАМИ &ndash;&gt;-->
-<!--        <div class="header-divider"></div>-->
-
-<!--        &lt;!&ndash; ВТОРОЙ РЯД &ndash;&gt;-->
-<!--        <div class="header-bottom">-->
-<!--            &lt;!&ndash; Кнопка Каталог &ndash;&gt;-->
-<!--            <button class="btn btn-catalog">-->
-<!--                <img src="images/каталог.svg" alt="Каталог" class="btn-icon">-->
-<!--                Каталог-->
-<!--            </button>-->
-
-<!--            &lt;!&ndash; Поиск &ndash;&gt;-->
-<!--            <div class="search">-->
-<!--                <input type="text" class="search-input" placeholder="Поиск">-->
-<!--                <img src="images/поиск.svg" alt="Поиск" class="search-icon">-->
-<!--            </div>-->
-
-<!--            &lt;!&ndash; Минимальная сумма заказа &ndash;&gt;-->
-<!--            <div class="min-order">-->
-<!--                <span class="min-order-price">50 000 ₽</span>-->
-<!--                <div class="min-order-label">минимальная<br>сумма заказа</div>-->
-<!--            </div>-->
-
-<!--            &lt;!&ndash; Кнопка Корзина &ndash;&gt;-->
-<!--            <button class="btn btn-cart">-->
-<!--                <img src="images/корзина.svg" alt="Корзина" class="btn-icon">-->
-<!--                Корзина-->
-<!--            </button>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</header>-->
-
-<!--&lt;!&ndash; СЕКЦИЯ МЕРЧ ДЛЯ БИЗНЕСА &ndash;&gt;-->
-<!--<section class="hero">-->
-<!--    <div class="container">-->
-<!--        <h1 class="hero-title">МЕРЧ ДЛЯ БИЗНЕСА</h1>-->
-
-<!--        <div class="hero-content">-->
-<!--            <p class="hero-subtitle">Помогаем сделать лучшие корпоративные подарки с логотипом</p>-->
-
-<!--            <button class="btn btn-hero">-->
-<!--                <div class="btn-text">-->
-<!--                    <strong>Оптом</strong>-->
-<!--                    <span>Работаем с юридическими лицами</span>-->
-<!--                </div>-->
-<!--                <img src="images/стрелка.svg" alt="→" class="btn-icon">-->
-<!--            </button>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--</body>-->
-
-<!--</html>-->
