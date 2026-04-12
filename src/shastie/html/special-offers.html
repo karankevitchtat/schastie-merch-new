@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спецпредложения — СЧАСТЬЕ | Корпоративный мерч</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0;600;0;700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/special-offers.css">
+</head>
+<body>
+
+<div class="container-fixed">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">СЧАСТЬЕ</div>
+                <nav class="nav">
+<!--                    <a href="index.html">Главная</a>-->
+                    <a href="special-offers.html" class="active">Спецпредложения</a>
+                    <a href="portfolio.html">Портфолио</a>
+                    <a href="delivery.html">Доставка и оплата</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="about.html">О нас</a>
+
+                </nav>
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <div class="contact-phone">+7 (812) 425-30-99</div>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-email">pro.schastie@mail.ru</div>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-email">01@schaste.ru</div>
+                        <div class="contact-dept">Отдел закупок</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <button class="btn btn-catalog" onclick="showCatalogMessage()">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="2" y="2" width="5" height="5" rx="1"/>
+                        <rect x="9" y="2" width="5" height="5" rx="1"/>
+                        <rect x="2" y="9" width="5" height="5" rx="1"/>
+                        <rect x="9" y="9" width="5" height="5" rx="1"/>
+                    </svg>
+                    <span>Каталог</span>
+                </button>
+                <div class="search">
+                    <input type="text" placeholder="Поиск" class="search-input">
+                    <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="min-order">
+                    <span class="min-order-price">50 000 ₽</span>
+                    <span class="min-order-label">минимальная<br>сумма заказа</span>
+                </div>
+                <button class="btn btn-cart" onclick="window.location.href='cart.html'">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    <span>Корзина</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+</div>
+
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<main class="offers-main">
+    <div class="container-fixed">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span class="current">Спецпредложения</span>
+        </div>
+
+        <!-- Заголовок -->
+        <h1 class="page-title">Спецпредложения для бизнеса</h1>
+
+        <!-- Основной блок (2 колонки как в about.html) -->
+        <div class="offers-content">
+
+            <!-- Левая колонка -->
+            <div class="offers-text">
+                <h2>Заказываете мерч для компании?</h2>
+
+                <p class="offers-intro">Получите больше за те же деньги!</p>
+
+                <!-- ЧТО ВЫ ПОЛУЧАЕТЕ -->
+                <section class="benefits-section">
+                    <h3 class="section-title">
+                        <span class="title-icon">🎁</span>
+                        ЧТО ВЫ ПОЛУЧАЕТЕ
+                    </h3>
+
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">💰</div>
+                            <div class="benefit-content">
+                                <h4>Персональную скидку</h4>
+                                <p>Уже с первого заказа</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🎨</div>
+                            <div class="benefit-content">
+                                <h4>Бесплатную разработку</h4>
+                                <p>Концепции подарка</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">⏱️</div>
+                            <div class="benefit-content">
+                                <h4>Гарантию сроков</h4>
+                                <p>Или вернём 10% от стоимости</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🤝</div>
+                            <div class="benefit-content">
+                                <h4>Поддержку на всех этапах</h4>
+                                <p>От идеи до доставки</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ПОДАРОК -->
+                <section class="gift-section">
+                    <h3 class="section-title">
+                        <span class="title-icon">🎉</span>
+                        ПРИ ЗАКАЗЕ ОТ 150 000 ₽
+                    </h3>
+
+                    <div class="gift-box">
+                        <div class="gift-icon-large">🎁</div>
+                        <div class="gift-content">
+                            <ul class="gift-list">
+                                <li>
+                                    <span class="check-icon">✓</span>
+                                    <span>Консультацию бренд-дизайнера</span>
+                                </li>
+                                <li>
+                                    <span class="check-icon">✓</span>
+                                    <span>Приоритетное размещение в производственном графике</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Правая колонка (персонаж) -->
+            <div class="offers-image">
+                <div class="image-wrapper">
+                    <img src="../images/счастье2.png" alt="СЧАСТЬЕ" class="offers-character"
+                         onerror="this.src='https://via.placeholder.com/400x500/7B68EE/ffffff?text=СЧАСТЬЕ'">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Призыв к действию -->
+        <div class="offers-cta">
+            <h3>Не нашли подходящее предложение?</h3>
+            <p>Свяжитесь с нами — подготовим индивидуальное условие под ваш бюджет!</p>
+
+            <div class="cta-buttons">
+                <a href="contacts.html" class="btn btn-primary">Оставить заявку →</a>
+                <a href="tel:+78124253099" class="btn btn-secondary">📞 +7 (812) 425-30-99</a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-form-text">
+                <p>Оставить контакты,<br>разберёмся вместе</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/ваш_профиль" target="_blank" class="social-link" title="Instagram">
+                        <img src="../images/инс.svg" alt="Instagram">
+                    </a>
+                    <a href="https://t.me/ваш_профиль" target="_blank" class="social-link" title="Telegram">
+                        <img src="../images/телег.svg" alt="Telegram">
+                    </a>
+                    <a href="viber://chat?number=%2B78124253099" class="social-link" title="Viber">
+                        <img src="../images/вайбер.svg" alt="Viber">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-form-wrapper">
+                <div class="footer-form-row">
+                    <input type="text" class="form-input-footer" placeholder="Контактное лицо">
+                    <input type="tel" class="form-input-footer" placeholder="Номер телефона">
+                    <button type="submit" class="form-btn-footer">Отправить</button>
+                </div>
+                <label class="form-checkbox-footer">
+                    <input type="checkbox" required>
+                    <span class="checkbox-custom-footer"></span>
+                    <span class="checkbox-text-footer">Даю согласие на обработку персональных данных</span>
+                </label>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="footer-line footer-line-1"></div>
+            <div class="footer-line footer-line-2"></div>
+            <div class="footer-marquee">
+                <div class="marquee-content">
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                </div>
+            </div>
+            <div class="footer-line footer-line-3"></div>
+            <div class="footer-line footer-line-4"></div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright-right">
+                <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>
+            </div>
+            <div class="footer-copyright-left">
+                <img src="../images/секция%2011%20сердце.svg" alt="❤️" class="heart-icon">
+                <span>Сделано с любовью</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,658 @@
+/* ===================================================== */
+/* ================== 13. РЕКОМЕНДУЕМЫЕ ТОВАРЫ ======== */
+/* ===================================================== */
+
+/* Секция */
+.recommended-section {
+    padding: 100px 0 0 0;
+    width: 100%;
+}
+
+/* Контейнер */
+.recommended-container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;             /* ✅ ФИКСИРОВАННАЯ ширина */
+    margin: 0 auto;
+    padding: 0 80px;               /* ✅ Оптимальные отступы */
+}
+
+/* Заголовок */
+.recommended-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.recommended-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #100C35;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.more-products-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #100C35;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.more-products-link:hover {
+    color: #7B68EE;
+}
+
+.more-products-link .arrow-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #7B68EE;
+    transition: all 0.3s;
+}
+
+.more-products-link:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Сетка товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin-bottom: 60px;
+    background: #E5E5E5;
+    border: 1px solid #E5E5E5;
+    max-width: 1280px;             /* ✅ ФИКСИРОВАННАЯ ширина */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Карточка товара */
+.product-card {
+    position: relative;
+    background: #ffffff;
+    padding: 20px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    min-width: 0;
+}
+
+.product-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    cursor: pointer;
+}
+
+.product-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-article {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #999999;
+}
+
+.product-stock {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #999999;
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s;
+}
+
+.product-sale-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #7B68EE;
+    color: white;
+    padding: 4px 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    z-index: 2;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+}
+
+.favorite-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: #999999;
+    transition: all 0.3s;
+}
+
+.favorite-btn:hover svg {
+    stroke: #7B68EE;
+}
+
+.product-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #100C35;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #F5F5F5;
+}
+
+.product-price-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.product-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #100C35;
+}
+
+.product-old-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.add-to-cart-btn {
+    min-width: 110px;
+    height: 36px;
+    padding: 0 14px;
+    background: #7B68EE;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.add-to-cart-btn:hover {
+    background: #100C35;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 104, 238, 0.3);
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 1400px) {
+    .recommended-container {
+        padding: 0 60px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .recommended-container {
+        padding: 0 40px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 968px) {
+    .recommended-container {
+        padding: 0 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 640px;
+    }
+}
+
+@media (max-width: 640px) {
+    .recommended-section {
+        padding: 80px 0 0 0;
+    }
+
+    .recommended-container {
+        padding: 0 20px;
+    }
+
+    .recommended-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .recommended-title {
+        font-size: 32px;
+    }
+
+    .more-products-link {
+        font-size: 14px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .product-info-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .product-article,
+    .product-stock {
+        font-size: 11px;
+    }
+
+    .product-image-wrapper {
+        height: 220px;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+
+    .product-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-to-cart-btn {
+        width: 100%;
+    }
+}
+
+/* ===================================================== */
+/* ================== 17. FUTER (ПОДВАЛ) ================ */
+/* ===================================================== */
+
+/* ───────── СЕКЦИЯ ───────── */
+.footer-section {
+    padding: 0;
+    margin: 0 !important;
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #100C35;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+/* ───────── КОНТЕЙНЕР ───────── */
+.footer-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    height: 550px;
+    margin: 0 auto;
+    background: #100C35;
+}
+
+/* ───────── ВЕРХНЯЯ ЧАСТЬ ───────── */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 48px 192px 0 192px;
+    gap: 40px;
+}
+
+/* ───────── ТЕКСТ ФОРМЫ ───────── */
+.footer-form-text {
+    flex-shrink: 0;
+    padding-top: 10px;
+    min-width: 180px;
+}
+
+.footer-form-text p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ───────── ОБЁРТКА ФОРМЫ (ИСПРАВЛЕНО!) ───────── */
+.footer-form-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;                              /* ✅ УБРАЛИ gap */
+    margin-right: 0;                     /* ✅ УБРАЛИ отступ справа */
+}
+
+/* ───────── СТРОКА ФОРМЫ (ИСПРАВЛЕНО!) ───────── */
+.footer-form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;                 /* ✅ ОТСТУП до чекбокса: 45px */
+}
+
+/* ───────── ПОЛЯ ВВОДА ───────── */
+.form-input-footer {
+    width: 200px;
+    height: 40px;
+    padding: 0 14px;
+    border: 0.5px solid #ffffff;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #100C35;
+    background: #ffffff;
+    transition: all 0.3s;
+}
+
+.form-input-footer::placeholder {
+    color: #100C35;
+    opacity: 0.7;
+}
+
+.form-input-footer:focus {
+    outline: none;
+    border-color: #7B68EE;
+    background: #f5f5f5;
+}
+
+/* ───────── КНОПКА ОТПРАВИТЬ ───────── */
+.form-btn-footer {
+    width: 140px;
+    height: 40px;
+    padding: 0 14px;
+    border: 0.5px solid #ffffff;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #ffffff;
+    background: #7B68EE;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.form-btn-footer:hover {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 104, 238, 0.4);
+}
+
+/* ───────── ЧЕКБОКС (ИСПРАВЛЕНО!) ───────── */
+.form-checkbox-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 0;                       /* ✅ УБРАЛИ отступ сверху */
+    margin-bottom: 36px;                 /* ✅ ОТСТУП снизу: 36px */
+}
+
+.form-checkbox-footer input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom-footer {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.form-checkbox-footer input[type="checkbox"]:checked + .checkbox-custom-footer {
+    background: #7B68EE;
+    border-color: #7B68EE;
+}
+
+.form-checkbox-footer input[type="checkbox"]:checked + .checkbox-custom-footer::after {
+    content: '';
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+
+.checkbox-text-footer {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: #909BB1;
+    line-height: 1.4;
+}
+
+/* ───────── СРЕДНЯЯ ЧАСТЬ ───────── */
+.footer-middle {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+/* ───────── ЛИНИИ ───────── */
+.footer-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #EEEEEE;
+    left: 0;
+}
+
+.footer-line-1 { top: 0; }
+.footer-line-2 { top: 51px; }
+.footer-line-3 { top: 271px; }
+.footer-line-4 { top: 322px; }
+
+/* ───────── БЕГУЩАЯ СТРОКА (ИСПРАВЛЕНО!) ───────── */
+.footer-marquee {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    z-index: 1;                          /* ✅ ПОВЕРХ линий */
+}
+
+.marquee-content {
+    display: flex;
+    gap: 100px;
+    animation: marquee 50s linear infinite;
+    white-space: nowrap;
+    height: auto;
+    align-items: center;
+}
+
+.marquee-content span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 950;
+    font-size: 2000px;                    /* ✅ РАЗМЕР: 150px */
+    color: #EEEEEE;                      /* ✅ ЦВЕТ: светло-серый (ЧТОБЫ БЫЛО ВИДНО!) */
+    letter-spacing: 10px;                 /* ✅ Межбуквенное: 2px */
+    line-height: 0.1;
+    opacity: 1;                          /* ✅ ПРОЗРАЧНОСТЬ: 100% */
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(-50px);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ───────── НИЖНЯЯ ЧАСТЬ ───────── */
+.footer-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 192px;
+}
+
+.footer-copyright-right span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #909BB1;
+    white-space: nowrap;
+}
+
+.footer-copyright-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.heart-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.footer-copyright-left span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #909BB1;
+}
+
+/* ───────── АДАПТИВНОСТЬ ───────── */
+@media (max-width: 1600px) {
+    .footer-container { max-width: 1536px; }
+    .footer-top { padding: 48px 80px 0 80px; }
+    .footer-bottom { padding: 0 80px; }
+    .marquee-content span { font-size: 120px; }
+}
+
+@media (max-width: 1400px) {
+    .footer-container { height: auto; min-height: 550px; }
+    .footer-top { flex-direction: column; gap: 30px; padding: 48px 60px 0 60px; }
+    .footer-form-text { text-align: center; width: 100%; }
+    .footer-form-wrapper { width: 100%; }
+    .footer-form-row { flex-wrap: wrap; justify-content: center; }
+    .form-input-footer { width: 180px; }
+    .form-checkbox-footer { justify-content: center; }
+    .marquee-content span { font-size: 100px; }
+    .footer-bottom { flex-direction: column; gap: 15px; padding: 0 60px 20px; }
+}
+
+@media (max-width: 968px) {
+    .footer-section { margin-left: 0; margin-right: 0; }
+    .footer-container { max-width: 100%; }
+    .footer-top { padding: 40px 40px 0 40px; }
+    .footer-form-row { flex-direction: column; align-items: stretch; }
+    .form-input-footer, .form-btn-footer { width: 100%; }
+    .form-checkbox-footer { justify-content: center; }
+    .marquee-content span { font-size: 60px; }
+    .footer-bottom { flex-direction: column; gap: 15px; padding: 0 40px 20px; }
+    .footer-copyright-left, .footer-copyright-right { text-align: center; justify-content: center; }
+}
+
+@media (max-width: 640px) {
+    .footer-top { padding: 30px 20px 0 20px; }
+    .footer-form-text p { font-size: 13px; }
+    .form-input-footer { height: 36px; font-size: 12px; }
+    .form-btn-footer { height: 36px; font-size: 12px; }
+    .marquee-content span { font-size: 40px; opacity: 0.5; }
+    .footer-bottom { padding: 0 20px 20px; }
+    .footer-copyright-left span, .footer-copyright-right span { font-size: 12px; }
+}

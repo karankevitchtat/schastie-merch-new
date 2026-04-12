@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- Указываем язык страницы для поисковиков и скринридеров -->
+<html lang="ru">
+
+<!-- ============================================
+     HEAD: Мета-данные, подключение стилей и шрифтов
+     ============================================ -->
+<head>
+    <!-- 1. КОДИРОВКА: Поддержка русских букв -->
+    <meta charset="UTF-8">
+
+    <!-- 2. АДАПТИВНОСТЬ: Корректное отображение на мобильных -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 3. ЗАГОЛОВОК: Отображается во вкладке браузера и в поиске -->
+    <title>Счастье — мерч для бизнеса</title>
+
+    <!-- 4. ШРИФТЫ: Подключение Inter из Google Fonts -->
+    <!-- Предзагрузка для ускорения -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Сам шрифт: веса 400, 500, 600, 700 + курсив 700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">-->
+
+    <!-- 5. SWIPER CSS: Стили для слайдера категорий (библиотека) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- 6. ВАШ CSS: Подключение основного файла стилей -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- ============================================
+     BODY: Видимая часть сайта
+     ============================================ -->
+<body>
+
+<!-- ОБЩИЙ КОНТЕЙНЕР: Центрирует весь контент, задает отступы 192px по бокам -->
+<div class="container-fixed">
+
+    <!-- ============================================
+         HEADER: Шапка сайта (логотип, меню, контакты)
+         ============================================ -->
+    <header class="header">
+        <!-- Внутренний контейнер для выравнивания -->
+        <div class="container">
+
+            <!-- ПЕРВЫЙ РЯД: Логотип + Навигация + Контакты -->
+            <div class="header-top">
+
+                <!-- Логотип -->
+                <div class="logo">СЧАСТЬЕ</div>
+
+                <!-- Навигационное меню -->
+                <nav class="nav">
+                    <a href="#">Спецпредложения</a>
+                    <a href="#">Портфолио</a>
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">О нас</a>
+                </nav>
+
+                <!-- Контактная информация -->
+                <div class="header-contacts">
+                    <!-- Телефон -->
+                    <div class="contact-item">
+                        <div class="contact-phone">+7 12356 8955</div>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+                    <!-- Email 1 -->
+                    <div class="contact-item">
+                        <div class="contact-email">zakaz@schastie.ru</div>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+                    <!-- Email 2 -->
+                    <div class="contact-item">
+                        <div class="contact-email">info@schastie.ru</div>
+                        <div class="contact-dept">Отдел закупок</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ВТОРОЙ РЯД: Каталог + Поиск + Мин.сумма + Корзина -->
+            <div class="header-bottom">
+
+                <!-- Кнопка "Каталог" -->
+                <button class="btn btn-catalog">
+                    <!-- Иконка сетки (4 квадрата) -->
+                    <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor">
+                        <rect x="2" y="2" width="5" height="5" rx="1"/>
+                        <rect x="9" y="2" width="5" height="5" rx="1"/>
+                        <rect x="2" y="9" width="5" height="5" rx="1"/>
+                        <rect x="9" y="9" width="5" height="5" rx="1"/>
+                    </svg>
+                    Каталог
+                </button>
+
+                <!-- Поле поиска -->
+                <div class="search">
+                    <input type="text" placeholder="Поиск" class="search-input">
+                    <!-- Иконка лупы -->
+                    <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <!-- Блок "Минимальная сумма заказа" -->
+                <div class="min-order">
+                    <span class="min-order-price">50 000 ₽</span>
+                    <span class="min-order-label">минимальная<br>сумма заказа</span>
+                </div>
+
+                <!-- Кнопка "Корзина" -->
+                <button class="btn btn-cart">
+                    <!-- Иконка корзины -->
+                    <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    Корзина
+                </button>
+            </div>
+        </div>
+    </header>
+</div>  <!-- Закрываем container-fixed (header вне main) -->
+
+<main class="product-page">
+    <div class="container-fixed">
+        <!-- Хлебные крошки -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Главная</a> /
+            <a href="#catalog">Каталог</a> /
+            <span>Термосы</span>
+        </nav>
+
+        <!-- Карточка товара -->
+        <div class="product-detail">
+            <!-- Галерея изображений -->
+            <div class="product-gallery">
+                <img src="../images/секция%207%20термос.png" alt="Термосы" class="main-image">
+            </div>
+
+            <!-- Информация о товаре -->
+            <div class="product-info">
+                <h1 class="product-title">Термосы</h1>
+                <div class="product-meta">
+                    <span class="product-article-detail">Артикул: 23200.00</span>
+                    <span class="product-stock-detail">В наличии: 20 шт.</span>
+                </div>
+                <div class="product-price-detail">900,00 ₽</div>
+
+                <div class="product-description">
+                    <p>Качественные термосы с логотипом вашей компании. Идеально подходят для корпоративных подарков и мерча.</p>
+                </div>
+
+                <div class="product-actions">
+                    <button class="add-to-cart-large">Добавить в корзину</button>
+                    <button class="add-to-favorite-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                        В избранное
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<!-- ============================================
+     СЕКЦИЯ 17: FUTER (ПОДВАЛ САЙТА)
+     ============================================ -->
+<footer class="footer-section">
+    <div class="footer-container">
+
+        <!-- ==========================================
+             ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ
+             ========================================== -->
+        <div class="footer-top">
+
+            <!-- Левая часть: Текст -->
+            <div class="footer-form-text">
+                <p>Оставить контакты,<br>разберёмся вместе</p>
+            </div>
+
+            <!-- Правая часть: Форма заявки -->
+            <div class="footer-form-wrapper">
+
+                <!-- Поля формы в ряд -->
+                <div class="footer-form-row">
+                    <!-- Поле: Контактное лицо -->
+                    <input type="text" class="form-input-footer" placeholder="Контактное лицо">
+
+                    <!-- Поле: Номер телефона -->
+                    <input type="tel" class="form-input-footer" placeholder="Номер телефона">
+
+                    <!-- Кнопка: Отправить -->
+                    <button type="submit" class="form-btn-footer">Отправить</button>
+                </div>
+
+                <!-- Чекбокс: Согласие (снизу под кнопками) -->
+                <label class="form-checkbox-footer">
+                    <input type="checkbox" required>
+                    <span class="checkbox-custom-footer"></span>
+                    <span class="checkbox-text-footer">Даю согласие на обработку персональных данных</span>
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================================
+             СРЕДНЯЯ ЧАСТЬ: ЛИНИИ + БЕГУЩАЯ СТРОКА
+             ========================================== -->
+        <div class="footer-middle">
+
+            <!-- Линия 1: 168px от верха -->
+            <div class="footer-line footer-line-1"></div>
+
+            <!-- Линия 2: 51px ниже первой -->
+            <div class="footer-line footer-line-2"></div>
+
+            <!-- БЕГУЩАЯ СТРОКА "СЧАСТЬЕ" -->
+            <div class="footer-marquee">
+                <div class="marquee-content">
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span>
+                </div>
+            </div>
+
+            <!-- Линия 3: 220px ниже второй -->
+            <div class="footer-line footer-line-3"></div>
+
+            <!-- Линия 4: 51px ниже третьей -->
+            <div class="footer-line footer-line-4"></div>
+
+        </div>
+
+        <!-- ==========================================
+             НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ (ПОМЕНЯЛИ МЕСТАМИ)
+             ========================================== -->
+        <div class="footer-bottom">
+
+            <!-- Копирайт СПРАВА: © 2026 -->
+            <div class="footer-copyright-right">
+                <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>
+            </div>
+
+            <!-- Копирайт СЛЕВА: Сделано с любовью -->
+            <div class="footer-copyright-left">
+                <!-- Иконка сердечка из папки images -->
+                <img src="../images/секция%2011%20сердце.svg" alt="❤️" class="heart-icon">
+                <span>Сделано с любовью</span>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

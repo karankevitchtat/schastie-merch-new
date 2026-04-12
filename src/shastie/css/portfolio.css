@@ -1,0 +1,200 @@
+/* ═══════════════════════════════════════════════════ */
+/* СТРАНИЦА "ПОРТФОЛИО" */
+/* Визуальный стиль с акцентом на фото */
+/* ═══════════════════════════════════════════════════ */
+
+.portfolio-main {
+    padding: 40px 0 80px;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #100C35;
+    margin: 50px 0 20px 0;
+}
+
+.portfolio-intro {
+    font-size: 16px;
+    color: #7B68EE;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ГАЛЕРЕЯ (СЕТКА) */
+/* ═══════════════════════════════════════════════════ */
+
+.portfolio-gallery {
+    display: grid;
+    /* Автоматическое заполнение: минимум 350px, иначе растягивается */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+/* Карточка фото */
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; /* Соотношение сторон 4:3 */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f0f0f0;
+}
+
+/* Изображение внутри */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Фото заполняет блок, не искажаясь */
+    transition: transform 0.5s ease;
+}
+
+/* Эффект при наведении на карточку */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(123, 104, 238, 0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Легкое увеличение фото */
+}
+
+/* Затемнение и текст поверх фото */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 25px;
+    background: linear-gradient(to top, rgba(16, 12, 53, 0.9) 0%, rgba(16, 12, 53, 0) 100%);
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* Показываем текст при наведении */
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    color: #ffffff;
+}
+
+.gallery-overlay p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* CTA БЛОК */
+/* ═══════════════════════════════════════════════════ */
+
+.portfolio-cta {
+    background: linear-gradient(135deg, #100C35 0%, #7B68EE 100%);
+    padding: 60px 40px;
+    border-radius: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.portfolio-cta h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0 0 15px 0;
+}
+
+.portfolio-cta p {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #ffffff;
+    color: #7B68EE;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #7B68EE;
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* АДАПТИВНОСТЬ */
+/* ═══════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 28px;
+    }
+
+    .portfolio-gallery {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+        gap: 20px;
+    }
+
+    .gallery-overlay {
+        opacity: 1; /* На мобильных текст виден всегда (опционально) */
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(16, 12, 53, 0.8) 0%, rgba(16, 12, 53, 0.4) 60%, transparent 100%);
+    }
+
+    .portfolio-cta h2 {
+        font-size: 26px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

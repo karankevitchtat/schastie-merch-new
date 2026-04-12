@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - СЧАСТЬЕ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/catalog.css">
+</head>
+<body>
+
+<!-- ============================================
+      HEADER: Шапка сайта (логотип, меню, контакты)
+      ============================================ -->
+<header class="header">
+    <!-- Внутренний контейнер для выравнивания -->
+    <div class="container">
+
+        <!-- ПЕРВЫЙ РЯД: Логотип + Навигация + Контакты -->
+        <div class="header-top">
+
+            <!-- Логотип -->
+            <div class="logo">СЧАСТЬЕ</div>
+
+            <!-- Навигационное меню  добавили заглушку <a href="#" onclick="showCatalogMessage(); return false;">Каталог</a>-->
+            <!--                <nav class="nav">-->
+            <nav class="nav">
+                <!--                    <a href="catalog.html">Каталог</a>-->
+                <a href="#">Спецпредложения</a>
+                <a href="#">Портфолио</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">Контакты</a>
+                <a href="#">О нас</a>
+            </nav>
+
+            <!-- Контактная информация -->
+            <div class="header-contacts">
+                <!-- Телефон -->
+                <div class="contact-item">
+                    <div class="contact-phone">+7 (812) 425-30-99</div>
+                    <div class="contact-dept">Отдел продаж</div>
+                </div>
+                <!-- Email 1 -->
+                <div class="contact-item">
+                    <div class="contact-email">pro.schastie@mail.ru</div>
+                    <div class="contact-dept">Отдел продаж</div>
+                </div>
+                <!-- Email 2 -->
+                <div class="contact-item">
+                    <div class="contact-email">01@schaste.ru</div>
+                    <div class="contact-dept">Отдел закупок</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВТОРОЙ РЯД: Каталог + Поиск + Мин.сумма + Корзина -->
+        <div class="header-bottom">
+
+            <!-- Кнопка "Каталог"   добавили заглушку  onclick="showCatalogMessage()"-->
+            <button class="btn btn-catalog" onclick="window.location.href='cart.html'">
+                <!-- Иконка сетки (4 квадрата) -->
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="5" height="5" rx="1"/>
+                    <rect x="9" y="2" width="5" height="5" rx="1"/>
+                    <rect x="2" y="9" width="5" height="5" rx="1"/>
+                    <rect x="9" y="9" width="5" height="5" rx="1"/>
+                </svg>
+                <span>Каталог</span>
+            </button>
+
+            <!-- Поле поиска -->
+            <div class="search">
+                <input type="text" placeholder="Поиск" class="search-input">
+                <!-- Иконка лупы -->
+                <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+
+            <!-- Блок "Минимальная сумма заказа" -->
+            <div class="min-order">
+                <span class="min-order-price">50 000 ₽</span>
+                <span class="min-order-label">минимальная<br>сумма заказа</span>
+            </div>
+
+            <!-- Кнопка "Корзина" -->
+            <button class="btn btn-cart" onclick="window.location.href='cart.html'">
+                <!-- Иконка корзины -->
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358
+                        5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1
+                        1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5
+                        0 100-3 1.5 1.5 0 000 3z"/>
+                </svg>
+                <span>Корзина</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- Основной контент -->
+<main class="catalog-main">
+    <div class="container-fixed">
+
+        <!-- Заголовок -->
+        <h1 class="page-title">Каталог товаров</h1>
+
+        <!-- Фильтры -->
+        <div class="catalog-filters">
+            <button class="filter-btn active" onclick="filterCategory('all')">Все товары</button>
+            <button class="filter-btn" onclick="filterCategory('posuda')">Посуда</button>
+            <button class="filter-btn" onclick="filterCategory('textile')">Текстиль</button>
+            <button class="filter-btn" onclick="filterCategory('office')">Канцелярия</button>
+            <button class="filter-btn" onclick="filterCategory('electronics')">Электроника</button>
+        </div>
+
+        <!-- Сетка товаров -->
+        <div class="products-grid" id="productsGrid">
+
+            <!-- Товар 1: Термос -->
+            <div class="product-item" data-category="posuda">
+                <div class="product-image">
+                    <img src="../images/products/thermos.jpg" alt="Термос с логотипом" onerror="this.src='https://via.placeholder.com/300x300/7B68EE/ffffff?text=Термос'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Термос с логотипом</h3>
+                    <p class="product-article">Артикул: TRS-001</p>
+                    <p class="product-price">900 ₽</p>
+                    <button class="btn btn-add-cart" onclick="addToCart({
+                            id: 1,
+                            name: 'Термос с логотипом',
+                            price: 900,
+                            article: 'TRS-001',
+                            image: 'images/products/thermos.jpg'
+                        })">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 2: Кружка -->
+            <div class="product-item" data-category="posuda">
+                <div class="product-image">
+                    <img src="../images/чашка%20бел.jpg" alt="Кружка с логотипом" onerror="this.src='https://via.placeholder.com/300x300/7B68EE/ffffff?text=Кружка'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Кружка с логотипом</h3>
+                    <p class="product-article">Артикул: MUG-045</p>
+                    <p class="product-price">450 ₽</p>
+                    <button class="btn btn-add-cart" onclick="addToCart({
+                            id: 2,
+                            name: 'Кружка с логотипом',
+                            price: 450,
+                            article: 'MUG-045',
+                            image: '../images/чашка%20бел.jpg'
+                        })">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 3: Футболка -->
+            <div class="product-item" data-category="textile">
+                <div class="product-image">
+                    <img src="../images/футболка.png" alt="Футболка с логотипом" onerror="this.src='https://via.placeholder.com/300x300/7B68EE/ffffff?text=Футболка'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Футболка с логотипом</h3>
+                    <p class="product-article">Артикул: TSH-120</p>
+                    <p class="product-price">1 200 ₽</p>
+                    <button class="btn btn-add-cart" onclick="addToCart({
+                            id: 3,
+                            name: 'Футболка с логотипом',
+                            price: 1200,
+                            article: 'TSH-120',
+                            image: '..images/футболка,зтп'
+                        })">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 4: Блокнот -->
+            <div class="product-item" data-category="office">
+                <div class="product-image">
+                    <img src="../images/products/notebook.jpg" alt="Блокнот с логотипом" onerror="this.src='https://via.placeholder.com/300x300/7B68EE/ffffff?text=Блокнот'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Блокнот с логотипом</h3>
+                    <p class="product-article">Артикул: NB-078</p>
+                    <p class="product-price">350 ₽</p>
+                    <button class="btn btn-add-cart" onclick="addToCart({
+                            id: 4,
+                            name: 'Блокнот с логотипом',
+                            price: 350,
+                            article: 'NB-078',
+                            image: 'images/products/notebook.jpg'
+                        })">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 5: Ручка -->
+            <div class="product-item" data-category="office">
+                <div class="product-image">
+                    <img src="../images/products/pen.jpg" alt="Ручка с логотипом" onerror="this.src='https://via.placeholder.com/300x300/7B68EE/ffffff?text=Ручка'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Ручка с логотипом</h3>
+                    <p class="product-article">Артикул: PEN-234</p>
+                    <p class="product-price">150 ₽</p>
+                    <button class="btn btn-add-cart" onclick="addToCart({
+                            id: 5,
+                            name: 'Ручка с логотипом',
+                            price: 150,
+                            article: 'PEN-234',
+                            image: 'images/products/pen.jpg'
+                        })">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 6: Пауэрбанк -->
+            <div class="product-item" data-category="electronics">
+                <div class="product-image">
+                    <img src="../images/products/powerbank.jpg" alt="Пауэрбанк с логотипом" onerror="this.src='https://via.placeholder.com/300x300/7B68EE/ffffff?text=Пауэрбанк'">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Пауэрбанк с логотипом</h3>
+                    <p class="product-article">Артикул: PWB-567</p>
+                    <p class="product-price">1 500 ₽</p>
+                    <button class="btn btn-add-cart" onclick="addToCart({
+                            id: 6,
+                            name: 'Пауэрбанк с логотипом',
+                            price: 1500,
+                            article: 'PWB-567',
+                            image: 'images/products/powerbank.jpg'
+                        })">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<!-- Футер -->
+<footer class="footer-section">
+    <!-- Ваш футер -->
+</footer>
+
+<!-- Модальное окно корзины -->
+<div class="cart-modal" id="cartModal">
+    <div class="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-content">
+        <div class="cart-header">
+            <h2>🛒 Корзина</h2>
+            <button class="cart-close" onclick="closeCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Корзина пуста</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="btn btn-checkout" onclick="window.location.href='cart.html'">
+                Оформить заказ
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/main.js"></script>
+<!--<script src="../js/catalog.js"></script>-->
+
+</body>
+</html>
