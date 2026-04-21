@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<!-- Указываем язык страницы для поисковиков и скринридеров -->
-<html lang="ru">
+<html lang="ru">             <!-- Указываем язык страницы для поисковиков и скринридеров -->
 
 <!-- ============================================
      HEAD: Мета-данные, подключение стилей и шрифтов
      ============================================ -->
 <head>
-    <!-- 1. КОДИРОВКА: Поддержка русских букв -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">                    <!-- 1. КОДИРОВКА: Поддержка русских букв -->
     <!-- 2. АДАПТИВНОСТЬ: Корректное отображение на мобильных -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0 user-scalable=yes">
     <!-- 3. ЗАГОЛОВОК: Отображается во вкладке браузера и в поиске -->
     <title>Счастье — мерч для бизнеса</title>
     <!-- 4. ШРИФТЫ: Подключение Inter из Google Fonts -->
@@ -52,7 +50,7 @@
                     <a href="special-offers.html">Спецпредложения</a>
                     <a href="portfolio.html">Портфолио</a>
                     <a href="delivery.html">Доставка и оплата</a>
-                    <a href="#">Контакты</a>
+                    <a href="contacts.html">Контакты</a>
                     <a href="about.html">О нас</a>
                 </nav>
 
@@ -61,18 +59,15 @@
                     <!-- Телефон -->
                     <div class="contact-item">
                         <div class="contact-phone">+7 (812) 425-30-99</div>
-                        <div class="contact-dept">Отдел продаж</div>
                     </div>
                     <!-- Email 1 -->
                     <div class="contact-item">
-                        <div class="contact-email">pro.schastie@mail.ru</div>
-                        <div class="contact-dept">Отдел продаж</div>
+                        <!-- Активная ссылка на почту -->
+                        <a href="mailto:pro.schastie@mail.ru" class="contact-email">
+                            pro.schastie@mail.ru
+                        </a>
                     </div>
-                    <!-- Email 2 -->
-                    <div class="contact-item">
-                        <div class="contact-email">01@schaste.ru</div>
-                        <div class="contact-dept">Отдел закупок</div>
-                    </div>
+
                 </div>
             </div>
 
@@ -80,8 +75,10 @@
             <div class="header-bottom">
 
                 <!-- Кнопка "Каталог"   добавили заглушку  onclick="showCatalogMessage()"-->
-                <button class="btn btn-catalog" onclick="showCatalogMessage()">
-<!--                <button class="btn btn-catalog" onclick="window.location.href='cart.html'"> нету заглушки-->
+ <!--               <button class="btn btn-catalog" onclick="showCatalogMessage()">
+                    ссылка на католог заглушка это везде в кнопках потом ссылку опять в button-->
+                <!-- Ссылка "Каталог" (ведет на файл catalog.html) -->
+                <a href="catalog.html" class="btn btn-catalog" style="text-decoration: none; display: inline-flex;">
                     <!-- Иконка сетки (4 квадрата) -->
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                         <rect x="2" y="2" width="5" height="5" rx="1"/>
@@ -90,7 +87,7 @@
                         <rect x="9" y="9" width="5" height="5" rx="1"/>
                     </svg>
                     <span>Каталог</span>
-                </button>
+                </a>
 
                 <!-- Поле поиска -->
                 <div class="search">
@@ -108,8 +105,8 @@
                 </div>
 
                 <!-- Кнопка "Корзина" -->
-<!--  openStubModal('cart') это заглушка             -->
-                <button class="btn btn-cart" onclick="showCartMessage()">
+                <!--  openStubModal('cart') это заглушка             -->
+                <a href="catalog.html" class="btn btn-cart" style="text-decoration: none; display: inline-flex;">
 <!--                <button class="btn btn-cart" onclick="window.location.href='cart.html'"> нету заглушки-->
                     <!-- Иконка корзины -->
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -120,7 +117,7 @@
                     </svg>
                     <span>Корзина</span>
                     <span class="cart-count" id="cartCount">0</span>
-                </button>
+                </a>
 
             </div>
         </div>
@@ -131,12 +128,13 @@
      MAIN: Основной контент страницы (внутри container-fixed)
      ============================================ -->
 <main class="main">
-    <div class="container-fixed">  <!-- Открываем container-fixed для main -->
+<!--    <div class="container-fixed">  &lt;!&ndash; Открываем container-fixed для main &ndash;&gt;-->
 
         <!-- ============================================
              HERO SECTION: Главный экран (первый экран сайта)
              ============================================ -->
         <section class="hero">
+            <div class="container-fixed">  <!-- Открываем container-fixed для main -->
             <div class="container">
                 <!-- Главный заголовок -->
                 <h1 class="hero-title">МЕРЧ ДЛЯ БИЗНЕСА</h1>
@@ -162,6 +160,7 @@
                     </button>
                 </div>
             </div>
+        </div>
         </section>
 
         <!-- ============================================
@@ -182,20 +181,39 @@
                         <p class="banner-subtitle">Проконсультируем вас по вопросам мерча</p>
                     </div>
 
-                    <!-- Правая часть: форма + чекбокс -->
+                    <!-- Правая часть: форма + чекбокс через электронку-->
                     <div class="banner-form-wrapper">
-                        <!-- Форма ввода данных -->
-                        <div class="banner-form">
-                            <input type="text" placeholder="Контактное лицо" class="form-input">
-                            <input type="tel" placeholder="Номер телефона" class="form-input">
-                            <button type="submit" class="form-btn">Отправить</button>
-                        </div>
 
-                        <!-- Чекбокс согласия на обработку данных -->
-                        <label class="banner-checkbox">
-                            <input type="checkbox" required>
-                            <span class="checkbox-text">Даю согласие на обработку <span class="personal-data">персональных данных</span></span>
+                        <!-- Форма ввода данных (ТЕПЕРЬ ЭТО НАСТОЯЩАЯ ФОРМА) -->
+                        <!-- В action вставлена ваша ссылка на Formspree -->
+                        <form action="https://formspree.io/f/xlgajwzl" method="POST" class="banner-form">
+
+                            <!-- Поле: Имя (добавили name="name") -->
+                            <input type="text" name="name" placeholder="Контактное лицо" class="form-input" required>
+                            <!-- Поле: Телефон (добавили name="phone") -->
+                            <input type="tel" name="phone" placeholder="Номер телефона" class="form-input" required>
+                            <!-- Кнопка отправки -->
+                            <button type="submit" class="form-btn">Отправить</button>
+                        </form>
+
+                        <!-- УНИВЕРСАЛЬНЫЙ ЧЕКБОКС СОГЛАСИЯ -->
+                        <label class="banner-checkbox" for="policy-agreement-main">
+
+                            <!-- 1. Скрытый инпут (обязательно required и name) -->
+                            <!-- id должен быть уникальным для каждой формы на странице! -->
+                            <input type="checkbox" id="policy-agreement-main" name="agreement" required>
+
+                            <!-- 2. Красивый квадратик (визуальная часть) -->
+                            <span class="checkbox-custom"></span>
+
+                            <!-- 3. Текст с ссылкой на политику -->
+                            <span class="checkbox-text">
+                                Даю согласие на обработку
+                                <a href="policy.html" target="_blank" class="policy-link">персональных данных</a>
+                                и принимаю условия
+                            </span>
                         </label>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -302,47 +320,185 @@
             </div>
         </section>
 
-        <!-- ============================================
-             PROJECTS SECTION: Реализованные проекты
-             ============================================ -->
-        <section class="projects-section">
-            <div class="projects-container">
-                <!-- Заголовок секции -->
-                <div class="projects-header">
-                    <h2 class="projects-title">
-                        <span class="title-black">РЕАЛИЗОВАННЫЕ</span>
-                        <span class="title-purple">ПРОЕКТЫ</span>
-                    </h2>
-                    <!-- Ссылка на портфолио -->
-                    <a href="#portfolio" class="projects-subtitle">
-                        <span>Смотреть портфолио</span>
-                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
 
-                    </a>
-                </div>
+<!-- ============================================-->
+    <!-- PROJECTS SECTION: Реализованные проекты (3D КАРУСЕЛЬ)
+     готовый-->
+    <!-- ============================================-->
+    <section class="projects-section">
+        <div class="projects-container">
 
-                <!-- Галерея проектов (2 фото) -->
-                <div class="projects-gallery">
-                    <!-- Проект 1: Подарочный набор -->
-                    <a href="#project1" class="project-item project-1">
-                        <img src="../images/новое)%202.png" alt="Подарочная коробка с мерчем" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-name">Подарочный набор</span>
-                        </div>
-                    </a>
-
-                    <!-- Проект 2: Брендинг транспорта -->
-                    <a href="#project2" class="project-item project-2">
-                        <img src="../images/секция%204%20машина%202.png" alt="Фургон с брендингом Счастье" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-name">Брендинг транспорта</span>
-                        </div>
-                    </a>
-                </div>
+            <!-- Заголовок -->
+            <div class="projects-header">
+                <h2 class="projects-title">
+                    <span class="title-black">РЕАЛИЗОВАННЫЕ</span>
+                    <span class="title-purple">ПРОЕКТЫ</span>
+                </h2>
+                <a href="portfolio.html" class="projects-subtitle">
+                    Смотреть портфолио
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
-        </section>
+
+            <!-- Обёртка для 3D слайдера -->
+            <div class="projects-slider-wrapper">
+
+                <!-- Стрелка влево -->
+                <button class="slider-arrow slider-arrow-prev" onclick="moveSlide(-1)" aria-label="Предыдущий слайд">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <!-- Контейнер слайдов -->
+                <div class="projects-slider" id="projectsSlider">
+
+                    <!-- Слайд 1 -->
+                    <div class="slider-item">
+                        <a href="portfolio.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/фото5%20смола.png" alt="Премиум посуда" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Премиум посуда</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="slider-item">
+                        <a href="portfolio.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/фото1.png" alt="Корпоративный мерч" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Корпоративный мерч</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="slider-item">
+                        <a href="portfolio.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/фото%204%20коробки.png" alt="Мерч ВИМ" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Корпоративный стиль</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 4 -->
+                    <div class="slider-item">
+                        <a href="portfolio.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/фото3дерево.png" alt="Уникальный дизайн" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Уникальный дизайн</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 5 -->
+                    <div class="slider-item">
+                        <a href="portfolio.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/фото6%20новый%20год.png" alt="Бизнес сувениры" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Бизнес сувениры</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 6 -->
+                    <div class="slider-item">
+                        <a href="portfolio.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/фото%20галерея%20вкуса.jpg" alt="Корпоративный мерч" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Корпоративный мерч</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 7 -->
+                    <div class="slider-item">
+                        <a href="portfolio.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/ф1%20белово.jpg" alt="Бизнес сувениры" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Бизнес сувениры</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 8 -->
+                    <div class="slider-item">
+                        <a href="premium-sets.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/ф2%20срм.jpg" alt="Подарочный премиум-набор" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Подарочный премиум-набор</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 9 -->
+                    <div class="slider-item">
+                        <a href="wristbands.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/ф5%20.jpg" alt="Брендированные браслеты" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Брендированные браслеты</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 10 -->
+                    <div class="slider-item">
+                        <a href="event-bags.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/ф4%20выборв.jpg" alt="Агитационная сумка" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Агитационная сумка</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 11 -->
+                    <div class="slider-item">
+                        <a href="camping-mugs.html" class="slider-link">
+                            <div class="slider-image-box">
+                                <img src="../images/ф3%20чашки.jpg" alt="Набор туристических кружек" class="slider-img">
+                            </div>
+                            <div class="slider-overlay">
+                                <span class="slider-project-name">Набор туристических кружек</span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Стрелка вправо -->
+                <button class="slider-arrow slider-arrow-next" onclick="moveSlide(1)" aria-label="Следующий слайд">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </section>
 
         <!-- ============================================
              TARGETS SECTION: Для кого и для каких целей
@@ -362,7 +518,7 @@
                             <li>Рестораны, гостиницы</li>
                         </ul>
                         <!-- Логотип (справа, полупрозрачный) -->
-                        <img src="../images/секция%205%20лого.png" alt="Логотип" class="target-logo">
+                        <img src="../images/лого%202.svg" alt="Логотип" class="target-logo">
                     </div>
 
                     <!-- ПРЯМОУГОЛЬНИК 2: Для каких целей -->
@@ -375,127 +531,155 @@
                             <li>Подарки для свадеб и юбилеев</li>
                         </ul>
                         <!-- Логотип (справа, полупрозрачный) -->
-                        <img src="../images/секция%205%20лого.png" alt="Логотип" class="target-logo">
+                        <img src="../images/лого%202.svg" alt="Логотип" class="target-logo">
                     </div>
 
                 </div>
             </div>
         </section>
+    <!-- ============================================ -->
+    <!-- СЕКЦИЯ: КАТЕГОРИИ ТОВАРОВ (КАРУСЕЛЬ) -->
+    <!-- ============================================ -->
+    <!-- Отображает лучшие товары в виде карусели с эффектом Fade + Scale -->
 
-        <!-- ============================================
-     СЕКЦИЯ: КАТЕГОРИИ ТОВАРОВ (СЛАЙДЕР)
-     ============================================ -->
-                <section class="categories-section">
-                    <div class="categories-container">
+    <section class="categories-section">
+        <div class="container-fixed">
 
-                        <!-- Заголовок -->
-                        <div class="categories-header">
-                            <h2 class="categories-title">
+            <!-- Заголовок секции -->
+            <div class="categories-header">
+                <h2 class="categories-title">
                 <span class="title-row">
                     <span class="title-black">РАЗДЕЛ С </span>
                     <span class="title-purple">ЛУЧШИМИ</span>
                 </span>
-                                <span class="title-row">
+                    <span class="title-row">
                     <span class="title-purple">ТОВАРАМИ </span>
                     <span class="title-black">ДЛЯ МЕРЧА</span>
                 </span>
-                            </h2>
-<!--              all-categories              onclick="showCatalogMessage(); return false;" добавили заглушку-->
-                            <a href="#all-categories" class="view-all-link" >
-                                <span>Смотреть все разделы</span>
-                                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
+                </h2>
 
-                        <!-- СЛАЙДЕР SWIPER -->
-                        <div class="catalog-slider swiper">
-                            <div class="swiper-wrapper">
+                <!-- Ссылка "Смотреть все разделы" -->
+                <a href="catalog.html" class="view-all-link" onclick="openStubModal('Каталог'); return false;">
+                    <span>Смотреть все разделы</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
 
-                                <!-- Слайд 1 -->
-                                <div class="category-card swiper-slide">
-                                    <a href="#notebooks" class="card-link">
-                                        <div class="card-image">
-                                            <img src="../images/секция%205%20Блокнот%20на%20пружине%201.png" alt="Ежедневники и блокноты" class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h3 class="card-title">Ежедневники и блокноты</h3>
-                                        </div>
-                                    </a>
-                                </div>
+            <!-- Карусель Swiper -->
+            <div class="swiper catalog-slider">
+                <div class="swiper-wrapper">
 
-                                <!-- Слайд 2 -->
-                                <div class="category-card swiper-slide">
-                                    <a href="#plaids" class="card-link">
-                                        <div class="card-image">
-                                            <img src="../images/секция%207%20плед.png" alt="Пледы" class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h3 class="card-title">Пледы</h3>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- Слайд 3 -->
-                                <div class="category-card swiper-slide">
-                                    <a href="#corporate" class="card-link">
-                                        <div class="card-image">
-                                            <img src="../images/секция%206%20визитки.png" alt="Корпоративные подарки" class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h3 class="card-title">Корпоративные подарки</h3>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- Слайд 4 -->
-                                <div class="category-card swiper-slide">
-                                    <a href="#clothing" class="card-link">
-                                        <div class="card-image">
-                                            <img src="../images/секция%206%20одежда%20.png" alt="Одежда" class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h3 class="card-title">Одежда</h3>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- Слайд 5 -->
-                                <div class="category-card swiper-slide">
-                                    <a href="#sets" class="card-link">
-                                        <div class="card-image">
-                                            <img src="../images/секция%207%20набор.png" alt="Наборы" class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h3 class="card-title">Наборы</h3>
-                                        </div>
-                                    </a>
-                                </div>
-
-
-                                <!-- Слайд 6 -->
-                                <div class="category-card swiper-slide">
-                                    <a href="#sets" class="card-link">
-                                        <div class="card-image">
-                                            <img src="../images/новое)%202.png" alt="Наборы" class="card-img">
-                                        </div>
-                                        <div class="card-content">
-                                            <h3 class="card-title">Наборы</h3>
-                                        </div>
-                                    </a>
+                    <!-- Слайд 1: ПОДАРОЧНЫЕ НАБОРЫ -->
+                    <div class="swiper-slide">
+                        <a href="catalog.html" class="category-card" onclick="openStubModal('Каталог'); return false;">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600&auto=format&fit=crop" alt="Подарочные наборы" class="card-img">
+                                <div class="card-text-overlay">
+                                    <span>ПОДАРОЧНЫЕ НАБОРЫ</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M16 12l-4-4-4 4M12 16V8"/>
+                                    </svg>
                                 </div>
                             </div>
-
-                            <!-- Навигация -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-
+                        </a>
                     </div>
-                </section>
-        <!-- ============================================
+
+                    <!-- Слайд 2: ШОПЕРЫ И СУМКИ -->
+                    <div class="swiper-slide">
+                        <a href="catalog.html" class="category-card" onclick="openStubModal('Каталог'); return false;">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop" alt="Шоперы и сумки" class="card-img">
+                                <div class="card-text-overlay">
+                                    <span>ШОПЕРЫ И СУМКИ</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M16 12l-4-4-4 4M12 16V8"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 3: БРЕНДИРОВАННЫЕ ЗОНТЫ -->
+                    <div class="swiper-slide">
+                        <a href="catalog.html" class="category-card" onclick="openStubModal('Каталог'); return false;">
+                            <div class="card-image">
+                                <img src="../images/unnamed.jpg" alt="Брендированные зонты" class="card-img">
+                                <div class="card-text-overlay">
+                                    <span>БРЕНДИРОВАННЫЕ ЗОНТЫ</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M16 12l-4-4-4 4M12 16V8"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 4: БРЕНДИРОВАНАЯ ОДЕЖДА -->
+                    <div class="swiper-slide">
+                        <a href="catalog.html" class="category-card" onclick="openStubModal('Каталог'); return false;">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=600&auto=format&fit=crop" alt="Брендированная одежда" class="card-img">
+                                <div class="card-text-overlay">
+                                    <span>БРЕНДИРОВАНАЯ ОДЕЖДА</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M16 12l-4-4-4 4M12 16V8"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 5: КРУЖКИ И ТЕРМОКРУЖКИ -->
+                    <div class="swiper-slide">
+                        <a href="catalog.html" class="category-card" onclick="openStubModal('Каталог'); return false;">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?q=80&w=600&auto=format&fit=crop" alt="Кружки и термокружки" class="card-img">
+                                <div class="card-text-overlay">
+                                    <span>КРУЖКИ И ТЕРМОКРУЖКИ</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M16 12l-4-4-4 4M12 16V8"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Слайд 6: КОРПОРАТИВНЫЙ МЕРЧ -->
+                    <div class="swiper-slide">
+                        <a href="catalog.html" class="category-card" onclick="openStubModal('Каталог'); return false;">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=600&auto=format&fit=crop" alt="Корпоративный мерч" class="card-img">
+                                <div class="card-text-overlay">
+                                    <span>КОРПОРАТИВНЫЙ МЕРЧ</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M16 12l-4-4-4 4M12 16V8"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- Конец swiper-wrapper -->
+
+
+            </div>
+            <!-- Конец catalog-slider -->
+
+        </div>
+        <!-- Конец container-fixed -->
+    </section>
+    <!-- Конец categories-section -->
+
+    <!-- ============================================
      СЕКЦИЯ: РЕКОМЕНДУЕМЫЕ ТОВАРЫ
      ============================================ -->
         <section class="recommended-section">
@@ -505,7 +689,7 @@
                 <div class="recommended-header">
                     <h2 class="recommended-title">РЕКОМЕНДУЕМЫЕ ТОВАРЫ</h2>
 <!--               #all-products      onclick="showCatalogMessage(); return false;" добавили заглушку-->
-                    <a href="#all-products" class="more-products-link">
+                    <a href="catalog.html" class="more-products-link" onclick="openStubModal('Каталог'); return false;">
                         <span>Больше товаров</span>
                         <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                              stroke-linecap="round" stroke-linejoin="round">
@@ -522,8 +706,8 @@
                          ========================================== -->
                     <div class="product-card" data-product-id="23200">
 
-                        <a href="product-thermos.html" class="product-link">
-
+<!--                        <a href="product-thermos.html" class="product-link">-->
+                        <a href="catalog.html" class="product-link" onclick="openStubModal('Товар'); return false;">
                             <!-- Верхняя часть: Артикул и склад -->
                             <div class="product-info-top">
                                 <span class="product-article">Арт: 23200.00</span>
@@ -540,7 +724,8 @@
                                 <!-- Кнопка "В избранное" (сердечко) -->
                                 <button class="favorite-btn" type="button" aria-label="Добавить в избранное">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78
+                                        7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                                     </svg>
                                 </button>
                             </div>
@@ -554,8 +739,7 @@
                                     <span class="product-price">900,00 ₽</span>
                                     <span class="product-old-price">950 ₽</span>
                                 </div>
-<!--                                <button class="add-to-cart-btn" type="button">В корзину</button>-->
-                                <button class="add-to-cart-btn" type="button" onclick="addToCart({
+                                <button class="add-to-cart-btn" type="button" onclick="openStubModal('Корзина')({
                                         id: 23200,
                                         name: 'Термосы',
                                         price: 900,
@@ -570,8 +754,8 @@
                          ТОВАР 2: Плед в коробке
                          ========================================== -->
                     <div class="product-card" data-product-id="23057">
-                        <a href="product-plaid.html" class="product-link">
-
+<!--                        <a href="product-plaid.html" class="product-link">-->
+                            <a href="catalog.html" class="product-link">
                             <div class="product-info-top">
                                 <span class="product-article">Арт: 23057.00</span>
                                 <span class="product-stock">Склад: 10 шт.</span>
@@ -582,7 +766,8 @@
 
                                 <button class="favorite-btn" type="button" aria-label="Добавить в избранное">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78
+                                        7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                                     </svg>
                                 </button>
                             </div>
@@ -593,8 +778,7 @@
                                 <div class="product-price-block">
                                     <span class="product-price">5 500,00 ₽</span>
                                 </div>
-<!--                                <button class="add-to-cart-btn" type="button">В корзину</button>-->
-                                <button class="add-to-cart-btn" type="button" onclick="addToCart({
+                                <button class="add-to-cart-btn" type="button" onclick="openStubModal('Корзина')({
                                         id: 23221,
                                         name: 'Плед',
                                         price: 900,
@@ -610,8 +794,8 @@
                          ТОВАР 3: Набор свечей
                          ========================================== -->
                     <div class="product-card" data-product-id="23027">
-                        <a href="product-candles.html" class="product-link">
-
+<!--                        <a href="product-candles.html" class="product-link">-->
+                        <a href="catalog.html" class="product-link">
                             <div class="product-info-top">
                                 <span class="product-article">Арт: 23027.00</span>
                                 <span class="product-stock">Склад: 720 шт.</span>
@@ -625,7 +809,8 @@
 
                                 <button class="favorite-btn" type="button" aria-label="Добавить в избранное">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78
+                                        7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                                     </svg>
                                 </button>
                             </div>
@@ -637,8 +822,8 @@
                                     <span class="product-price">195,00 ₽</span>
                                     <span class="product-old-price">215 ₽</span>
                                 </div>
-<!--                                <button class="add-to-cart-btn" type="button">В корзину</button>-->
-                                <button class="add-to-cart-btn" type="button" onclick="addToCart({
+                            <!--<button class="add-to-cart-btn" type="button">В корзину</button>-->
+                                <button class="add-to-cart-btn" type="button" onclick="openStubModal('Корзина')({
                                         id: 23225,
                                         name: 'Набор свечей',
                                         price: 900,
@@ -653,8 +838,8 @@
                          ТОВАР 4: Набор диффузоров
                          ========================================== -->
                     <div class="product-card" data-product-id="23107">
-                        <a href="product-diffusers.html" class="product-link">
-
+<!--                        <a href="product-diffusers.html" class="product-link">-->
+                            <a href="catalog.html" class="product-link">
                             <div class="product-info-top">
                                 <span class="product-article">Арт: 23107.00</span>
                                 <span class="product-stock">Склад: 72 шт.</span>
@@ -665,7 +850,8 @@
 
                                 <button class="favorite-btn" type="button" aria-label="Добавить в избранное">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78
+                                        7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                                     </svg>
                                 </button>
                             </div>
@@ -676,8 +862,7 @@
                                 <div class="product-price-block">
                                     <span class="product-price">1 000,00 ₽</span>
                                 </div>
-<!--                                <button class="add-to-cart-btn" type="button">В корзину</button>-->
-                                <button class="add-to-cart-btn" type="button" onclick="addToCart({
+                                <button class="add-to-cart-btn" type="button" onclick="openStubModal('Корзина')({
                                         id: 23230,
                                         name: 'Набор диффузоров',
                                         price: 900,
@@ -706,9 +891,10 @@
                     <!-- Строка с заголовками -->
                     <div class="subheaders-row">
                         <h3 class="about-subtitle">Наши преимущества</h3>
-                        <a href="#about" class="about-link">
+                        <a href="about.html" class="about-link">
                             <span>о компании</span>
-                                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
                                 </svg>
                         </a>
@@ -746,7 +932,8 @@
                         <div class="advantage-card">
                             <div class="advantage-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3
+                                    8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                                     <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
                                     <line x1="12" y1="22.08" x2="12" y2="12"/>
                                 </svg>
@@ -771,8 +958,14 @@
 
                     <!-- Текст о компании -->
                     <div class="about-offer">
-                        <p>Бизнес-подарок — это всегда про эмоции. А какая эмоция важнее искренней радости? Счастье уверены: деловые подарки должны удивлять, вдохновлять и транслировать ценности вашей компании легко и со вкусом. Наша специализация — креативные презенты с идеей и историей. Мы сотрудничаем с ведущими поставщиками сувенирного рынка, чтобы на одной платформе вы могли найти идеальное решение. Выбор: Легко и с комфортом найдете то, что нужно. Качество: Двойной контроль на всех этапах. Сервис: Наша команда с удовольствием поможет вам, а логистика — бережно доставит заказ.</p>
-                        <p>Счастье открыт для новых задач и смелых идей. Давайте развиваться вместе, делая бизнес успешнее, а мир — добрее. Вместе нам под силу любые вершины!</p>
+                        <p>Бизнес-подарок — это всегда про эмоции. А какая эмоция важнее искренней радости? Счастье уверены:
+                            деловые подарки должны удивлять, вдохновлять и транслировать ценности вашей компании легко и со вкусом.
+                            Наша специализация — креативные презенты с идеей и историей. Мы сотрудничаем с ведущими поставщиками
+                            сувенирного рынка, чтобы на одной платформе вы могли найти идеальное решение. Выбор: Легко и с комфортом
+                            найдете то, что нужно. Качество: Двойной контроль на всех этапах. Сервис: Наша команда с удовольствием
+                            поможет вам, а логистика — бережно доставит заказ.</p>
+                        <p>Счастье открыт для новых задач и смелых идей. Давайте развиваться вместе, делая бизнес успешнее,
+                            а мир — добрее. Вместе нам под силу любые вершины!</p>
                     </div>
 
                 </div>
@@ -785,9 +978,9 @@
                         <h2 class="trust-title">НАМ ДОВЕРЯЮТ</h2>
                         <a href="#all-clients" class="more-clients-link">
                             <span>Больше компаний</span>
-                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
                             </svg>
                         </a>
                     </div>
@@ -822,7 +1015,8 @@
                         <div class="faq-answer">
                             <div class="faq-answer-content">
                                 <h3 class="faq-subtitle">Кто может стать клиентом Счастье?</h3>
-                                <p>Мы работаем только с юридическими лицами и индивидуальными предпринимателями по безналичному расчету.</p>
+                                <p>Мы работаем только с юридическими лицами и индивидуальными предпринимателями
+                                    по безналичному расчету.</p>
 
                                 <h3 class="faq-subtitle">Какая минимальная сумма заказа?</h3>
                                 <p>Минимальный заказ — 50 000 рублей, включая стоимость нанесения логотипа или дизайна.</p>
@@ -831,7 +1025,8 @@
                                 <p>Да, все цены в каталоге и расчётах указаны с учетом НДС.</p>
 
                                 <h3 class="faq-subtitle">Работаете ли вы с системой «Честный ЗНАК»?</h3>
-                                <p>Да, мы поддерживаем маркировку «Честный ЗНАК» и поможем вам с оформлением необходимых документов.</p>
+                                <p>Да, мы поддерживаем маркировку «Честный ЗНАК» и поможем вам с оформлением необходимых
+                                    документов.</p>
                             </div>
                         </div>
                     </div>
@@ -856,7 +1051,8 @@
                                 </ol>
 
                                 <h3 class="faq-subtitle">Можно ли заказать индивидуальный дизайн?</h3>
-                                <p>Да, мы разрабатываем уникальные макеты и изготавливаем продукцию по вашему ТЗ. Сроки и стоимость согласовываются индивидуально.</p>
+                                <p>Да, мы разрабатываем уникальные макеты и изготавливаем продукцию по вашему ТЗ.
+                                    Сроки и стоимость согласовываются индивидуально.</p>
                             </div>
                         </div>
                     </div>
@@ -915,7 +1111,8 @@
                                 </ul>
 
                                 <h3 class="faq-subtitle">Сколько стоит доставка в регионы?</h3>
-                                <p>Стоимость рассчитывается по тарифам транспортных компаний и зависит от веса, габаритов и удаленности.</p>
+                                <p>Стоимость рассчитывается по тарифам транспортных компаний и зависит от веса, габаритов
+                                    и удаленности.</p>
 
                                 <h3 class="faq-subtitle">Какие сроки доставки?</h3>
                                 <ul class="faq-list">
@@ -981,22 +1178,26 @@
                         <div class="faq-answer">
                             <div class="faq-answer-content">
                                 <h3 class="faq-subtitle">Какие скидки вы предоставляете?</h3>
-                                <p>Мы предлагаем гибкую систему скидок для постоянных клиентов:</p>
+                                <p>Скидки для постоянных клиентов рассчитываются в индивидуальном порядке.</p>
                                 <ul class="faq-list">
-                                    <li>При заказе от 100 000 руб. — скидка 5%.</li>
-                                    <li>При заказе от 300 000 руб. — скидка 10%.</li>
-                                    <li>При заказе от 500 000 руб. — скидка 15%.</li>
-                                    <li>При заказе от 1 000 000 руб. — индивидуальные условия.</li>
+                                    <li>Мы учитываем:</li>
+                                    <li>Сумму заказа</li>
+                                    <li>Частоту сотрудничества</li>
+                                    <li>Долгосрочность работы</li>
+                                    <li>Напишите мне - обсудим ваши задачи, и я предложу комфортные условия!</li>
                                 </ul>
 
                                 <h3 class="faq-subtitle">Как стать постоянным клиентом?</h3>
-                                <p>Достаточно сделать повторный заказ. Мы автоматически применяем скидку при превышении порога суммы заказа.</p>
+                                <p>Достаточно сделать повторный заказ. Мы автоматически применяем скидку при превышении
+                                    порога суммы заказа.</p>
 
                                 <h3 class="faq-subtitle">Действуют ли скидки на все товары?</h3>
-                                <p>Скидки применяются на большинство товаров каталога. Исключения составляют товары по акциям и специальные предложения.</p>
+                                <p>Скидки применяются на большинство товаров каталога. Исключения составляют товары по
+                                    акциям и специальные предложения.</p>
 
                                 <h3 class="faq-subtitle">Можно ли получить персонального менеджера?</h3>
-                                <p>Да, при регулярных заказах (от 3 раз в квартал) за вами закрепляется персональный менеджер, который помогает с подбором товаров и оформлением заказов.</p>
+                                <p>Да, при регулярных заказах (от 3 раз в квартал) за вами закрепляется персональный
+                                    менеджер, который помогает с подбором товаров и оформлением заказов.</p>
                             </div>
                         </div>
                     </div>
@@ -1012,24 +1213,29 @@
                         <div class="faq-answer">
                             <div class="faq-answer-content">
                                 <h3 class="faq-subtitle">Можно ли получить образцы продукции?</h3>
-                                <p>Да, мы предоставляем образцы продукции для оценки качества. Стоимость образцов и доставки обсуждается индивидуально. При размещении заказа стоимость образцов вычитается из общей суммы.</p>
+                                <p>Да, мы предоставляем образцы продукции для оценки качества. Стоимость образцов
+                                    и доставки обсуждается индивидуально. При размещении заказа стоимость образцов
+                                    вычитается из общей суммы.</p>
 
                                 <h3 class="faq-subtitle">Предоставляете ли вы макет для согласования?</h3>
-                                <p>Да, перед запуском в производство мы бесплатно разрабатываем цифровой макет с вашим логотипом и отправляем на согласование.</p>
+                                <p>Да, перед запуском в производство мы бесплатно разрабатываем цифровой макет с
+                                    вашим логотипом и отправляем на согласование.</p>
 
                                 <h3 class="faq-subtitle">Какие форматы файлов нужны для нанесения?</h3>
-                                <p>Мы принимаем логотипы в форматах: AI, EPS, PDF (векторные), PNG, JPG (высокого разрешения, от 300 dpi).</p>
+                                <p>Мы принимаем логотипы в форматах: AI, EPS, PDF (векторные), PNG, JPG
+                                    (высокого разрешения, от 300 dpi).</p>
 
                                 <h3 class="faq-subtitle">Можно ли изменить дизайн после утверждения макета?</h3>
-                                <p>Внесение изменений возможно до момента запуска производства. После утверждения макета и начала производства изменения невозможны.</p>
+                                <p>Внесение изменений возможно до момента запуска производства. После утверждения
+                                    макета и начала производства изменения невозможны.</p>
 
-                                <h3 class="faq-subtitle">Как с вами связаться?</h3>
+                                <h3 class="faq-subtitle">Как с нами связаться?</h3>
                                 <p>Вы можете связаться с нами:</p>
                                 <ul class="faq-list">
-                                    <li>По телефону: +7 (XXX) XXX-XX-XX</li>
-                                    <li>По email: info@schastye.ru</li>
+                                    <li>По телефону: +7 (812) 425-30-99</li>
+                                    <li>По email: pro.schastie@mail.ru</li>
                                     <li>Через форму обратной связи на сайте</li>
-                                    <li>В мессенджерах: WhatsApp, Telegram</li>
+                                    <li>В мессенджерах: MAX, Telegram</li>
                                 </ul>
                             </div>
                         </div>
@@ -1089,18 +1295,22 @@
                 <h2 class="brief-form-title">Бриф на разработку концепции<br>по сувенирной продукции</h2>
 
                 <!-- Форма -->
-                <form class="brief-form" onsubmit="submitBrief(event)">
+                <form id="brief-form"
+                      class="brief-form"
+                      action="https://formspree.io/f/xlgajwzl"
+                      method="POST">
 
-                    <!-- Row 1 -->
+
+                <!-- Row 1 -->
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label">Контактное лицо*</label>
-                            <input type="text" class="form-input" required placeholder="Ваше имя">
+                            <input type="text" name="Контактное лицо" class="form-input" required placeholder="Ваше имя">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Телефон*</label>
-                            <input type="tel" class="form-input" required placeholder="+7 (___) ___-__-__">
+                            <input type="tel" name="Телефон" class="form-input" required placeholder="+7 (___) ___-__-__">
                         </div>
                     </div>
 
@@ -1108,12 +1318,12 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label">Организация</label>
-                            <input type="text" class="form-input" placeholder="Название компании">
+                            <input type="text" name="Организация" class="form-input" placeholder="Название компании">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">E-Mail*</label>
-                            <input type="email" class="form-input" required placeholder="email@example.com">
+                            <input type="email" name="email" class="form-input" required placeholder="email@example.com">
                         </div>
                     </div>
 
@@ -1121,79 +1331,79 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label">Город</label>
-                            <input type="text" class="form-input" placeholder="Ваш город">
+                            <input type="text" name="Город" class="form-input" placeholder="Ваш город">
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Ваш сайт или соц. сеть</label>
-                            <input type="text" class="form-input" placeholder="https://">
+                            <input type="text" name="Ваш сайт" class="form-input" placeholder="https://">
                         </div>
                     </div>
 
                     <!-- Row 4 -->
                     <div class="form-group">
                         <label class="form-label">Чем занимается компания</label>
-                        <input type="text" class="form-input" placeholder="Сфера деятельности">
+                        <input type="text" name="занимается компания" class="form-input" placeholder="Сфера деятельности">
                     </div>
 
                     <!-- Row 5 -->
                     <div class="form-group">
                         <label class="form-label">Корпоративная цветовая гамма*</label>
-                        <input type="text" class="form-input" required placeholder="Например: синий, белый, золотой">
+                        <input type="text" name="цветовая гамма" class="form-input" required placeholder="Например: синий, белый, золотой">
                     </div>
 
                     <!-- Row 6 -->
                     <div class="form-group">
                         <label class="form-label">Целевая аудитория*</label>
-                        <input type="text" class="form-input" required placeholder="Кто ваши клиенты">
+                        <input type="text" name="аудитория" class="form-input" required placeholder="Кто ваши клиенты">
                     </div>
 
                     <!-- Row 7 -->
                     <div class="form-group">
                         <label class="form-label">Цель использования сувенирной продукции</label>
-                        <input type="text" class="form-input" placeholder="Для чего нужны сувениры">
+                        <input type="text" name="Цель использования" class="form-input" placeholder="Для чего нужны сувениры">
                     </div>
 
                     <!-- Row 8 -->
                     <div class="form-group">
                         <label class="form-label">Тираж и планируемая стоимость одного изделия</label>
-                        <input type="text" class="form-input" placeholder="Количество и бюджет">
+                        <input type="text" name="Тираж" class="form-input" placeholder="Количество и бюджет">
                     </div>
 
                     <!-- Row 9 -->
                     <div class="form-group">
                         <label class="form-label">Желаемое отношение целевой аудитории к вашему подарку</label>
-                        <input type="text" class="form-input" placeholder="Какие эмоции должен вызывать">
+                        <input type="text" name="отношение к подарку" class="form-input" placeholder="Какие эмоции должен вызывать">
                     </div>
 
                     <!-- Row 10 -->
                     <div class="form-group">
                         <label class="form-label">Техническая информация</label>
-                        <textarea class="form-textarea" rows="3" placeholder="Дополнительные технические требования"></textarea>
+                        <textarea class="form-textarea" name="тех.информация" rows="3" placeholder="Дополнительные технические требования"></textarea>
                     </div>
 
                     <!-- Row 11 -->
                     <div class="form-group">
                         <label class="form-label">Пожелания к упаковке</label>
-                        <input type="text" class="form-input" placeholder="Требования к упаковке">
+                        <input type="text" name="упаковка" class="form-input" placeholder="Требования к упаковке">
                     </div>
 
                     <!-- Row 12 -->
                     <div class="form-group">
                         <label class="form-label">Творческие пожелания</label>
-                        <textarea class="form-textarea" rows="3" placeholder="Ваши идеи и пожелания"></textarea>
+                        <textarea class="form-textarea" name="Творческие пожелания" rows="3" placeholder="Ваши идеи и пожелания"></textarea>
                     </div>
 
                     <!-- Row 13 -->
                     <div class="form-group">
                         <label class="form-label">Желательные сроки доставки готовой продукции</label>
-                        <input type="text" class="form-input" placeholder="Когда нужно получить">
+                        <input type="text" name="сроки" class="form-input" placeholder="Когда нужно получить">
                     </div>
 
                     <!-- Row 14 -->
                     <div class="form-group">
                         <label class="form-label">Продукция, которая ранее уже была изготовлена для Вас</label>
-                        <input type="text" class="form-input" placeholder="Если было ранее">
+                        <input type="text" name="Продукция" class="form-input" placeholder="Если было ранее">
                     </div>
 
                     <!-- Row 15: Прикрепить файл -->
@@ -1206,180 +1416,193 @@
                         <div class="file-name" id="fileName">Файл не выбран</div>
                     </div>
 
-                    <!-- Row 16: Чекбокс -->
+                    <!-- Row 16: Чекбокс (ИСПРАВЛЕННЫЙ) -->
                     <div class="form-group form-checkbox-group">
-                        <label class="form-checkbox">
-                            <input type="checkbox" required>
+
+                        <!-- Используем label с уникальным ID для этой формы -->
+                        <label class="banner-checkbox" for="policy-agreement-brief">
+
+                            <!-- 1. Скрытый инпут с уникальным name и id -->
+                            <input type="checkbox" id="policy-agreement-brief" name="agreement_brief" required>
+
+                            <!-- 2. Красивый квадратик (визуальная часть) -->
                             <span class="checkbox-custom"></span>
-                            <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
+
+                            <!-- 3. Текст с ссылкой на политику -->
+                            <span class="checkbox-text">
+            Даю согласие на обработку
+            <a href="policy.html" target="_blank" class="policy-link">персональных данных</a>
+        </span>
                         </label>
                     </div>
 
                     <!-- Кнопка отправки -->
-                    <button type="submit" class="form-submit-btn">Отправить</button>
+<!--                    <button type="submit" class="form-submit-btn">Отправить</button>-->
+                            <button type="submit" class="form-btn">Отправить</button>
                 </form>
             </div>
         </div>
+
 
     </main>  <!-- Закрываем main -->
     </div>  <!-- Закрываем container-fixed (для main) -->
 
 
 
-
-
 <!-- ============================================
      СЕКЦИЯ: FUTER (ПОДВАЛ САЙТА)
+     Здесь находится форма заявки, бегущая строка и копирайт.
      ============================================ -->
 <footer class="footer-section">
+
+    <!-- Контейнер-ограничитель.
+         Он держит всю ширину футера, но ограничивает контент по центру (max-width),
+         чтобы на больших экранах текст не разъезжался слишком широко. -->
     <div class="footer-container">
 
         <!-- ==========================================
-             ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ
+             ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ И КОНТАКТЫ
+             Слева: текст и соцсети. Справа: форма отправки.
              ========================================== -->
         <div class="footer-top">
 
-            <!-- Левая часть: Текст -->
+            <!-- ЛЕВАЯ КОЛОНКА: Текст призыва и иконки соцсетей -->
             <div class="footer-form-text">
                 <p>Оставить контакты,<br>разберёмся вместе</p>
 
-                <!--  СОЦСЕТИ  -->
+                <!-- Блок с иконками социальных сетей -->
                 <div class="footer-social">
-                    <a href="https://instagram.com/ваш_профиль" target="_blank" class="social-link" title="Instagram">
+                    <!-- Ссылка на Instagram -->
+                    <a href="#" class="social-link" target="_blank">
                         <img src="../images/инс.svg" alt="Instagram">
                     </a>
-
-                    <a href="https://t.me/ваш_профиль" target="_blank" class="social-link" title="Telegram">
+                    <!-- Ссылка на Telegram -->
+                    <a href="#" class="social-link" target="_blank">
                         <img src="../images/телег.svg" alt="Telegram">
                     </a>
-
-                    <a href="viber://chat?number=%2B78124253099" class="social-link" title="Viber">
+                    <!-- Ссылка на Viber -->
+                    <a href="#" class="social-link" target="_blank">
                         <img src="../images/вайбер.svg" alt="Viber">
                     </a>
                 </div>
             </div>
 
-
-            <!-- Правая часть: Форма заявки -->
+            <!-- ПРАВАЯ КОЛОНКА: Форма обратной связи -->
             <div class="footer-form-wrapper">
+                <!--
+                     action="..." — адрес сервиса Formspree, куда улетают данные.
+                     method="POST" — метод отправки данных.
+                     class="footer-form" — класс для стилизации.
+                -->
+                <form action="https://formspree.io/f/xlgajwzl" method="POST" class="footer-form">
 
-                <!-- Поля формы в ряд -->
-                <div class="footer-form-row">
-                    <!-- Поле: Контактное лицо -->
-                    <input type="text" class="form-input-footer" placeholder="Контактное лицо">
+                    <!-- Строка с полями ввода (в ряд) -->
+                    <div class="footer-form-row">
+                        <!-- Поле: Имя (обязательно к заполнению благодаря required) -->
+                        <input type="text" name="name_footer" placeholder="Контактное лицо" class="form-input-footer" required>
 
-                    <!-- Поле: Номер телефона -->
-                    <input type="tel" class="form-input-footer" placeholder="Номер телефона">
+                        <!-- Поле: Телефон (обязательно) -->
+                        <input type="tel" name="phone_footer" placeholder="Номер телефона" class="form-input-footer" required>
 
-                    <!-- Кнопка: Отправить -->
-                    <button type="submit" class="form-btn-footer">Отправить</button>
-                </div>
+                        <!-- Кнопка отправки формы -->
+                        <button type="submit" class="form-btn-footer">Отправить</button>
+                    </div>
 
-                <!-- Чекбокс: Согласие (снизу под кнопками) -->
-                <label class="form-checkbox-footer">
-                    <input type="checkbox" required>
-                    <span class="checkbox-custom-footer"></span>
-                    <span class="checkbox-text-footer">Даю согласие на обработку персональных данных</span>
-                </label>
+                    <!-- Чекбокс согласия на обработку данных (Юридическое требование) -->
+                    <!-- for="..." связывает клик по тексту с checkbox -->
+                    <label class="form-checkbox-footer" for="policy-agreement-footer">
+                        <!-- Сам скрытый чекбокс (визуально рисуется через CSS) -->
+                        <input type="checkbox" id="policy-agreement-footer" name="agreement_footer" required>
 
+                        <!-- Кастомный квадратик галочки (стилізуется в CSS) -->
+                        <span class="checkbox-custom-footer"></span>
+
+                        <!-- Текст согласия со ссылкой на политику -->
+                        <span class="checkbox-text-footer">
+                            Даю согласие на обработку
+                            <!-- Ссылка откроется в новой вкладке (target="_blank") -->
+                            <a href="policy.html" target="_blank" class="policy-link-footer">персональных данных</a>
+                        </span>
+                    </label>
+                </form>
             </div>
-
         </div>
 
         <!-- ==========================================
-             СРЕДНЯЯ ЧАСТЬ: ЛИНИИ + БЕГУЩАЯ СТРОКА
+             СРЕДНЯЯ ЧАСТЬ: ДЕКОРАТИВНЫЕ ЛИНИИ + БЕГУЩАЯ СТРОКА
+             Создает визуальный эффект движения текста между линиями.
              ========================================== -->
         <div class="footer-middle">
-
-            <!-- Линия 1: 168px от верха -->
+            <!-- Декоративные линии (горизонтальные разделители) -->
             <div class="footer-line footer-line-1"></div>
-
-            <!-- Линия 2: 51px ниже первой -->
             <div class="footer-line footer-line-2"></div>
 
-            <!-- БЕГУЩАЯ СТРОКА "СЧАСТЬЕ" -->
+            <!-- Бегущая строка "СЧАСТЬЕ" -->
             <div class="footer-marquee">
                 <div class="marquee-content">
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
+                    <!-- Слова дублируются много раз, чтобы создать эффект бесконечной ленты -->
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
                 </div>
             </div>
 
-            <!-- Линия 3: 220px ниже второй -->
+            <!-- Еще две декоративные линии снизу -->
             <div class="footer-line footer-line-3"></div>
-
-            <!-- Линия 4: 51px ниже третьей -->
             <div class="footer-line footer-line-4"></div>
-
         </div>
 
         <!-- ==========================================
-             НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ (ПОМЕНЯЛИ МЕСТАМИ)
+             НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ (Авторские права)
+             Расположена в самом низу футера.
              ========================================== -->
         <div class="footer-bottom">
-
-            <!-- Копирайт СПРАВА: © 2026 -->
+            <!-- Правая часть: Копирайт -->
             <div class="footer-copyright-right">
                 <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>
             </div>
 
-            <!-- Копирайт СЛЕВА: Сделано с любовью -->
+            <!-- Левая часть: Подпись "Сделано с любовью" и иконка сердца -->
             <div class="footer-copyright-left">
-                <!-- Иконка сердечка из папки images -->
                 <img src="../images/секция%2011%20сердце.svg" alt="❤️" class="heart-icon">
                 <span>Сделано с любовью</span>
             </div>
-
         </div>
-
     </div>
 </footer>
 
+
+
+
 <!-- ============================================
-     КАСТОМНЫЙ ALERT (в стиле бренда)
+     КАСТОМНЫЙ ALERT (Всплывающее окно успеха)
+     Появляется после успешной отправки формы.
+     Изначально скрыт (display: none в CSS), показывается через JavaScript.
      ============================================ -->
-<div class="custom-alert" id="customAlert">
-    <div class="custom-alert-overlay" onclick="hideCustomAlert()"></div>
-    <div class="custom-alert-content">
-        <!-- Иконка успеха -->
-        <div class="alert-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-        </div>
+<!--<div class="custom-alert" id="customAlert">-->
 
-        <!-- Заголовок -->
-        <h3 class="alert-title"> Спасибо!</h3>
+<!--    &lt;!&ndash; Затемненный фон (оверлей). При клике на него окно закроется (вызов функции hideCustomAlert()) &ndash;&gt;-->
+<!--    <div class="custom-alert-overlay" onclick="hideCustomAlert()"></div>-->
 
-        <!-- Текст сообщения -->
-        <p class="alert-message" id="alertMessage">
-            Ваш бриф принят. Открывается почтовый клиент для отправки.
-        </p>
+<!--    &lt;!&ndash; Само белое окно с сообщением &ndash;&gt;-->
+<!--    <div class="custom-alert-content">-->
+<!--        &lt;!&ndash; Иконка галочки (SVG графика) &ndash;&gt;-->
+<!--        <div class="alert-icon">-->
+<!--            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">-->
+<!--                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>-->
+<!--                <polyline points="22 4 12 14.01 9 11.01"/>-->
+<!--            </svg>-->
+<!--        </div>-->
 
-        <!-- Подсказка про файл -->
-        <div class="alert-note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="16" x2="12" y2="12"/>
-                <line x1="12" y1="8" x2="12.01" y2="8"/>
-            </svg>
-            <span>Не забудьте прикрепить файл брендбука вручную!</span>
-        </div>
+<!--        &lt;!&ndash; Заголовок сообщения &ndash;&gt;-->
+<!--        <h3 class="alert-title">Спасибо!</h3>-->
 
-        <!-- Кнопка ОК -->
-        <button class="alert-btn" onclick="hideCustomAlert()">
-            Хорошо
-        </button>
-    </div>
-</div>
+<!--        &lt;!&ndash; Текст сообщения. id нужен, чтобы JS мог менять текст dynamically &ndash;&gt;-->
+<!--        <p class="alert-message" id="alertMessage">Заявка успешно отправлена!</p>-->
 
+<!--        &lt;!&ndash; Кнопка закрытия окна &ndash;&gt;-->
+<!--        <button class="alert-btn" onclick="hideCustomAlert()">Хорошо</button>-->
+<!--    </div>-->
+<!--</div>-->
 
 <!-- Подключение скриптов (должно быть в конце body) -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1388,3 +1611,13 @@
 
 </body>  <!-- Закрываем body -->
 </html>  <!-- Закрываем html -->
+
+
+<!--      временная кнопка обнуление корзины-->
+<!--    <button onclick="localStorage.clear(); location.reload();"-->
+<!--            style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;-->
+<!--               background: #A80000; color: white; border: none;-->
+<!--               padding: 15px 25px; border-radius: 8px; cursor: pointer;-->
+<!--               font-size: 14px; font-weight: 600;">-->
+<!--        🗑️ ОЧИСТИТЬ КОРЗИНУ-->
+<!--    </button>-->

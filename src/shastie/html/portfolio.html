@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=5.0, user-scalable=yes">
     <title>Портфолио — СЧАСТЬЕ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,30 +20,44 @@
             <div class="header-top">
                 <div class="logo">СЧАСТЬЕ</div>
                 <nav class="nav">
-                    <a href="index.html">Главная</a>
                     <a href="special-offers.html">Спецпредложения</a>
                     <a href="portfolio.html" class="active">Портфолио</a>
                     <a href="delivery.html">Доставка и оплата</a>
-                    <a href="about.html">О нас</a>
                     <a href="contacts.html">Контакты</a>
+                    <a href="about.html">О нас</a>
                 </nav>
+
+                <!-- Контактная информация -->
                 <div class="header-contacts">
+                    <!-- Телефон -->
                     <div class="contact-item">
                         <div class="contact-phone">+7 (812) 425-30-99</div>
                         <div class="contact-dept">Отдел продаж</div>
                     </div>
+                    <!-- Email 1 -->
                     <div class="contact-item">
-                        <div class="contact-email">pro.schastie@mail.ru</div>
+                        <!-- Активная ссылка на почту -->
+                        <a href="mailto:pro.schastie@mail.ru" class="contact-email">
+                            pro.schastie@mail.ru
+                        </a>
                         <div class="contact-dept">Отдел продаж</div>
                     </div>
+
+                    <!-- Email 2 -->
                     <div class="contact-item">
-                        <div class="contact-email">01@schaste.ru</div>
+                        <a href="mailto:01@schaste.ru" class="contact-email">
+                            01@schaste.ru
+                        </a>
                         <div class="contact-dept">Отдел закупок</div>
                     </div>
                 </div>
             </div>
+
+
             <div class="header-bottom">
-                <button class="btn btn-catalog" onclick="showCatalogMessage()">
+<!--                <button class="btn btn-catalog" onclick="showCatalogMessage()">
+                    ссылка на католог заглушка это везде в кнопках потом ссылку опять в button-->
+                    <a href="catalog.html" class="btn btn-catalog" style="text-decoration: none; display: inline-flex">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                         <rect x="2" y="2" width="5" height="5" rx="1"/>
                         <rect x="9" y="2" width="5" height="5" rx="1"/>
@@ -51,7 +65,7 @@
                         <rect x="9" y="9" width="5" height="5" rx="1"/>
                     </svg>
                     <span>Каталог</span>
-                </button>
+                </a>
                 <div class="search">
                     <input type="text" placeholder="Поиск" class="search-input">
                     <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
@@ -62,13 +76,15 @@
                     <span class="min-order-price">50 000 ₽</span>
                     <span class="min-order-label">минимальная<br>сумма заказа</span>
                 </div>
-                <button class="btn btn-cart" onclick="window.location.href='cart.html'">
+
+<!--                <button class="btn btn-cart" onclick="window.location.href='cart.html'">-->
+                    <a href="catalog.html" class="btn btn-cart" style="text-decoration: none; display: inline-flex">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                     </svg>
                     <span>Корзина</span>
                     <span class="cart-count" id="cartCount">0</span>
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -130,28 +146,55 @@
                 <img src="../images/фото1.png" alt="Разнообразный мерч" onerror="this.src='https://via.placeholder.com/600x400/7B68EE/ffffff?text=Брендирование'">
                 <div class="gallery-overlay">
                     <h3>Брендирование</h3>
-                    <p>Логотипы на текстиле и аксессуарах</p>
+                    <p>НАБОР ТУРИСТИЧЕСКИХ КРУЖЕК</p>
+                </div>
+            </div>
+
+            <!-- ФОТО 5: Разное (брелоки, полотенце) -->
+            <div class="gallery-item">
+                <img src="../images/ф3%20чашки.jpg" alt="Разнообразный мерч" onerror="this.src='https://via.placeholder.com/600x400/7B68EE/ffffff?text=Брендирование'">
+                <div class="gallery-overlay">
+                    <h3>Брендирование</h3>
+                    <p></p>
                 </div>
             </div>
 
             <!-- ФОТО 5 (Заглушка для будущего) -->
             <div class="gallery-item">
-                <img src="../images/portfolio-5.jpg" alt="Пример работы" onerror="this.src='https://via.placeholder.com/600x400/f0f0f0/cccccc?text=Ваше+Фото'">
+                <img src="../images/ф2%20срм.jpg" alt="Пример работы" onerror="this.src='https://via.placeholder.com/600x400/f0f0f0/cccccc?text=Ваше+Фото'">
                 <div class="gallery-overlay">
                     <h3>Ваш проект</h3>
-                    <p>Здесь может быть ваша работа</p>
+                    <p>БРЕНДИРОВАННЫЕ акссесуары</p>
                 </div>
             </div>
+
+            <!-- ФОТО 6 -->
+            <div class="gallery-item">
+                <img src="../images/ф5%20.jpg" alt="Пример работы" onerror="this.src='https://via.placeholder.com/600x400/f0f0f0/cccccc?text=Ваше+Фото'">
+                <div class="gallery-overlay">
+                    <h3>Ваш проект</h3>
+                    <p>Брендированные браслеты</p>
+                </div>
+            </div>
+
+            <!-- ФОТО 5: Разное (брелоки, полотенце) -->
+            <div class="gallery-item">
+                <img src="../images/ф1%20белово.jpg" alt="Разнообразный мерч" onerror="this.src='https://via.placeholder.com/600x400/7B68EE/ffffff?text=Брендирование'">
+                <div class="gallery-overlay">
+                    <h3>Брендирование</h3>
+                    <p>Логотипы на текстиле и аксессуарах</p>
+                </div>
+            </div>
+
 
             <!-- ФОТО 6 (Заглушка для будущего) -->
             <div class="gallery-item">
-                <img src="../images/portfolio-6.jpg" alt="Пример работы" onerror="this.src='https://via.placeholder.com/600x400/f0f0f0/cccccc?text=Ваше+Фото'">
+                <img src="../images/" alt="Пример работы" onerror="this.src='https://via.placeholder.com/600x400/f0f0f0/cccccc?text=Ваше+Фото'">
                 <div class="gallery-overlay">
                     <h3>Ваш проект</h3>
                     <p>Здесь может быть ваша работа</p>
                 </div>
             </div>
-
         </div>
 
         <!-- CTA БЛОК -->
@@ -167,51 +210,58 @@
     </div>
 </main>
 
-<!-- FOOTER (БЕЗ ИЗМЕНЕНИЙ) -->
+
+<!-- ============================================
+     СЕКЦИЯ: FUTER (ПОДВАЛ САЙТА)
+     ============================================ -->
 <footer class="footer-section">
     <div class="footer-container">
+
+        <!-- ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ -->
         <div class="footer-top">
             <div class="footer-form-text">
                 <p>Оставить контакты,<br>разберёмся вместе</p>
                 <div class="footer-social">
-                    <a href="https://instagram.com/ваш_профиль" target="_blank" class="social-link" title="Instagram">
-                        <img src="../images/инс.svg" alt="Instagram">
-                    </a>
-                    <a href="https://t.me/ваш_профиль" target="_blank" class="social-link" title="Telegram">
-                        <img src="../images/телег.svg" alt="Telegram">
-                    </a>
-                    <a href="viber://chat?number=%2B78124253099" class="social-link" title="Viber">
-                        <img src="../images/вайбер.svg" alt="Viber">
-                    </a>
+                    <a href="#" class="social-link"><img src="../images/инс.svg" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img src="../images/телег.svg" alt="Telegram"></a>
+                    <a href="#" class="social-link"><img src="../images/вайбер.svg" alt="Viber"></a>
                 </div>
             </div>
+
             <div class="footer-form-wrapper">
-                <div class="footer-form-row">
-                    <input type="text" class="form-input-footer" placeholder="Контактное лицо">
-                    <input type="tel" class="form-input-footer" placeholder="Номер телефона">
-                    <button type="submit" class="form-btn-footer">Отправить</button>
-                </div>
-                <label class="form-checkbox-footer">
-                    <input type="checkbox" required>
-                    <span class="checkbox-custom-footer"></span>
-                    <span class="checkbox-text-footer">Даю согласие на обработку персональных данных</span>
-                </label>
+                <form action="https://formspree.io/f/xlgajwzl" method="POST" class="footer-form">
+                    <div class="footer-form-row">
+                        <input type="text" name="name_footer" placeholder="Контактное лицо" class="form-input-footer" required>
+                        <input type="tel" name="phone_footer" placeholder="Номер телефона" class="form-input-footer" required>
+                        <button type="submit" class="form-btn-footer">Отправить</button>
+                    </div>
+                    <label class="form-checkbox-footer" for="policy-agreement-footer">
+                        <input type="checkbox" id="policy-agreement-footer" name="agreement_footer" required>
+                        <span class="checkbox-custom-footer"></span>
+                        <span class="checkbox-text-footer">
+                            Даю согласие на обработку
+                            <a href="policy.html" target="_blank" class="policy-link-footer">персональных данных</a>
+                        </span>
+                    </label>
+                </form>
             </div>
         </div>
+
+        <!-- СРЕДНЯЯ ЧАСТЬ: ЛИНИИ + БЕГУЩАЯ СТРОКА -->
         <div class="footer-middle">
             <div class="footer-line footer-line-1"></div>
             <div class="footer-line footer-line-2"></div>
             <div class="footer-marquee">
                 <div class="marquee-content">
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
                 </div>
             </div>
             <div class="footer-line footer-line-3"></div>
             <div class="footer-line footer-line-4"></div>
         </div>
+
+        <!-- НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ -->
         <div class="footer-bottom">
             <div class="footer-copyright-right">
                 <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>
@@ -223,6 +273,23 @@
         </div>
     </div>
 </footer>
+
+<!-- КАСТОМНЫЙ ALERT (всплывающее окно успеха) -->
+<!--<div class="custom-alert" id="customAlert">-->
+<!--    <div class="custom-alert-overlay" onclick="hideCustomAlert()"></div>-->
+<!--    <div class="custom-alert-content">-->
+<!--        <div class="alert-icon">-->
+<!--            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">-->
+<!--                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>-->
+<!--                <polyline points="22 4 12 14.01 9 11.01"/>-->
+<!--            </svg>-->
+<!--        </div>-->
+<!--        <h3 class="alert-title">Спасибо!</h3>-->
+<!--        <p class="alert-message" id="alertMessage">Заявка успешно отправлена!</p>-->
+<!--        <button class="alert-btn" onclick="hideCustomAlert()">Хорошо</button>-->
+<!--    </div>-->
+<!--</div>-->
+
 
 <script src="../js/main.js"></script>
 

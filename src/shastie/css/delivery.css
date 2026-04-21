@@ -144,7 +144,7 @@
 
 .company-item:hover {
     box-shadow: 0 8px 25px rgba(123, 104, 238, 0.15);
-    transform: translateY(-px);
+    transform: translateY(-1px);
     background: #ffffff;
 }
 
@@ -535,39 +535,197 @@
 }
 
 /* ═══════════════════════════════════════════════════ */
-/* АДАПТИВНОСТЬ */
+/* АДАПТИВНОСТЬ ДЛЯ ДОСТАВКИ И ОПЛАТЫ */
 /* ═══════════════════════════════════════════════════ */
 
+/* Планшеты (меньше 968px) */
 @media (max-width: 968px) {
-    .payment-methods {
-        grid-template-columns: 1fr;
+    .delivery-main {
+        padding: 30px 0 60px;
     }
 
-    .table-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .table-row.header {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
     .page-title {
         font-size: 28px;
+        margin: 40px 0 25px 0;
+    }
+
+    .delivery-intro {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .delivery-section {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
     }
 
     .section-title {
         font-size: 20px;
+        margin-bottom: 20px;
     }
 
+    /* Таблица — делаем прокрутку */
+    .delivery-table {
+        overflow-x: auto;
+    }
+
+    .table-row {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        min-width: 600px;  /* Минимальная ширина для таблицы */
+    }
+
+    /* Способы оплаты — 2 колонки */
+    .payment-methods {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .method-card {
+        padding: 20px;
+    }
+
+    .method-icon {
+        font-size: 28px;
+    }
+
+    .method-content h3 {
+        font-size: 14px;
+    }
+
+    .method-content p {
+        font-size: 12px;
+    }
+}
+
+/* Телефоны (меньше 640px) */
+@media (max-width: 640px) {
+    .delivery-main {
+        padding: 20px 0 40px;
+    }
+
+    .page-title {
+        font-size: 24px;
+        margin: 30px 0 20px 0;
+    }
+
+    .delivery-intro {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .delivery-section {
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .section-text {
+        font-size: 14px;
+    }
+
+    /* Таблица — прокрутка */
+    .delivery-table {
+        overflow-x: auto;
+        margin-bottom: 15px;
+    }
+
+    .table-row {
+        grid-template-columns: 2fr 1fr 1fr;
+        min-width: 500px;  /* Прокрутка на маленьком экране */
+    }
+
+    .table-cell {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    /* Транспортные компании — в колонку */
     .delivery-companies {
         flex-direction: column;
+        gap: 10px;
     }
 
     .company-item {
         width: 100%;
+        padding: 12px 15px;
+    }
+
+    /* Регионы доставки */
+    .delivery-regions {
+        gap: 10px;
+    }
+
+    .delivery-regions h3 {
+        font-size: 15px;
+    }
+
+    .delivery-regions li {
+        padding: 12px 15px;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    /* ✅ СПОСОБЫ ОПЛАТЫ — 1 КОЛОНКА */
+    .payment-methods {
+        grid-template-columns: 1fr;  /* ✅ В одну колонку */
+        gap: 12px;
+    }
+
+    .method-card {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .method-icon {
+        font-size: 24px;
+    }
+
+    .method-content h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .method-content p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* Условия оплаты */
+    .payment-terms {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .payment-terms h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .payment-terms-item {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .payment-terms li {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    /* Документы */
+    .documents-list li {
+        font-size: 14px;
+        padding-left: 25px;
+        margin-bottom: 10px;
+    }
+
+    /* FAQ Аккордеон */
+    .faq-accordion {
+        gap: 0;
+        margin-top: 20px;
     }
 
     .faq-question {
@@ -576,18 +734,131 @@
 
     .faq-question-text {
         font-size: 14px;
+        padding-right: 15px;
+    }
+
+    .faq-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .faq-answer p {
+        padding: 0 0 15px 0;
+        font-size: 13px;
+    }
+
+    /* CTA блок */
+    .delivery-cta {
+        padding: 30px 20px;
+        margin-top: 30px;
     }
 
     .delivery-cta h2 {
-        font-size: 24px;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .delivery-cta p {
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 
     .cta-buttons {
         flex-direction: column;
+        gap: 12px;
     }
 
     .btn-primary,
     .btn-secondary {
         width: 100%;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Очень маленькие экраны (меньше 480px) */
+@media (max-width: 480px) {
+    .delivery-main {
+        padding: 15px 0 30px;
+    }
+
+    .page-title {
+        font-size: 22px;
+        margin: 25px 0 15px 0;
+    }
+
+    .delivery-intro {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 17px;
+    }
+
+    .table-row {
+        min-width: 450px;
+    }
+
+    .table-cell {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .company-item {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .delivery-regions li {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .method-card {
+        padding: 15px;
+    }
+
+    .method-icon {
+        font-size: 22px;
+    }
+
+    .method-content h3 {
+        font-size: 13px;
+    }
+
+    .method-content p {
+        font-size: 11px;
+    }
+
+    .payment-terms {
+        padding: 15px;
+    }
+
+    .payment-terms-item {
+        padding: 15px;
+    }
+
+    .documents-list li {
+        font-size: 13px;
+    }
+
+    .faq-question-text {
+        font-size: 13px;
+    }
+
+    .faq-answer p {
+        font-size: 12px;
+    }
+
+    .delivery-cta {
+        padding: 25px 15px;
+    }
+
+    .delivery-cta h2 {
+        font-size: 20px;
+    }
+
+    .delivery-cta p {
+        font-size: 13px;
     }
 }

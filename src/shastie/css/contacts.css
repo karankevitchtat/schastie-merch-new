@@ -1,0 +1,548 @@
+
+/* ===================================================== */
+/* ================== СТРАНИЦА КОНТАКТОВ ================ */
+/* ===================================================== */
+
+/* ───────── ОСНОВНОЙ КОНТЕЙНЕР ───────── */
+.contacts-main {
+    padding: 40px 0 120px;              /* ✅ Увеличили отступ сверху как в "О нас" */
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.contacts-container {
+    max-width: 1536px;                  /* ✅ Как в "О нас" */
+    margin: 0 auto;
+    padding: 0 192px;                   /* ✅ ОТСТУПЫ 192px как в header */
+}
+
+/* ───────── ХЛЕБНЫЕ КРОШКИ ───────── */
+
+.breadcrumbs {
+    display: flex;                     /* Flexbox для элементов в ряд */
+    align-items: center;               /* Выравнивание по центру */
+    gap: 8px;                          /* Расстояние между элементами */
+    font-size: 16px;                   /* ✅ Размер шрифта 16px */
+    color: #100C35;                    /* Темно-синий цвет */
+    margin-bottom: 50px;               /* Отступ снизу */
+    font-family: 'Inter', sans-serif;  /* Шрифт Inter */
+}
+
+.breadcrumbs a {
+    color: #100C35;                    /* Темно-синий цвет ссылок */
+    text-decoration: underline;        /* ✅ Подчеркивание */
+    text-decoration-color: #999999;    /* Цвет подчеркивания серый */
+    text-underline-offset: 3px;        /* Отступ подчеркивания */
+    font-weight: 500;                  /* ✅ Жирный шрифт */
+    transition: all 0.3s;              /* Плавное изменение */
+}
+
+.breadcrumbs a:hover {
+    color: #A80000;                    /* ✅ Красный цвет при наведении */
+    text-decoration-color: #A80000;    /* Подчеркивание тоже красное */
+}
+
+.breadcrumbs span {
+    color: #999999;                    /* Серый цвет разделителя */
+}
+
+.breadcrumbs .current {
+    color: #999999;                    /* Серый цвет текущей страницы */
+    cursor: default;                   /* Курсор обычный (не ссылка) */
+    font-weight: 500;                  /* ✅ Тоже жирный */
+}
+
+/* ───────── ЗАГОЛОВОК СТРАНИЦЫ ───────── */
+.page-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #100C35;
+    margin: 0 0 60px 0;
+    text-transform: uppercase;
+}
+
+/* ───────── ДВЕ КОЛОНКИ (GRID) ───────── */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;   /* ✅ Как в "О нас" (1fr 450px) */
+    gap: 80px;                          /* ✅ Увеличили gap */
+    margin-bottom: 80px;
+    align-items: start;
+}
+
+/* ───────── ЛЕВАЯ КОЛОНКА ───────── */
+.contacts-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ───────── ЗАГОЛОВКИ СЕКЦИЙ ───────── */
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;                    /* ✅ Увеличили с 18px до 20px */
+    color: #100C35;
+    margin: 50px 0 25px 0;              /* ✅ Увеличили отступ сверху */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.title-icon {
+    font-size: 24px;                    /* ✅ Увеличили иконку */
+}
+
+/* ───────── КАРТОЧКИ КОНТАКТОВ (4 штуки в сетке) ───────── */
+.contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 колонки */
+    gap: 20px;                          /* ✅ Увеличили gap */
+}
+
+/* ✅ СТИЛЬ КАРТОЧЕК КАК В "О НАС" */
+.contact-card-mini {
+    background: linear-gradient(135deg, #f9f9fb 0%, #EEEEEE 100%);
+    border-radius: 16px;
+    padding: 25px 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    border: 1px solid #E5E5E5;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✅ Градиентная полоска сверху (как в "О нас") */
+.contact-card-mini::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #7B68EE 0%, #100C35 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+/* ✅ Ховер эффект как в "О нас" */
+.contact-card-mini:hover {
+    transform: translateY(-8px);        /* ✅ Поднимаем выше */
+    box-shadow: 0 15px 40px rgba(123, 104, 238, 0.2);
+    border-color: #7B68EE;
+}
+
+.contact-card-mini:hover::before {
+    transform: scaleX(1);               /* ✅ Показываем полоску */
+}
+
+.contact-card-icon {
+    font-size: 40px;                    /* ✅ Увеличили иконку */
+    flex-shrink: 0;
+}
+
+.contact-card-content h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #100C35;
+    margin: 0 0 5px 0;
+}
+
+.contact-card-content p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #7B68EE;
+    margin: 0 0 3px 0;
+}
+
+.contact-card-content p a {
+    color: #7B68EE;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-card-content p a:hover {
+    color: #100C35;
+}
+
+.contact-card-content span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* ───────── РЕКВИЗИТЫ ───────── */
+.requisites-box {
+    background: linear-gradient(135deg, #f9f9fb 0%, #EEEEEE 100%);
+    border-radius: 16px;
+    padding: 30px;
+    border-left: 4px solid #7B68EE;
+}
+
+.requisites-header {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.requisites-header h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #100C35;
+    margin: 0 0 8px 0;
+}
+
+.requisites-header p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.requisites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.requisite-row {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.requisite-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #100C35;
+    min-width: 180px;
+    flex-shrink: 0;
+}
+
+.requisite-value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #333;
+    word-break: break-all;
+}
+
+/* ───────── ПРАВАЯ КОЛОНКА (ФОРМА) ───────── */
+.contacts-right {
+    position: sticky;
+    top: 150px;                         /* ✅ Как в "О нас" */
+}
+
+/* ✅ СТИЛЬ ФОРМЫ С HOVER ЭФФЕКТОМ */
+.contact-form-wrapper {
+    background: #ffffff;
+    border: 2px solid #E5E5E5;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Градиентная полоска сверху формы */
+.contact-form-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #7B68EE 0%, #100C35 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+.contact-form-wrapper:hover {
+    border-color: #7B68EE;
+    box-shadow: 0 15px 40px rgba(123, 104, 238, 0.2);
+    transform: translateY(-5px);
+}
+
+.contact-form-wrapper:hover::before {
+    transform: scaleX(1);
+}
+
+.form-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #100C35;
+    margin: 0 0 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+    margin: 0 0 35px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #100C35;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #100C35;
+    background: #ffffff;
+    transition: all 0.3s;
+}
+
+.form-input {
+    height: 48px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #7B68EE;
+    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #999;
+}
+
+/* ───────── ЧЕКБОКС ───────── */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D0D0D0;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.form-checkbox input[type="checkbox"]:checked + .checkbox-custom {
+    background: #7B68EE;
+    border-color: #7B68EE;
+}
+
+.form-checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '';
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+
+.checkbox-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.policy-link {
+    color: #7B68EE;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.policy-link:hover {
+    color: #100C35;
+}
+
+/* ───────── КНОПКА ОТПРАВКИ ───────── */
+.form-submit-btn {
+    width: 100%;
+    height: 52px;
+    background: linear-gradient(135deg, #7B68EE 0%, #5A4FCF 100%);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.form-submit-btn:hover {
+    background: linear-gradient(135deg, #5A4FCF 0%, #7B68EE 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(123, 104, 238, 0.4);
+}
+
+/* ───────── БЛАГОДАРСТВЕННЫЙ БЛОК (ПРЯМОУГОЛЬНИК СНИЗУ) ───────── */
+.thank-you-block {
+    background: linear-gradient(135deg, #100C35 0%, #7B68EE 100%);
+    border-radius: 16px;
+    padding: 60px 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.thank-you-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.thank-you-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0 0 20px 0;
+}
+
+.thank-you-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+}
+
+/* ───────── АДАПТИВНОСТЬ ───────── */
+@media (max-width: 1600px) {
+    .contacts-container {
+        padding: 0 80px;                /* ✅ Уменьшаем отступы */
+    }
+}
+
+@media (max-width: 1200px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;     /* ✅ Одна колонка */
+        gap: 40px;
+    }
+
+    .contacts-right {
+        position: relative;
+        top: 0;
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .thank-you-block {
+        padding: 40px 30px;
+    }
+
+    .thank-you-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 968px) {
+    .contacts-container {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contacts-main {
+        padding: 60px 0 80px;
+    }
+
+    .contacts-container {
+        padding: 0 20px;                /* ✅ Минимальные отступы */
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .thank-you-block {
+        padding: 30px 20px;
+    }
+
+    .thank-you-title {
+        font-size: 24px;
+    }
+
+    .thank-you-text {
+        font-size: 15px;
+    }
+}

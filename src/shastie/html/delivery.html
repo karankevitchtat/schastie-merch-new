@@ -1,453 +1,8 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="ru">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Доставка и оплата — СЧАСТЬЕ</title>-->
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0;600;0;700;1,700&display=swap" rel="stylesheet">-->
-<!--    <link rel="stylesheet" href="../css/style.css">-->
-<!--    <link rel="stylesheet" href="../css/delivery.css">-->
-<!--</head>-->
-<!--<body>-->
-<!--&lt;!&ndash; ОБЩИЙ КОНТЕЙНЕР: Центрирует весь контент, задает отступы 192px по бокам &ndash;&gt;-->
-<!--<div class="container-fixed">-->
-
-<!--    &lt;!&ndash; ============================================-->
-<!--         HEADER: Шапка сайта (логотип, меню, контакты)-->
-<!--         ============================================ &ndash;&gt;-->
-<!--    <header class="header">-->
-<!--        &lt;!&ndash; Внутренний контейнер для выравнивания &ndash;&gt;-->
-<!--        <div class="container">-->
-
-<!--            &lt;!&ndash; ПЕРВЫЙ РЯД: Логотип + Навигация + Контакты &ndash;&gt;-->
-<!--            <div class="header-top">-->
-
-<!--                &lt;!&ndash; Логотип &ndash;&gt;-->
-<!--                <div class="logo">СЧАСТЬЕ</div>-->
-
-<!--                &lt;!&ndash; Навигационное меню  добавили заглушку <a href="#" onclick="showCatalogMessage(); return false;">Каталог</a>&ndash;&gt;-->
-<!--                &lt;!&ndash;                <nav class="nav">&ndash;&gt;-->
-<!--                <nav class="nav">-->
-
-<!--                    <a href="special-offers.html">Спецпредложения</a>-->
-<!--                    <a href="#">Портфолио</a>-->
-<!--                    <a href="#">Доставка и оплата</a>-->
-<!--                    <a href="#">Контакты</a>-->
-<!--                    <a href="about.html">О нас</a>-->
-<!--                </nav>-->
-
-<!--                &lt;!&ndash; Контактная информация &ndash;&gt;-->
-<!--                <div class="header-contacts">-->
-<!--                    &lt;!&ndash; Телефон &ndash;&gt;-->
-<!--                    <div class="contact-item">-->
-<!--                        <div class="contact-phone">+7 (812) 425-30-99</div>-->
-<!--                        <div class="contact-dept">Отдел продаж</div>-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; Email 1 &ndash;&gt;-->
-<!--                    <div class="contact-item">-->
-<!--                        <div class="contact-email">pro.schastie@mail.ru</div>-->
-<!--                        <div class="contact-dept">Отдел продаж</div>-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash; Email 2 &ndash;&gt;-->
-<!--                    <div class="contact-item">-->
-<!--                        <div class="contact-email">01@schaste.ru</div>-->
-<!--                        <div class="contact-dept">Отдел закупок</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            &lt;!&ndash; ВТОРОЙ РЯД: Каталог + Поиск + Мин.сумма + Корзина &ndash;&gt;-->
-<!--            <div class="header-bottom">-->
-
-<!--                &lt;!&ndash; Кнопка "Каталог"   добавили заглушку  onclick="showCatalogMessage()"&ndash;&gt;-->
-<!--                <button class="btn btn-catalog" onclick="window.location.href='cart.html'">-->
-<!--                    &lt;!&ndash; Иконка сетки (4 квадрата) &ndash;&gt;-->
-<!--                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">-->
-<!--                        <rect x="2" y="2" width="5" height="5" rx="1"/>-->
-<!--                        <rect x="9" y="2" width="5" height="5" rx="1"/>-->
-<!--                        <rect x="2" y="9" width="5" height="5" rx="1"/>-->
-<!--                        <rect x="9" y="9" width="5" height="5" rx="1"/>-->
-<!--                    </svg>-->
-<!--                    <span>Каталог</span>-->
-<!--                </button>-->
-
-<!--                &lt;!&ndash; Поле поиска &ndash;&gt;-->
-<!--                <div class="search">-->
-<!--                    <input type="text" placeholder="Поиск" class="search-input">-->
-<!--                    &lt;!&ndash; Иконка лупы &ndash;&gt;-->
-<!--                    <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">-->
-<!--                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>-->
-<!--                    </svg>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Блок "Минимальная сумма заказа" &ndash;&gt;-->
-<!--                <div class="min-order">-->
-<!--                    <span class="min-order-price">50 000 ₽</span>-->
-<!--                    <span class="min-order-label">минимальная<br>сумма заказа</span>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Кнопка "Корзина" &ndash;&gt;-->
-<!--                <button class="btn btn-cart" onclick="window.location.href='cart.html'">-->
-<!--                    &lt;!&ndash; Иконка корзины &ndash;&gt;-->
-<!--                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">-->
-<!--                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358-->
-<!--                        5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1-->
-<!--                        1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5-->
-<!--                        0 100-3 1.5 1.5 0 000 3z"/>-->
-<!--                    </svg>-->
-<!--                    <span>Корзина</span>-->
-<!--                    <span class="cart-count" id="cartCount">0</span>-->
-<!--                </button>-->
-
-<!--            </div>-->
-<!--        </div>-->
-<!--    </header>-->
-<!--</div>  &lt;!&ndash; Закрываем container-fixed (header вне main) &ndash;&gt;-->
-
-<!--&lt;!&ndash; ОСНОВНОЙ КОНТЕНТ &ndash;&gt;-->
-<!--<main class="delivery-main">-->
-<!--    <div class="container-fixed">-->
-
-<!--        &lt;!&ndash; Хлебные крошки &ndash;&gt;-->
-<!--        <div class="breadcrumbs">-->
-<!--            <a href="index.html">Главная</a>-->
-<!--            <span>/</span>-->
-<!--            <span class="current">Доставка и оплата</span>-->
-<!--        </div>-->
-
-<!--        &lt;!&ndash; Заголовок &ndash;&gt;-->
-<!--        <h1 class="page-title">Доставка и оплата</h1>-->
-
-<!--        &lt;!&ndash; Основной блок (2 колонки как в about.html) &ndash;&gt;-->
-<!--        <div class="delivery-content">-->
-<!--            &lt;!&ndash; Левая колонка &ndash;&gt;-->
-<!--            <div class="delivery-text">-->
-<!--                <p class="delivery-intro">-->
-<!--                    Мы организуем быструю и надёжную доставку корпоративных подарков по Санкт-Петербургу,-->
-<!--                    Москве, Казани, Твери и всей России.-->
-<!--                </p>-->
-
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                &lt;!&ndash; ПО САНКТ-ПЕТЕРБУРГУ И МОСКВЕ &ndash;&gt;-->
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                <section class="delivery-section">-->
-<!--                    <h3 class="section-title">-->
-<!--                        <span class="title-icon">🚚</span>-->
-<!--                        ПО САНКТ-ПЕТЕРБУРГУ И МОСКВЕ-->
-<!--                    </h3>-->
-
-<!--                    <div class="delivery-table">-->
-<!--                        <div class="table-row header">-->
-<!--                            <div class="table-cell">Условие</div>-->
-<!--                            <div class="table-cell">Стоимость</div>-->
-<!--                            <div class="table-cell">Сроки</div>-->
-<!--                        </div>-->
-<!--                        <div class="table-row">-->
-<!--                            <div class="table-cell">Заказ от 50 000 ₽</div>-->
-<!--                            <div class="table-cell highlight">Бесплатно</div>-->
-<!--                            <div class="table-cell">1-2 рабочих дня</div>-->
-<!--                        </div>-->
-<!--                        <div class="table-row">-->
-<!--                            <div class="table-cell">Экспресс-доставка</div>-->
-<!--                            <div class="table-cell">1 500 ₽</div>-->
-<!--                            <div class="table-cell">В день заказа</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                    <p class="delivery-note">* Бесплатная доставка осуществляется в пределах КАД</p>-->
-<!--                </section>-->
-
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                &lt;!&ndash; ПО РОССИИ &ndash;&gt;-->
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                <section class="delivery-section">-->
-<!--                    <h3 class="section-title">-->
-<!--                        <span class="title-icon">🇷🇺</span>-->
-<!--                        ПО РОССИИ-->
-<!--                    </h3>-->
-
-<!--                    <p>Отправляем заказы во все регионы через проверенные транспортные компании:</p>-->
-
-<!--                    <div class="delivery-list">-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">📦</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>СДЭК</h4>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">🚚</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>Деловые Линии</h4>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">📮</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>ПЭК</h4>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">⚡</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>Энергия</h4>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">📦</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>КИТ</h4>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                    <div class="delivery-regions">-->
-<!--                        <h4>Сроки доставки:</h4>-->
-<!--                        <ul class="regions-list">-->
-<!--                            <li><strong>Москва и МО:</strong> 1-4 дня</li>-->
-<!--                            <li><strong>Центральный округ:</strong> 1-4 дня</li>-->
-<!--                            <li><strong>Поволжье, Юг, Урал:</strong> 1-4 дня</li>-->
-<!--                            <li><strong>Сибирь, Дальний Восток:</strong> 1-4 дня</li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-
-<!--                    <p class="delivery-note">* Стоимость рассчитывается индивидуально в зависимости от веса и региона.-->
-<!--                        Отправления страхуются на полную стоимость заказа.</p>-->
-<!--                </section>-->
-
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                &lt;!&ndash; ОПЛАТА &ndash;&gt;-->
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                <section class="delivery-section">-->
-<!--                    <h3 class="section-title">-->
-<!--                        <span class="title-icon">💳</span>-->
-<!--                        ОПЛАТА-->
-<!--                    </h3>-->
-
-<!--                    <p>Работаем официально с юридическими лицами и индивидуальными предпринимателями.</p>-->
-
-<!--                    <h4 class="subsection-title">СПОСОБЫ ОПЛАТЫ</h4>-->
-<!--                    <div class="delivery-list">-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">📄</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>Безналичный расчёт</h4>-->
-<!--                                <p>По счёту (для юр. лиц и ИП)</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">🏦</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>Банковский перевод</h4>-->
-<!--                                <p>По реквизитам</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">🤝</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>Отсрочка платежа</h4>-->
-<!--                                <p>Для постоянных клиентов по договору</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                    <h4 class="subsection-title">УСЛОВИЯ</h4>-->
-<!--                    <div class="delivery-list">-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">💰</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>100% предоплата</h4>-->
-<!--                                <p>Для новых клиентов</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">📊</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>50% + 50%</h4>-->
-<!--                                <p>Для заказов от 500 000 ₽ (обсуждается индивидуально)</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="delivery-card">-->
-<!--                            <div class="delivery-icon">📅</div>-->
-<!--                            <div class="delivery-info">-->
-<!--                                <h4>Отсрочка до 14 дней</h4>-->
-<!--                                <p>Для постоянных партнёров</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </section>-->
-
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                &lt;!&ndash; ДОКУМЕНТЫ &ndash;&gt;-->
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                <section class="delivery-section">-->
-<!--                    <h3 class="section-title">-->
-<!--                        <span class="title-icon">📋</span>-->
-<!--                        ДОКУМЕНТЫ-->
-<!--                    </h3>-->
-
-<!--                    <p>Предоставляем полный пакет закрывающих документов для бухгалтерии:</p>-->
-
-<!--                    <div class="documents-box">-->
-<!--                        <ul class="documents-list">-->
-<!--                            <li>-->
-<!--                                <span class="check-icon">✓</span>-->
-<!--                                <span>Счёт на оплату и Договор поставки</span>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <span class="check-icon">✓</span>-->
-<!--                                <span>УПД / ТОРГ-12 / Счёт-фактура</span>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <span class="check-icon">✓</span>-->
-<!--                                <span>Сертификаты соответствия на продукцию (по запросу)</span>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </section>-->
-
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                &lt;!&ndash; ЧАСТЫЕ ВОПРОСЫ (АККОРДЕОН) &ndash;&gt;-->
-<!--                &lt;!&ndash; ═══════════════════════════════════════════════════ &ndash;&gt;-->
-<!--                <section class="delivery-section">-->
-<!--                    <h3 class="section-title">-->
-<!--                        <span class="title-icon">❓</span>-->
-<!--                        ЧАСТЫЕ ВОПРОСЫ-->
-<!--                    </h3>-->
-
-<!--                    <div class="faq-accordion">-->
-<!--                        <div class="faq-item">-->
-<!--                            <button class="faq-question" onclick="toggleFaq(this)">-->
-<!--                                <span class="faq-question-text">Можно ли получить заказ до оплаты?</span>-->
-<!--                                <span class="faq-icon">-->
-<!--                    <span class="faq-plus"></span>-->
-<!--                </span>-->
-<!--                            </button>-->
-<!--                            <div class="faq-answer">-->
-<!--                                <p>Отгрузка производится после поступления оплаты на счёт. Для постоянных клиентов возможна индивидуальная отсрочка.</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--                        <div class="faq-item">-->
-<!--                            <button class="faq-question" onclick="toggleFaq(this)">-->
-<!--                                <span class="faq-question-text">Что если товар повредится при доставке?</span>-->
-<!--                                <span class="faq-icon">-->
-<!--                    <span class="faq-plus"></span>-->
-<!--                </span>-->
-<!--                            </button>-->
-<!--                            <div class="faq-answer">-->
-<!--                                <p>Все отправления застрахованы. В случае повреждения мы полностью возместим стоимость или заменим товар за свой счёт.</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--                        <div class="faq-item">-->
-<!--                            <button class="faq-question" onclick="toggleFaq(this)">-->
-<!--                                <span class="faq-question-text">Как получить закрывающие документы?</span>-->
-<!--                                <span class="faq-icon">-->
-<!--                    <span class="faq-plus"></span>-->
-<!--                </span>-->
-<!--                            </button>-->
-<!--                            <div class="faq-answer">-->
-<!--                                <p>Электронную версию отправляем в ЭДО или на email в день отгрузки. Оригинал можем отправить почтой.</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </section>-->
-<!--            </div>-->
-
-<!--            &lt;!&ndash; Правая колонка (персонаж) &ndash;&gt;-->
-<!--            <div class="delivery-image">-->
-<!--                <div class="image-wrapper">-->
-<!--                    <img src="../images/счастье2.png" alt="СЧАСТЬЕ" class="delivery-character"-->
-<!--                         onerror="this.src='https://via.placeholder.com/350x450/7B68EE/ffffff?text=СЧАСТЬЕ'">-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
-
-<!--        &lt;!&ndash; Призыв к действию (как в about.html) &ndash;&gt;-->
-<!--        <div class="delivery-cta">-->
-<!--            <h2>Остались вопросы?</h2>-->
-<!--            <p>Свяжитесь с нами — ответим в течение 15 минут!</p>-->
-<!--            <div class="cta-buttons">-->
-<!--                <a href="contacts.html" class="btn btn-primary">Оставить заявку →</a>-->
-<!--                <a href="tel:+78124253099" class="btn btn-secondary">📞 +7 (812) 425-30-99</a>-->
-<!--                <a href="mailto:pro.schastie@mail.ru" class="btn btn-secondary">✉️ pro.schastie@mail.ru</a>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--    </div>-->
-<!--</main>-->
-
-<!--&lt;!&ndash; FOOTER &ndash;&gt;-->
-<!--<footer class="footer-section">-->
-<!--    <div class="footer-container">-->
-<!--        <div class="footer-top">-->
-<!--            <div class="footer-form-text">-->
-<!--                <p>Оставить контакты,<br>разберёмся вместе</p>-->
-<!--                <div class="footer-social">-->
-<!--                    <a href="https://instagram.com/ваш_профиль" target="_blank" class="social-link" title="Instagram">-->
-<!--                        <img src="../images/инс.svg" alt="Instagram">-->
-<!--                    </a>-->
-<!--                    <a href="https://t.me/ваш_профиль" target="_blank" class="social-link" title="Telegram">-->
-<!--                        <img src="../images/телег.svg" alt="Telegram">-->
-<!--                    </a>-->
-<!--                    <a href="viber://chat?number=%2B78124253099" class="social-link" title="Viber">-->
-<!--                        <img src="../images/вайбер.svg" alt="Viber">-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="footer-form-wrapper">-->
-<!--                <div class="footer-form-row">-->
-<!--                    <input type="text" class="form-input-footer" placeholder="Контактное лицо">-->
-<!--                    <input type="tel" class="form-input-footer" placeholder="Номер телефона">-->
-<!--                    <button type="submit" class="form-btn-footer">Отправить</button>-->
-<!--                </div>-->
-<!--                <label class="form-checkbox-footer">-->
-<!--                    <input type="checkbox" required>-->
-<!--                    <span class="checkbox-custom-footer"></span>-->
-<!--                    <span class="checkbox-text-footer">Даю согласие на обработку персональных данных</span>-->
-<!--                </label>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="footer-middle">-->
-<!--            <div class="footer-line footer-line-1"></div>-->
-<!--            <div class="footer-line footer-line-2"></div>-->
-<!--            <div class="footer-marquee">-->
-<!--                <div class="marquee-content">-->
-<!--                    <span>СЧАСТЬЕ</span>-->
-<!--                    <span>СЧАСТЬЕ</span>-->
-<!--                    <span>СЧАСТЬЕ</span>-->
-<!--                    <span>СЧАСТЬЕ</span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="footer-line footer-line-3"></div>-->
-<!--            <div class="footer-line footer-line-4"></div>-->
-<!--        </div>-->
-<!--        <div class="footer-bottom">-->
-<!--            <div class="footer-copyright-right">-->
-<!--                <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>-->
-<!--            </div>-->
-<!--            <div class="footer-copyright-left">-->
-<!--                <img src="../images/секция%2011%20сердце.svg" alt="❤️" class="heart-icon">-->
-<!--                <span>Сделано с любовью</span>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
-
-<!--<script src="../js/main.js"></script>-->
-
-<!--</body>  &lt;!&ndash; Закрываем body &ndash;&gt;-->
-<!--</html>  &lt;!&ndash; Закрываем html &ndash;&gt;-->
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=5.0, user-scalable=yes">
     <title>Доставка и оплата — СЧАСТЬЕ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -465,30 +20,44 @@
             <div class="header-top">
                 <div class="logo">СЧАСТЬЕ</div>
                 <nav class="nav">
-                    <a href="index.html">Главная</a>
                     <a href="special-offers.html">Спецпредложения</a>
                     <a href="portfolio.html">Портфолио</a>
-                    <a href="delivery.html" class="active">Доставка и оплата</a>
-                    <a href="about.html">О нас</a>
+                    <a href="delivery.html">Доставка и оплата</a>
                     <a href="contacts.html">Контакты</a>
+                    <a href="about.html">О нас</a>
                 </nav>
+
+
+                <!-- Контактная информация -->
                 <div class="header-contacts">
+                    <!-- Телефон -->
                     <div class="contact-item">
                         <div class="contact-phone">+7 (812) 425-30-99</div>
                         <div class="contact-dept">Отдел продаж</div>
                     </div>
+                    <!-- Email 1 -->
                     <div class="contact-item">
-                        <div class="contact-email">pro.schastie@mail.ru</div>
+                        <!-- Активная ссылка на почту -->
+                        <a href="mailto:pro.schastie@mail.ru" class="contact-email">
+                            pro.schastie@mail.ru
+                        </a>
                         <div class="contact-dept">Отдел продаж</div>
                     </div>
+
+                    <!-- Email 2 -->
                     <div class="contact-item">
-                        <div class="contact-email">01@schaste.ru</div>
+                        <a href="mailto:01@schaste.ru" class="contact-email">
+                            01@schaste.ru
+                        </a>
                         <div class="contact-dept">Отдел закупок</div>
                     </div>
                 </div>
             </div>
+
+
             <div class="header-bottom">
-                <button class="btn btn-catalog" onclick="showCatalogMessage()">
+<!--                <button class="btn btn-catalog" onclick="showCatalogMessage()">-->
+                    <a href="catalog.html" class="btn btn-catalog" style="text-decoration: none; display: inline-flex">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                         <rect x="2" y="2" width="5" height="5" rx="1"/>
                         <rect x="9" y="2" width="5" height="5" rx="1"/>
@@ -496,7 +65,7 @@
                         <rect x="9" y="9" width="5" height="5" rx="1"/>
                     </svg>
                     <span>Каталог</span>
-                </button>
+                    </a>
                 <div class="search">
                     <input type="text" placeholder="Поиск" class="search-input">
                     <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
@@ -507,13 +76,15 @@
                     <span class="min-order-price">50 000 ₽</span>
                     <span class="min-order-label">минимальная<br>сумма заказа</span>
                 </div>
-                <button class="btn btn-cart" onclick="window.location.href='cart.html'">
+
+<!--                <button class="btn btn-cart" onclick="window.location.href='cart.html'">-->
+                    <a href="catalog.html" class="btn btn-cart" style="text-decoration: none; display: inline-flex">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                     </svg>
                     <span>Корзина</span>
                     <span class="cart-count" id="cartCount">0</span>
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -691,58 +262,64 @@
             <div class="cta-buttons">
                 <a href="contacts.html" class="btn btn-primary">Оставить заявку →</a>
                 <a href="tel:+78124253099" class="btn btn-secondary">📞 +7 (812) 425-30-99</a>
-                <a href="mailto:pro.schastie@mail.ru" class="btn btn-secondary">✉️ pro.schastie@mail.ru</a>
+<!--                <a href="mailto:pro.schastie@mail.ru" class="btn btn-secondary">✉️ pro.schastie@mail.ru</a>-->
             </div>
         </div>
 
     </div>
 </main>
 
-<!-- FOOTER (БЕЗ ИЗМЕНЕНИЙ) -->
+<!-- ============================================
+     СЕКЦИЯ: FUTER (ПОДВАЛ САЙТА)
+     ============================================ -->
 <footer class="footer-section">
     <div class="footer-container">
+
+        <!-- ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ -->
         <div class="footer-top">
             <div class="footer-form-text">
                 <p>Оставить контакты,<br>разберёмся вместе</p>
                 <div class="footer-social">
-                    <a href="https://instagram.com/ваш_профиль" target="_blank" class="social-link" title="Instagram">
-                        <img src="../images/инс.svg" alt="Instagram">
-                    </a>
-                    <a href="https://t.me/ваш_профиль" target="_blank" class="social-link" title="Telegram">
-                        <img src="../images/телег.svg" alt="Telegram">
-                    </a>
-                    <a href="viber://chat?number=%2B78124253099" class="social-link" title="Viber">
-                        <img src="../images/вайбер.svg" alt="Viber">
-                    </a>
+                    <a href="#" class="social-link"><img src="../images/инс.svg" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img src="../images/телег.svg" alt="Telegram"></a>
+                    <a href="#" class="social-link"><img src="../images/вайбер.svg" alt="Viber"></a>
                 </div>
             </div>
+
             <div class="footer-form-wrapper">
-                <div class="footer-form-row">
-                    <input type="text" class="form-input-footer" placeholder="Контактное лицо">
-                    <input type="tel" class="form-input-footer" placeholder="Номер телефона">
-                    <button type="submit" class="form-btn-footer">Отправить</button>
-                </div>
-                <label class="form-checkbox-footer">
-                    <input type="checkbox" required>
-                    <span class="checkbox-custom-footer"></span>
-                    <span class="checkbox-text-footer">Даю согласие на обработку персональных данных</span>
-                </label>
+                <form action="https://formspree.io/f/xlgajwzl" method="POST" class="footer-form">
+                    <div class="footer-form-row">
+                        <input type="text" name="name_footer" placeholder="Контактное лицо" class="form-input-footer" required>
+                        <input type="tel" name="phone_footer" placeholder="Номер телефона" class="form-input-footer" required>
+                        <button type="submit" class="form-btn-footer">Отправить</button>
+                    </div>
+                    <label class="form-checkbox-footer" for="policy-agreement-footer">
+                        <input type="checkbox" id="policy-agreement-footer" name="agreement_footer" required>
+                        <span class="checkbox-custom-footer"></span>
+                        <span class="checkbox-text-footer">
+                            Даю согласие на обработку
+                            <a href="policy.html" target="_blank" class="policy-link-footer">персональных данных</a>
+                        </span>
+                    </label>
+                </form>
             </div>
         </div>
+
+        <!-- СРЕДНЯЯ ЧАСТЬ: ЛИНИИ + БЕГУЩАЯ СТРОКА -->
         <div class="footer-middle">
             <div class="footer-line footer-line-1"></div>
             <div class="footer-line footer-line-2"></div>
             <div class="footer-marquee">
                 <div class="marquee-content">
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
                 </div>
             </div>
             <div class="footer-line footer-line-3"></div>
             <div class="footer-line footer-line-4"></div>
         </div>
+
+        <!-- НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ -->
         <div class="footer-bottom">
             <div class="footer-copyright-right">
                 <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>
@@ -754,6 +331,22 @@
         </div>
     </div>
 </footer>
+
+<!--&lt;!&ndash; КАСТОМНЫЙ ALERT (всплывающее окно успеха) &ndash;&gt;-->
+<!--<div class="custom-alert" id="customAlert">-->
+<!--    <div class="custom-alert-overlay" onclick="hideCustomAlert()"></div>-->
+<!--    <div class="custom-alert-content">-->
+<!--        <div class="alert-icon">-->
+<!--            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">-->
+<!--                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>-->
+<!--                <polyline points="22 4 12 14.01 9 11.01"/>-->
+<!--            </svg>-->
+<!--        </div>-->
+<!--        <h3 class="alert-title">Спасибо!</h3>-->
+<!--        <p class="alert-message" id="alertMessage">Заявка успешно отправлена!</p>-->
+<!--        <button class="alert-btn" onclick="hideCustomAlert()">Хорошо</button>-->
+<!--    </div>-->
+<!--</div>-->
 
 <script src="../js/main.js"></script>
 

@@ -926,65 +926,65 @@ src/shastie/
 /* ═══════════════════════════════════════════════════ */
 
 /* Для экранов уже 1200px (планшеты) */
-@media (max-width: 1200px) {
-    .cart-wrapper {
-        grid-template-columns: 1fr;  /* ✅ 1 колонка вместо 2 */
-    }
-    .cart-form-section {
-        order: 2;                    /* ✅ Форма под товарами */
-    }
-}
+/*@media (max-width: 1200px) {*/
+/*    .cart-wrapper {*/
+/*        grid-template-columns: 1fr;  !* ✅ 1 колонка вместо 2 *!*/
+/*    }*/
+/*    .cart-form-section {*/
+/*        order: 2;                    !* ✅ Форма под товарами *!*/
+/*    }*/
+/*}*/
 
-/* Для экранов уже 768px (маленькие планшеты) */
-@media (max-width: 768px) {
-    .footer-top {
-        padding: 40px 60px 0;
-        flex-direction: column;      /* ✅ Элементы друг под другом */
-    }
-    .footer-form-row {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .form-input-footer {
-        width: 100%;                 /* ✅ Поля на всю ширину */
-    }
-    .footer-bottom {
-        padding: 0 60px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .marquee-content span {
-        font-size: 100px;            /* ✅ Меньше текст бегущей строки */
-    }
-}
+/*!* Для экранов уже 768px (маленькие планшеты) *!*/
+/*@media (max-width: 768px) {*/
+/*    .footer-top {*/
+/*        padding: 40px 60px 0;*/
+/*        flex-direction: column;      !* ✅ Элементы друг под другом *!*/
+/*    }*/
+/*    .footer-form-row {*/
+/*        flex-wrap: wrap;*/
+/*        justify-content: center;*/
+/*    }*/
+/*    .form-input-footer {*/
+/*        width: 100%;                 !* ✅ Поля на всю ширину *!*/
+/*    }*/
+/*    .footer-bottom {*/
+/*        padding: 0 60px 20px;*/
+/*        flex-direction: column;*/
+/*        gap: 15px;*/
+/*    }*/
+/*    .marquee-content span {*/
+/*        font-size: 100px;            !* ✅ Меньше текст бегущей строки *!*/
+/*    }*/
+/*}*/
 
-/* Для экранов уже 480px (телефоны) */
-@media (max-width: 480px) {
-    .cart-controls {
-        flex-direction: column;      /* ✅ Кнопки друг под другом */
-    }
-    .btn {
-        width: 100%;                 /* ✅ Кнопки на всю ширину */
-        justify-content: center;
-    }
-    .form-row-2 {
-        grid-template-columns: 1fr;  /* ✅ 1 колонка вместо 2 */
-    }
-    .cart-item {
-        flex-direction: column;      /* ✅ Товар вертикально */
-        align-items: flex-start;
-    }
-    .footer-top {
-        padding: 30px 20px 0;
-    }
-    .footer-bottom {
-        padding: 0 20px 20px;
-    }
-    .marquee-content span {
-        font-size: 60px;
-        opacity: 0.6;
-    }
-}
+/*!* Для экранов уже 480px (телефоны) *!*/
+/*@media (max-width: 480px) {*/
+/*    .cart-controls {*/
+/*        flex-direction: column;      !* ✅ Кнопки друг под другом *!*/
+/*    }*/
+/*    .btn {*/
+/*        width: 100%;                 !* ✅ Кнопки на всю ширину *!*/
+/*        justify-content: center;*/
+/*    }*/
+/*    .form-row-2 {*/
+/*        grid-template-columns: 1fr;  !* ✅ 1 колонка вместо 2 *!*/
+/*    }*/
+/*    .cart-item {*/
+/*        flex-direction: column;      !* ✅ Товар вертикально *!*/
+/*        align-items: flex-start;*/
+/*    }*/
+/*    .footer-top {*/
+/*        padding: 30px 20px 0;*/
+/*    }*/
+/*    .footer-bottom {*/
+/*        padding: 0 20px 20px;*/
+/*    }*/
+/*    .marquee-content span {*/
+/*        font-size: 60px;*/
+/*        opacity: 0.6;*/
+/*    }*/
+/*}*/
 
 /* ═══════════════════════════════════════════════════ */
 /* СОЦИАЛЬНЫЕ СЕТИ В ФУТЕРЕ */

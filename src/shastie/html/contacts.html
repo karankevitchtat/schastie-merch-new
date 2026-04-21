@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=5.0, user-scalable=yes">
+    <title>Контакты — СЧАСТЬЕ | Корпоративный мерч</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+</head>
+<body>
+
+<div class="container-fixed">
+
+    <!-- ========== HEADER (как на всех страницах) ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">СЧАСТЬЕ</div>
+                <nav class="nav">
+                    <a href="special-offers.html">Спецпредложения</a>
+                    <a href="portfolio.html">Портфолио</a>
+                    <a href="delivery.html">Доставка и оплата</a>
+                    <a href="contacts.html" class="active">Контакты</a>
+                    <a href="about.html">О нас</a>
+                </nav>
+
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <div class="contact-phone">+7 (812) 425-30-99</div>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+
+                    <div class="contact-item">
+                        <a href="mailto:pro.schastie@mail.ru" class="contact-email">pro.schastie@mail.ru</a>
+                        <div class="contact-dept">Отдел продаж</div>
+                    </div>
+
+                    <div class="contact-item">
+                        <a href="mailto:01@schaste.ru" class="contact-email">01@schaste.ru</a>
+                        <div class="contact-dept">Отдел закупок</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header-bottom">
+                <a href="catalog.html" class="btn btn-catalog" style="text-decoration: none; display: inline-flex">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="2" y="2" width="5" height="5" rx="1"/>
+                        <rect x="9" y="2" width="5" height="5" rx="1"/>
+                        <rect x="2" y="9" width="5" height="5" rx="1"/>
+                        <rect x="9" y="9" width="5" height="5" rx="1"/>
+                    </svg>
+                    <span>Каталог</span>
+                </a>
+                <div class="search">
+                    <input type="text" placeholder="Поиск" class="search-input">
+                    <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="min-order">
+                    <span class="min-order-price">50 000 ₽</span>
+                    <span class="min-order-label">минимальная<br>сумма заказа</span>
+                </div>
+                <a href="catalog.html" class="btn btn-cart" style="text-decoration: none; display: inline-flex">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    <span>Корзина</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+</div>
+
+<!-- ========== ОСНОВНОЙ КОНТЕНТ ========== -->
+<main class="contacts-main">
+    <div class="contacts-container">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span class="current">Контакты</span>
+        </div>
+
+        <!-- Заголовок -->
+        <h1 class="page-title">КОНТАКТЫ И РЕКВИЗИТЫ</h1>
+
+        <!-- Две колонки: слева инфо, справа форма -->
+        <div class="contacts-grid">
+
+            <!-- ЛЕВАЯ КОЛОНКА (уменьшенная) -->
+            <div class="contacts-left">
+
+                <!-- КОНТАКТНАЯ ИНФОРМАЦИЯ -->
+                <section class="contact-info-section">
+                    <h3 class="section-title">
+                        <span class="title-icon">📞</span>
+                        КОНТАКТНАЯ ИНФОРМАЦИЯ
+                    </h3>
+
+                    <div class="contact-cards-grid">
+                        <!-- Телефон -->
+                        <div class="contact-card-mini">
+                            <div class="contact-card-icon">📱</div>
+                            <div class="contact-card-content">
+                                <h4>Телефон</h4>
+                                <p><a href="tel:+79148879009">+7 (914) 887-90-09</a></p>
+                                <span>Ежедневно<br>с 9:00 до 18:00</span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-card-mini">
+                            <div class="contact-card-icon">✉️</div>
+                            <div class="contact-card-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:pro.schastie@mail.ru">pro.schastie@mail.ru</a></p>
+                                <span>Отвечаем в течение<br>2 часов</span>
+                            </div>
+                        </div>
+
+                        <!-- Адрес (ИСПРАВЛЕНО) -->
+                        <div class="contact-card-mini">
+                            <div class="contact-card-icon">🏢</div>
+                            <div class="contact-card-content">
+                                <h4>Адрес</h4>
+                                <p>665703, г. Братск</p>
+                                <span>ул. Маяковского<br>(Гидростроитель ж/р), 10, 9</span>
+                            </div>
+                        </div>
+
+                        <!-- Мессенджеры -->
+                        <div class="contact-card-mini">
+                            <div class="contact-card-icon">💬</div>
+                            <div class="contact-card-content">
+                                <h4>Мессенджеры</h4>
+                                <p>Telegram, WhatsApp,<br>Viber</p>
+                                <span>По номеру<br>+7 (914) 887-90-09</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Реквизиты -->
+                <section class="requisites-section">
+                    <h3 class="section-title">
+                        <span class="title-icon">📋</span>
+                        РЕКВИЗИТЫ КОМПАНИИ
+                    </h3>
+
+                    <div class="requisites-box">
+                        <div class="requisites-header">
+                            <h4>ИП Пириев Алексей Вячеславович</h4>
+                            <p>Индивидуальный предприниматель</p>
+                        </div>
+
+                        <div class="requisites-list">
+                            <div class="requisite-row">
+                                <span class="requisite-label">ИНН:</span>
+                                <span class="requisite-value">380583647460</span>
+                            </div>
+                            <div class="requisite-row">
+                                <span class="requisite-label">ОГРНИП:</span>
+                                <span class="requisite-value">323385000108073</span>
+                            </div>
+                            <div class="requisite-row">
+                                <span class="requisite-label">Расчетный счет:</span>
+                                <span class="requisite-value">40802810420000136071</span>
+                            </div>
+                            <div class="requisite-row">
+                                <span class="requisite-label">Банк:</span>
+                                <span class="requisite-value">ООО "Банк Точка"</span>
+                            </div>
+                            <div class="requisite-row">
+                                <span class="requisite-label">БИК:</span>
+                                <span class="requisite-value">044525104</span>
+                            </div>
+                            <div class="requisite-row">
+                                <span class="requisite-label">Корреспондентский счет:</span>
+                                <span class="requisite-value">30101810745374525104</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- ПРАВАЯ КОЛОНКА (форма) -->
+            <div class="contacts-right">
+                <div class="contact-form-wrapper">
+                    <h2 class="form-title">НАПИШИТЕ НАМ</h2>
+                    <p class="form-subtitle">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+
+                    <form action="https://formspree.io/f/xlgajwzl" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Ваше имя*</label>
+                                <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Иван Иванов">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-phone">Телефон*</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-input" required placeholder="+7 (___) ___-__-__">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" class="form-input" placeholder="email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Сообщение</label>
+                            <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Расскажите о вашем проекте..."></textarea>
+                        </div>
+
+                        <label class="form-checkbox" for="contact-agreement">
+                            <input type="checkbox" id="contact-agreement" name="agreement" required>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">
+                                Даю согласие на обработку <a href="policy.html" target="_blank" class="policy-link">персональных данных</a>
+                            </span>
+                        </label>
+
+                        <button type="submit" class="form-submit-btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- БЛАГОДАРСТВЕННЫЙ БЛОК (прямоугольник снизу) -->
+        <div class="thank-you-block">
+            <div class="thank-you-content">
+                <h2 class="thank-you-title">Спасибо, что выбрали нас!</h2>
+                <p class="thank-you-text">
+                    Мы ценим ваше доверие и стремимся сделать каждый заказ особенным.<br>
+                    Вместе создадим мерч, который принесет счастье вашей команде!
+                </p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<!-- ========== FOOTER (как на всех страницах) ========== -->
+<!--     СЕКЦИЯ: FUTER (ПОДВАЛ САЙТА)-->
+<!--     ============================================ -->
+<footer class="footer-section">
+    <div class="footer-container">
+
+        <!-- ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ -->
+        <div class="footer-top">
+            <div class="footer-form-text">
+                <p>Оставить контакты,<br>разберёмся вместе</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><img src="../images/инс.svg" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img src="../images/телег.svg" alt="Telegram"></a>
+                    <a href="#" class="social-link"><img src="../images/вайбер.svg" alt="Viber"></a>
+                </div>
+            </div>
+
+            <div class="footer-form-wrapper">
+                <form action="https://formspree.io/f/xlgajwzl" method="POST" class="footer-form">
+                    <div class="footer-form-row">
+                        <input type="text" name="name_footer" placeholder="Контактное лицо" class="form-input-footer" required>
+                        <input type="tel" name="phone_footer" placeholder="Номер телефона" class="form-input-footer" required>
+                        <button type="submit" class="form-btn-footer">Отправить</button>
+                    </div>
+                    <label class="form-checkbox-footer" for="policy-agreement-footer">
+                        <input type="checkbox" id="policy-agreement-footer" name="agreement_footer" required>
+                        <span class="checkbox-custom-footer"></span>
+                        <span class="checkbox-text-footer">
+                            Даю согласие на обработку
+                            <a href="policy.html" target="_blank" class="policy-link-footer">персональных данных</a>
+                        </span>
+                    </label>
+                </form>
+            </div>
+        </div>
+
+        <!-- СРЕДНЯЯ ЧАСТЬ: ЛИНИИ + БЕГУЩАЯ СТРОКА -->
+        <div class="footer-middle">
+            <div class="footer-line footer-line-1"></div>
+            <div class="footer-line footer-line-2"></div>
+            <div class="footer-marquee">
+                <div class="marquee-content">
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
+                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>
+                </div>
+            </div>
+            <div class="footer-line footer-line-3"></div>
+            <div class="footer-line footer-line-4"></div>
+        </div>
+
+        <!-- НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ -->
+        <div class="footer-bottom">
+            <div class="footer-copyright-right">
+                <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>
+            </div>
+            <div class="footer-copyright-left">
+                <img src="../images/секция%2011%20сердце.svg" alt="❤️" class="heart-icon">
+                <span>Сделано с любовью</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--&lt;!&ndash; КАСТОМНЫЙ ALERT &ndash;&gt;-->
+<!--<div class="custom-alert" id="customAlert">-->
+<!--    <div class="custom-alert-overlay" onclick="hideCustomAlert()"></div>-->
+<!--    <div class="custom-alert-content">-->
+<!--        <div class="alert-icon">-->
+<!--            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">-->
+<!--                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>-->
+<!--                <polyline points="22 4 12 14.01 9 11.01"/>-->
+<!--            </svg>-->
+<!--        </div>-->
+<!--        <h3 class="alert-title">Спасибо!</h3>-->
+<!--        <p class="alert-message" id="alertMessage">Заявка успешно отправлена!</p>-->
+<!--        <button class="alert-btn" onclick="hideCustomAlert()">Хорошо</button>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<script src="../js/main.js"></script>
+<script src="../js/contacts.js"></script>
+
+</body>
+</html>

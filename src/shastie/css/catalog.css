@@ -352,42 +352,42 @@
 /* АДАПТИВНОСТЬ ХЕДЕРА */
 /* ═══════════════════════════════════════════════════ */
 
-@media (max-width: 968px) {
-    .header-top {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+/*@media (max-width: 968px) {*/
+/*    .header-top {*/
+/*        flex-direction: column;*/
+/*        gap: 20px;*/
+/*        text-align: center;*/
+/*    }*/
 
-    .header-contacts {
-        text-align: center;
-    }
+/*    .header-contacts {*/
+/*        text-align: center;*/
+/*    }*/
 
-    .header-bottom {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+/*    .header-bottom {*/
+/*        flex-wrap: wrap;*/
+/*        justify-content: center;*/
+/*    }*/
 
-    .search {
-        order: 3;
-        max-width: 100%;
-    }
+/*    .search {*/
+/*        order: 3;*/
+/*        max-width: 100%;*/
+/*    }*/
 
-    .min-order {
-        order: 4;
-        text-align: center;
-    }
-}
+/*    .min-order {*/
+/*        order: 4;*/
+/*        text-align: center;*/
+/*    }*/
+/*}*/
 
-@media (max-width: 640px) {
-    .nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+/*@media (max-width: 640px) {*/
+/*    .nav {*/
+/*        gap: 15px;*/
+/*        flex-wrap: wrap;*/
+/*        justify-content: center;*/
+/*    }*/
 
-    .btn {
-        padding: 10px 16px;
-        font-size: 13px;
-    }
-}
+/*    .btn {*/
+/*        padding: 10px 16px;*/
+/*        font-size: 13px;*/
+/*    }*/
+/*}*/

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=5.0, user-scalable=yes">
     <title>Корзина - СЧАСТЬЕ</title>
 
     <!-- ПРАВИЛЬНЫЕ ОТНОСИТЕЛЬНЫЕ ПУТИ -->
@@ -47,12 +47,18 @@
                     </div>
                     <!-- Email 1 -->
                     <div class="contact-item">
-                        <div class="contact-email">pro.schastie@mail.ru</div>
+                        <!-- Активная ссылка на почту -->
+                        <a href="mailto:pro.schastie@mail.ru" class="contact-email">
+                            pro.schastie@mail.ru
+                        </a>
                         <div class="contact-dept">Отдел продаж</div>
                     </div>
+
                     <!-- Email 2 -->
                     <div class="contact-item">
-                        <div class="contact-email">01@schaste.ru</div>
+                        <a href="mailto:01@schaste.ru" class="contact-email">
+                            01@schaste.ru
+                        </a>
                         <div class="contact-dept">Отдел закупок</div>
                     </div>
                 </div>
@@ -63,7 +69,7 @@
 
                 <!-- Кнопка "Каталог" добавили заглушку onclick="showCatalogMessage()"-->
 <!--                <button class="btn btn-catalog">onclick="showCatalogMessage()" -->
-                <button class="btn btn-catalog" onclick="window.location.href='catalog.html'">
+                <a href="catalog.html" class="btn btn-catalog" style="text-decoration: none; display: inline-flex">
                     <!-- Иконка сетки (4 квадрата) -->
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                         <rect x="2" y="2" width="5" height="5" rx="1"/>
@@ -72,7 +78,7 @@
                         <rect x="9" y="9" width="5" height="5" rx="1"/>
                     </svg>
                     <span>Каталог</span>
-                </button>
+                </a>
 
                 <!-- Поле поиска -->
                 <div class="search">
@@ -90,7 +96,8 @@
                 </div>
 
                 <!-- Кнопка "Корзина" -->
-                <button class="btn btn-cart" onclick="window.location.href='cart.html'">
+<!--                <button class="btn btn-cart" onclick="window.location.href='cart.html'">-->
+                    <a href="catalog.html" class="btn btn-cart" style="text-decoration: none; display: inline-flex">
                     <!-- Иконка корзины -->
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358
@@ -100,7 +107,7 @@
                     </svg>
                     <span>Корзина</span>
                     <span class="cart-count" id="cartCount">0</span>
-                </button>
+                </a>
 
             </div>
         </div>
@@ -108,7 +115,7 @@
 </div>  <!-- Закрываем container-fixed (header вне main) -->
 
 
-<!--&lt;!&ndash; Заглушка вместо каталога &ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; Заглушка вместо каталога &ndash;&gt;&ndash;&gt;-->
 <!--<div style="text-align: center; padding: 100px 20px;">-->
 <!--    <h1>🚧 Каталог в разработке</h1>-->
 <!--    <p style="font-size: 18px; color: #666; margin: 20px 0;">-->
@@ -124,259 +131,225 @@
 <!--    </button>-->
 <!--</div>-->
 
-<!-- Основной контент -->
-<main class="cart-main">
-    <div class="container-fixed">
+<!--&lt;!&ndash; Основной контент &ndash;&gt;-->
+<!--<main class="cart-main">-->
+<!--    <div class="container-fixed">-->
 
-        <!-- Хлебные крошки -->
-        <nav class="breadcrumbs">
-            <a href="index.html">Главная</a>
-            <span>/</span>
-            <span class="current">Оформление заявки</span>
-        </nav>
+<!--        &lt;!&ndash; Хлебные крошки &ndash;&gt;-->
+<!--        <nav class="breadcrumbs">-->
+<!--            <a href="index.html">Главная</a>-->
+<!--            <span>/</span>-->
+<!--            <span class="current">Оформление заявки</span>-->
+<!--        </nav>-->
 
-        <!-- Заголовок -->
-        <h1 class="page-title">Ваша корзина</h1>
+<!--        &lt;!&ndash; Заголовок &ndash;&gt;-->
+<!--        <h1 class="page-title">Ваша корзина</h1>-->
 
-        <!-- Кнопки управления -->
-        <div class="cart-controls">
-<!--            добовляем заглушку-->
-<!--            <button class="btn btn-continue"  заглуш (onclick="showCatalogMessage()" )  onclick="window.location.href='catalog.html'">-->
-            <button class="btn btn-continue" onclick="window.location.href='catalog.html'">
-                ← Продолжить выбор
-            </button>
-            <button class="btn btn-clear" onclick="clearCart()" style="margin-left: auto;">
-                Очистить корзину
-            </button>
-        </div>
+<!--        &lt;!&ndash; Кнопки управления &ndash;&gt;-->
+<!--        <div class="cart-controls">-->
+<!--&lt;!&ndash;            добовляем заглушку&ndash;&gt;-->
+<!--&lt;!&ndash;            <button class="btn btn-continue"  заглуш (onclick="showCatalogMessage()" )  onclick="window.location.href='catalog.html'">&ndash;&gt;-->
+<!--            <button class="btn btn-continue" onclick="window.location.href='catalog.html'">-->
+<!--                ← Продолжить выбор-->
+<!--            </button>-->
+<!--            <button class="btn btn-clear" onclick="clearCart()" style="margin-left: auto;">-->
+<!--                Очистить корзину-->
+<!--            </button>-->
+<!--        </div>-->
 
-        <!-- Обёртка: товары + форма -->
-        <div class="cart-wrapper">
+<!--        &lt;!&ndash; Обёртка: товары + форма &ndash;&gt;-->
+<!--        <div class="cart-wrapper">-->
 
-            <!-- Левая колонка: Товары -->
-            <div class="cart-items-section">
-                <h3 class="section-title">Товары в корзине</h3>
+<!--            &lt;!&ndash; Левая колонка: Товары &ndash;&gt;-->
+<!--            <div class="cart-items-section">-->
+<!--                <h3 class="section-title">Товары в корзине</h3>-->
 
-                <!-- ✅ ПУСТАЯ КОРЗИНА -->
-                <div class="cart-empty-state" id="cartEmptyState">
-                    <div class="empty-cart-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M16 11V7a4 4 0 10-8 0v4M5 9h14l1 12H4L5 9z"/>
-                        </svg>
-                        <span class="cart-count-badge">0</span>
-                    </div>
-                    <p class="empty-cart-text">
-                        В вашей корзине еще нет товаров.<br>
-                        Просмотрите наш каталог — там много интересного!
-                    </p>
-<!--                    добовляем заглушку-->
-<!--                    <button class="btn btn-catalog-empty" onclick="showCatalogMessage()">-->
-                    <button class="btn btn-catalog-empty" onclick="window.location.href='catalog.html'">
-                        Перейти в каталог
-                    </button>
-                </div>
+<!--                &lt;!&ndash; ✅ ПУСТАЯ КОРЗИНА &ndash;&gt;-->
+<!--                <div class="cart-empty-state" id="cartEmptyState">-->
+<!--                    <div class="empty-cart-icon">-->
+<!--                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">-->
+<!--                            <path d="M16 11V7a4 4 0 10-8 0v4M5 9h14l1 12H4L5 9z"/>-->
+<!--                        </svg>-->
+<!--                        <span class="cart-count-badge">0</span>-->
+<!--                    </div>-->
+<!--                    <p class="empty-cart-text">-->
+<!--                        В вашей корзине еще нет товаров.<br>-->
+<!--                        Просмотрите наш каталог — там много интересного!-->
+<!--                    </p>-->
+<!--&lt;!&ndash;                    добовляем заглушку&ndash;&gt;-->
+<!--&lt;!&ndash;                    <button class="btn btn-catalog-empty" onclick="showCatalogMessage()">&ndash;&gt;-->
+<!--                    <button class="btn btn-catalog-empty" onclick="window.location.href='catalog.html'">-->
+<!--                        Перейти в каталог-->
+<!--                    </button>-->
+<!--                </div>-->
 
-                <!-- ТОВАРЫ (скрываются когда корзина пуста) -->
-                <div id="cartItemsContainer" class="hidden">
-                    <div class="cart-items" id="cartItems"></div>
+<!--                &lt;!&ndash; ТОВАРЫ (скрываются когда корзина пуста) &ndash;&gt;-->
+<!--                <div id="cartItemsContainer" class="hidden">-->
+<!--                    <div class="cart-items" id="cartItems"></div>-->
 
-                    <!-- Итого -->
-                    <div class="cart-summary">
-                        <div class="summary-row">
-                            <span>Товаров:</span>
-                            <span class="summary-count" id="summaryCount">0</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Сумма:</span>
-                            <span class="summary-total" id="summaryTotal">0 ₽</span>
-                        </div>
-                    </div>
+<!--                    &lt;!&ndash; Итого &ndash;&gt;-->
+<!--                    <div class="cart-summary">-->
+<!--                        <div class="summary-row">-->
+<!--                            <span>Товаров:</span>-->
+<!--                            <span class="summary-count" id="summaryCount">0</span>-->
+<!--                        </div>-->
+<!--                        <div class="summary-row">-->
+<!--                            <span>Сумма:</span>-->
+<!--                            <span class="summary-total" id="summaryTotal">0 ₽</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <!-- Важная информация -->
-                    <div class="cart-notice">
-                        <h4>Обратите внимание!</h4>
-                        <ul>
-                            <li>Минимальный заказ: <strong>50 000 ₽</strong></li>
-                            <li>Цены указаны без нанесения</li>
-                            <li>Стоимость уточняйте у менеджера</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<!--                    &lt;!&ndash; Важная информация &ndash;&gt;-->
+<!--                    <div class="cart-notice">-->
+<!--                        <h4>Обратите внимание!</h4>-->
+<!--                        <ul>-->
+<!--                            <li>Минимальный заказ: <strong>50 000 ₽</strong></li>-->
+<!--                            <li>Цены указаны без нанесения</li>-->
+<!--                            <li>Стоимость уточняйте у менеджера</li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <!-- Правая колонка: Форма -->
-            <div class="cart-form-section">
-                <h3 class="section-title">Оформить заявку</h3>
-                <form class="cart-form" id="cartForm" onsubmit="submitOrder(event)">
+<!--            &lt;!&ndash; Правая колонка: Форма &ndash;&gt;-->
+<!--            <div class="cart-form-section">-->
+<!--                <h3 class="section-title">Оформить заявку</h3>-->
+<!--                <form class="cart-form" id="cartForm" onsubmit="submitOrder(event)">-->
 
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="ФИО *" required>
-                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" class="form-input" placeholder="ФИО *" required>-->
+<!--                    </div>-->
 
-                    <div class="form-row-2">
-                        <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Организация">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Город">
-                        </div>
-                    </div>
+<!--                    <div class="form-row-2">-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="text" class="form-input" placeholder="Организация">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="text" class="form-input" placeholder="Город">-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="form-row-2">
-                        <div class="form-group">
-                            <input type="tel" class="form-input" placeholder="Телефон *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-input" placeholder="E-Mail *" required>
-                        </div>
-                    </div>
+<!--                    <div class="form-row-2">-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="tel" class="form-input" placeholder="Телефон *" required>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="email" class="form-input" placeholder="E-Mail *" required>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="form-group">
-                        <textarea class="form-textarea" placeholder="Комментарий" rows="3"></textarea>
-                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <textarea class="form-textarea" placeholder="Комментарий" rows="3"></textarea>-->
+<!--                    </div>-->
 
-                    <div class="form-group">
-                        <label class="file-upload">
-                            <input type="file" id="brandbookFile" accept=".pdf,.jpg,.png">
-                            <span class="file-upload-btn">📎 Прикрепить файл</span>
-                            <span class="file-name" id="fileName">Файл не выбран</span>
-                        </label>
-                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <label class="file-upload">-->
+<!--                            <input type="file" id="brandbookFile" accept=".pdf,.jpg,.png">-->
+<!--                            <span class="file-upload-btn">📎 Прикрепить файл</span>-->
+<!--                            <span class="file-name" id="fileName">Файл не выбран</span>-->
+<!--                        </label>-->
+<!--                    </div>-->
 
-                    <label class="checkbox-label">
-                        <input type="checkbox" required>
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-text">
-                            Согласен на <a href="#">обработку данных</a>
-                        </span>
-                    </label>
+<!--                    <label class="checkbox-label">-->
+<!--                        <input type="checkbox" required>-->
+<!--                        <span class="checkbox-custom"></span>-->
+<!--                        <span class="checkbox-text">-->
+<!--                            Согласен на <a href="#">обработку данных</a>-->
+<!--                        </span>-->
+<!--                    </label>-->
 
-                    <button type="submit" class="btn btn-submit">Отправить заявку</button>
-                </form>
-            </div>
+<!--                    <button type="submit" class="btn btn-submit">Отправить заявку</button>-->
+<!--                </form>-->
+<!--            </div>-->
 
-        </div>
-    </div>
-</main>
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
 
-<!-- Футер -->
-<!-- ============================================
-     СЕКЦИЯ 17: FUTER (ПОДВАЛ САЙТА)
-     ============================================ -->
-<footer class="footer-section">
-    <div class="footer-container">
+<!--&lt;!&ndash; Футер &ndash;&gt;-->
+<!--&lt;!&ndash; ============================================-->
+<!--     СЕКЦИЯ: FUTER (ПОДВАЛ САЙТА)-->
+<!--     ============================================ &ndash;&gt;-->
+<!--<footer class="footer-section">-->
+<!--    <div class="footer-container">-->
 
-        <!-- ==========================================
-             ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ
-             ========================================== -->
-        <div class="footer-top">
+<!--        &lt;!&ndash; ВЕРХНЯЯ ЧАСТЬ: ФОРМА ЗАЯВКИ &ndash;&gt;-->
+<!--        <div class="footer-top">-->
+<!--            <div class="footer-form-text">-->
+<!--                <p>Оставить контакты,<br>разберёмся вместе</p>-->
+<!--                <div class="footer-social">-->
+<!--                    <a href="#" class="social-link"><img src="../images/инс.svg" alt="Instagram"></a>-->
+<!--                    <a href="#" class="social-link"><img src="../images/телег.svg" alt="Telegram"></a>-->
+<!--                    <a href="#" class="social-link"><img src="../images/вайбер.svg" alt="Viber"></a>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <!-- Левая часть: Текст -->
-            <div class="footer-form-text">
-                <p>Оставить контакты,<br>разберёмся вместе</p>
+<!--            <div class="footer-form-wrapper">-->
+<!--                <form action="https://formspree.io/f/xlgajwzl" method="POST" class="footer-form">-->
+<!--                    <div class="footer-form-row">-->
+<!--                        <input type="text" name="name_footer" placeholder="Контактное лицо" class="form-input-footer" required>-->
+<!--                        <input type="tel" name="phone_footer" placeholder="Номер телефона" class="form-input-footer" required>-->
+<!--                        <button type="submit" class="form-btn-footer">Отправить</button>-->
+<!--                    </div>-->
+<!--                    <label class="form-checkbox-footer" for="policy-agreement-footer">-->
+<!--                        <input type="checkbox" id="policy-agreement-footer" name="agreement_footer" required>-->
+<!--                        <span class="checkbox-custom-footer"></span>-->
+<!--                        <span class="checkbox-text-footer">-->
+<!--                            Даю согласие на обработку-->
+<!--                            <a href="policy.html" target="_blank" class="policy-link-footer">персональных данных</a>-->
+<!--                        </span>-->
+<!--                    </label>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
 
-                <!--  СОЦСЕТИ  -->
-                <div class="footer-social">
-                    <a href="https://instagram.com/ваш_профиль" target="_blank" class="social-link" title="Instagram">
-                        <img src="../images/инс.svg" alt="Instagram">
-                    </a>
+<!--        &lt;!&ndash; СРЕДНЯЯ ЧАСТЬ: ЛИНИИ + БЕГУЩАЯ СТРОКА &ndash;&gt;-->
+<!--        <div class="footer-middle">-->
+<!--            <div class="footer-line footer-line-1"></div>-->
+<!--            <div class="footer-line footer-line-2"></div>-->
+<!--            <div class="footer-marquee">-->
+<!--                <div class="marquee-content">-->
+<!--                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>-->
+<!--                    <span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span><span>СЧАСТЬЕ</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="footer-line footer-line-3"></div>-->
+<!--            <div class="footer-line footer-line-4"></div>-->
+<!--        </div>-->
 
-                    <a href="https://t.me/ваш_профиль" target="_blank" class="social-link" title="Telegram">
-                        <img src="../images/телег.svg" alt="Telegram">
-                    </a>
+<!--        &lt;!&ndash; НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ &ndash;&gt;-->
+<!--        <div class="footer-bottom">-->
+<!--            <div class="footer-copyright-right">-->
+<!--                <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>-->
+<!--            </div>-->
+<!--            <div class="footer-copyright-left">-->
+<!--                <img src="../images/секция%2011%20сердце.svg" alt="❤️" class="heart-icon">-->
+<!--                <span>Сделано с любовью</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
 
-                    <a href="viber://chat?number=%2B78124253099" class="social-link" title="Viber">
-                        <img src="../images/вайбер.svg" alt="Viber">
-                    </a>
-                </div>
-            </div>
+<!--&lt;!&ndash; КАСТОМНЫЙ ALERT (всплывающее окно успеха) &ndash;&gt;-->
+<!--<div class="custom-alert" id="customAlert">-->
+<!--    <div class="custom-alert-overlay" onclick="hideCustomAlert()"></div>-->
+<!--    <div class="custom-alert-content">-->
+<!--        <div class="alert-icon">-->
+<!--            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">-->
+<!--                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>-->
+<!--                <polyline points="22 4 12 14.01 9 11.01"/>-->
+<!--            </svg>-->
+<!--        </div>-->
+<!--        <h3 class="alert-title">Спасибо!</h3>-->
+<!--        <p class="alert-message" id="alertMessage">Заявка успешно отправлена!</p>-->
+<!--        <button class="alert-btn" onclick="hideCustomAlert()">Хорошо</button>-->
+<!--    </div>-->
+<!--</div>-->
 
+<!--&lt;!&ndash; СКРИПТЫ: Сначала main.js, потом cart.js &ndash;&gt;-->
+<!--<script src="../js/main.js"></script>-->
+<!--&lt;!&ndash;<script src="../js/cart.js"></script>&ndash;&gt;-->
 
-            <!-- Правая часть: Форма заявки -->
-            <div class="footer-form-wrapper">
-
-                <!-- Поля формы в ряд -->
-                <div class="footer-form-row">
-                    <!-- Поле: Контактное лицо -->
-                    <input type="text" class="form-input-footer" placeholder="Контактное лицо">
-
-                    <!-- Поле: Номер телефона -->
-                    <input type="tel" class="form-input-footer" placeholder="Номер телефона">
-
-                    <!-- Кнопка: Отправить -->
-                    <button type="submit" class="form-btn-footer">Отправить</button>
-                </div>
-
-                <!-- Чекбокс: Согласие (снизу под кнопками) -->
-                <label class="form-checkbox-footer">
-                    <input type="checkbox" required>
-                    <span class="checkbox-custom-footer"></span>
-                    <span class="checkbox-text-footer">Даю согласие на обработку персональных данных</span>
-                </label>
-
-            </div>
-
-        </div>
-
-        <!-- ==========================================
-             СРЕДНЯЯ ЧАСТЬ: ЛИНИИ + БЕГУЩАЯ СТРОКА
-             ========================================== -->
-        <div class="footer-middle">
-
-            <!-- Линия 1: 168px от верха -->
-            <div class="footer-line footer-line-1"></div>
-
-            <!-- Линия 2: 51px ниже первой -->
-            <div class="footer-line footer-line-2"></div>
-
-            <!-- БЕГУЩАЯ СТРОКА "СЧАСТЬЕ" -->
-            <div class="footer-marquee">
-                <div class="marquee-content">
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                    <span>СЧАСТЬЕ</span>
-                </div>
-            </div>
-
-            <!-- Линия 3: 220px ниже второй -->
-            <div class="footer-line footer-line-3"></div>
-
-            <!-- Линия 4: 51px ниже третьей -->
-            <div class="footer-line footer-line-4"></div>
-
-        </div>
-
-        <!-- ==========================================
-             НИЖНЯЯ ЧАСТЬ: КОПИРАЙТ (ПОМЕНЯЛИ МЕСТАМИ)
-             ========================================== -->
-        <div class="footer-bottom">
-
-            <!-- Копирайт СПРАВА: © 2026 -->
-            <div class="footer-copyright-right">
-                <span>© 2026 «СЧАСТЬЕ». Все права защищены.</span>
-            </div>
-
-            <!-- Копирайт СЛЕВА: Сделано с любовью -->
-            <div class="footer-copyright-left">
-                <!-- Иконка сердечка из папки images -->
-                <img src="../images/секция%2011%20сердце.svg" alt="❤️" class="heart-icon">
-                <span>Сделано с любовью</span>
-            </div>
-
-        </div>
-
-    </div>
-</footer>
-
-<!-- СКРИПТЫ: Сначала main.js, потом cart.js -->
-<script src="../js/main.js"></script>
-<!--<script src="../js/cart.js"></script>-->
-
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
 
